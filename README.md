@@ -6,24 +6,21 @@ This is an e-commerce website for golf products that I create for **Milestone Pr
 
 <!-- Mock up goes here -->
 
+## USER'S STORIES
+
+There are two types of users for the website. One is shoppers whose primary goal is to view golf products and purchase them online. The other one is the shop owner whose primary goal is to sell golf products and run business. I am a full-stack web developer and create an e-commerce website to meet the primary goals of the users and their stories.
+
+**<ins>Shopper's User Stories</ins>**
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopper-user-story.png)
+
+**<ins>Owner's User Stories</ins>**
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/owner-user-story.png)
+
 ## UX 5 PLANES
 
 ### Strategy Plane
-
-The primary goal of the web is to give users (= shoppers) a hassles free shopping experience. Below are the user's and owner's stories, which have some important features and functions to achieve the primary goal, and these are all implemented on the website. *(On a scale of 1 [least] - 5 [most])
-
-**<ins>User's Stories</ins>**
-
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/user-stories1.png)
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/user-stories2.png)
-
-**<ins>Owner's Stories</ins>**
-
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/owner-stories.png)<br>
-
-Below are the additional features and functions that can improve the website, however, these are not mandatory to achieve the current goal. Some are not implemented due to a lack of my current skills & knowledge and some due to a lack of time.
-
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/additional-features.png)<br>
 
 ### Scope Plane
 
