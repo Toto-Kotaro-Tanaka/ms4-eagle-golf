@@ -87,4 +87,8 @@ The admin panel, which is created automatically when you create Django project, 
 - **CSS** & **JavaScript** (`.css` & `.js`)<br>
 CSS and JavaScript files of those HTML files are created within the same app folder
 
+Below is the flowchart of the website to show the core relationships between the pages. (Most of the pages are linked each other subject to permission)<br>
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/flowchart.png)<br>
+
 <div align="right"><a href="#top">🔝</a></div>
