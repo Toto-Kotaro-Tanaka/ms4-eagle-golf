@@ -12,7 +12,8 @@ There are two types of users for the website. One is shoppers whose primary goal
 
 **<ins>Shopper's User Story</ins>**
 
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopper-user-story.png)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopper-user-story1.png)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopper-user-story2.png)
 
 **<ins>Owner's User Story</ins>**
 
