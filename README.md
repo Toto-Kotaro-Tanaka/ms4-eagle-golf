@@ -27,8 +27,8 @@ To achieve the user's primary goals and stories outlined in the User Stories sec
 
 | Opportunity                                 | Importance | Viability / Feasibility |
 | :------------------------------------------ | :--------: | :---------------------: |
-| Displaying products by main category        |     5      |            5            |
-| Displaying products by sub category         |     5      |            5            |
+| Displaying products by group of categories  |     5      |            5            |
+| Displaying products by category             |     5      |            5            |
 | Viewing product details                     |     5      |            4            |
 | Search Function                             |     4      |            5            |
 | Sorting Function                            |     4      |            5            |
@@ -60,29 +60,29 @@ Below are the additional functions and features that can improve the website, ho
 
 ### Scope Plane
 
-To achieve user’s and owner’s stories, below are the minimum features and functions to be included in this project. Also, CRUD (Create, Read, Update, and Delete) functions are required for the admin user to control the products on the website so these are also included in the project.
+Based on the requirements of achieving user's and owner's goals and stories, below is the list of planning pages with the features and functions. CRUD (Create, Read, Update, and Delete) functions are implemented on the website as it is required for admin user's product management.
 
-- Simple design Home page that even first-time users know how to navigate the website. Clearly displayed group of categories (e.g. Golf Clubs | Clothing & Shoes) that have categories in it (e.g. Golf Clubs --> Drivers | Irons | Putters)
+- Simple design Home page that the purpose of the website is obvious to anybody and even first-time users know how to navigate the website. Clearly displayed group of categories (e.g. Golf Clubs | Clothing & Shoes) that have categories in it (e.g. Golf Clubs --> Drivers | Irons | Putters)
 - Product pages by the group of categories where users can view all the products belong to the group. Users are navigated to categories in this group from this page
 - Product pages by category where users can view all the products belong to the category
 - Product details page where uses can see all the product details. Users can also select options (e.g. Size, Right / Left) and put the product in the cart
-- Cart page where users can see all the selected products before purchase. Users can change the quantity of the product or remove it
+- Shopping Cart page where users can see all the selected products before purchase. Users can change the quantity of the product or remove it
 - Checkout page where users can provide shipping details and credit card details
-- Order confirmation page where users get confirmation of purchase
+- Checkout success page where users get confirmation of purchase
 - Register page where users can create an account to keep the shipping address saved and to view order histories
 - Login page where users can log in to the page
 - Profile page where users can see the personal details and order histories
 - Logout function that users can safely log out the website and takes users back to home page
-- Manage product page (admin only) where admin can add, edit, and delete products
+- Product Management pages (admin only) where admin can add, edit, and delete products
 
 ### Structure Plane
 
 — **Front-end** —
 
-The website consists of below core pages (`.html` files)
+The website consists of below core `HTML` pages and have some `CSS` and `JavaScript` 
 
 - **Home** (`index.html`)<br>
-The main page of the website. There is a logo, search function, navigation to *Group of Categories & Categories*, *Register* & *Login* and *Shopping Cart* pages, a hero image with Shop Now button. There are icons of popular brands that users can click and view the products of the brand. There is a section of "Why Eagle Golf?" which provides a few reasons of buying products with this shop. There is a footer with a form to subscribe to newsletter and some social icons. **The same header and footer are used accross all html files*
+The main page of the website. There is a logo, search function, navigation to *Group of Categories & Categories*, *Register* & *Login* and *Shopping Cart* pages, a hero image with Shop Now button. There are icons of popular brands that users can click and view the products of the brand. There is a section of "Why Eagle Golf?" which provides a few reasons of buying products with the shop. There is a footer with a form to subscribe to newsletter and some social icons. **The same header and footer are used accross all html files*
 
 - **Products** (`products.html`, `products/<category_name>.html`)<br>
 The pages where users can see products by group of categories & category and have an access to product details page.
@@ -97,28 +97,28 @@ The page where users can view all the selected products and details. Users can a
 The page where users can process the purchase. Strip, which is a secured platform for credit card payment, is used on the website for processing payments.  
 
 - **Checkout Success** (`checkout_success.html`)<br>
-The confirmation page where users is lead to when the payment process is successfully completed. Users can see the order number, shipping address, the details of product. This page is accessible for registered users from Profile page.
+The confirmation page where users is lead to when the payment process is successfully completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
 
 - **Register** (`register.html`)<br>
-The page where users can create an account to save their personal details for next shopping and keep their purchase histories. A form and function is created with Django Allauth package.
+The page where users can create an account to save their personal details for next shopping and keep their purchase histories. A form with built-in function is created with Django Allauth package.
 
 - **Login** (`login.html`)<br>
-The page where users can login the website and access to Profile page to see the personal details and purchase histories. A form and function is created with Django Allauth package.
+The page where users can login the website and access to Profile page to see the personal details and purchase histories. A form with built-in function is created with Django Allauth package.
 
 - **Profile** (`profile.html`)<br>
 The page where users can see personal details and purchase histories.
 
 - **Add Products** (`add_products.html`)<br>
-The page where only *Admin* has an access to it and add a new product on the website.
+The page where only *Admin* has an access and add a new product on the website.
 
 - **Edit Products** (`edit_products.html`)<br>
-The page where only *Admin* has an access to it and edit products.
+The page where only *Admin* has an access and edit products.
 
 - **Base Template** (`base.html`)<br>
-The template `html` document that has core components of html and is used among other html files.
+The `html` template document that has core components of html and is used among other html files.
 
 - **Admin** (`/admin`)<br>
-The admin panel, which is created automatically when you create Django project, and where Admin can take control of products and other data
+The admin panel, which can be created with Django project, where Admin can take control of products and other data
 
 - **CSS** & **JavaScript** (`.css` & `.js`)<br>
 CSS and JavaScript files of those HTML files are created within the same app folder
@@ -129,7 +129,8 @@ Below is the flowchart of the website to show the core relationships between the
 
 — **Back-end** —<br>
 
-Users have options to purchase products as a guest user or account holder user. Guest users cannot save personal details for their next purchase so personal details such as name, email address, shipping address etc belong to their order in the database. Account holder users create an account with their <ins>email address</ins> and <ins>username</ins>, and user name (user profile) is linked with their order so that personal details are retrieved. Each product belongs to a category and that is identified by category Id. Each order is linked with product sku and name.
+Users have options to purchase products as a guest user or account holder user. Guest users cannot save personal details for their next purchase so personal details such as name, email address, shipping address etc belong to their order in the database. Account holder users create an account with their <ins>email address</ins> and <ins>username</ins>, and user name (user profile) is linked with their order so that personal details can be retrieved. Each product belongs to a category and that is identified by category id. Each order is linked with product sku and name.<br>
+SQLite, which is Django built-in database is used for development mode and Heroku Postgre is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode. 
 
 Below is the chart of the database to show the data relationships.
 
@@ -137,11 +138,11 @@ Below is the chart of the database to show the data relationships.
 
 ### Skeleton Plane
 
-The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is fully mobile responsive so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of core pages of the website.
+The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is fully mobile responsive website so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of core pages of the website.
 
 - [Wireframes: Home (`index.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/home.png)
 - [Wireframes: Products (`products.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/products.png)
-- [Wireframes: Product Details (`product/<product_id>.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/products-details.png)
+- [Wireframes: Product Details (`product/<product_id>.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-details.png)
 - [Wireframes: Shopping Cart (`shopping_cart.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopping-cart.png)
 - [Wireframes: Checkout (`checkout.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout.png)
 - [Wireframes: Checkout Success (`checkout_success.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout-success.png)
@@ -149,5 +150,10 @@ The website is created as a desktop-first because it is easy to picture the whol
 - [Wireframes: Login (`login.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/login.png)
 - [Wireframes: Profile (`profile.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
 - [Wireframes: Product Management (`product_management.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
+
+<!-- Image Quality Test -->
+- [Wireframes: Quality Test 900](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/quality-test900.png)
+
+- [Wireframes: Quality Test 1200](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/quality-test1200.png)
 
 <div align="right"><a href="#top">🔝</a></div>
