@@ -122,6 +122,14 @@ CSS and JavaScript files of those HTML files are created within the same app fol
 
 Below is the flowchart of the website to show the core relationships between the pages. (Most of the pages are linked each other subject to permission)<br>
 
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/flowchart.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/front-end-chart.png)<br>
+
+— **Back-end** —<br>
+
+Users have options to purchase products as a guest user or an account holder user. Guest users cannot save their personal details for next purchase so their personal details such as name, email address, shipping address etc belong to their order in the database. Accound holder users create an account with thier <ins>email address</ins> and <ins>username</ins>, and user name (user profile) is linked with their order so that thier personal details are retrieved. Each product belongs to a category and that is identified by category Id. Each order is linked with product sku and name. 
+
+Below is the chart of the database to show the data relationships.
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/back-end-chart.png)<br>
 
 <div align="right"><a href="#top">🔝</a></div>
