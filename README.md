@@ -155,7 +155,7 @@ The website is created as a desktop-first because it is easy to picture the whol
 
 — **Colours** —
 
-This is an e-commerce website that has a lot of products with images containing different colours, therefore **White** (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is **Hunter Green** (#09572A) and this is used for some icons and fonts. **Jet** (#333333) is used as the main font colour, **Golden Yellow** (#FFDF00) is used for buttons and alerts to stand them out. **Flame** is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
+This is an e-commerce website that has a lot of products with images containing different colours, therefore **White** (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is **Hunter Green** (#09572A) and this is used for some icons and fonts. **Jet** (#333333) is used as the main font colour, **Golden Yellow** (#FFDF00) is used for buttons and alerts to stand them out. **Flame** (#E84610) is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/colours.png)
 
@@ -166,3 +166,58 @@ This is an e-commerce website that has a lot of products with images containing 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/roboto.png)
 
 <div align="right"><a href="#top">🔝</a></div>
+
+## FEATURES
+
+### Existing Features
+
+### Features Left To Implement
+
+## TECHNOLOGIES USED
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML) for markup
+- [CSS3](https://en.wikipedia.org/wiki/CSS) for style
+- [Material Design for Bootstrap 5 & 4](https://mdbootstrap.com/) (an open-source toolkit based on Bootstrap for developing Material Design) for the mainframe of the website <!-- MDB or Bootstrap TBC -->
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for interaction
+- [Python3](https://www.python.org/) as a backend programming language
+- [Django](https://www.djangoproject.com/) (an open-source web framework) as the main framework of Python
+- [SQLite](https://www.sqlite.org/index.html) (Django built-in database) as database in development mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as database in production mode
+- [Google Fonts](https://fonts.google.com/) for fonts
+- [Font Awesome](https://fontawesome.com/) for icons
+- [Gitpod](https://www.gitpod.io/) as Integrated Development Environment (IDE)
+- [Git](https://git-scm.com/) for local version control, keeping the files & documents
+- [GitHub](https://github.com/) for online version control and keeping the files & documents
+- [Heroku](https://www.heroku.com/) for deploying the website
+
+## RESOURCES
+
+### General Resources
+
+### Tools
+
+## TESTING
+
+## PROJECT BARRIERS & SOLUTIONS
+
+## VERSION CONTROL
+
+## DEPLOYMENT
+
+## CREDITS
+
+### Code
+
+— **HTML5** —
+
+— **CSS3** —
+
+— **JavaScript** —
+
+— **Python** —
+
+### Contents
+
+### Media
+
+## ACKNOWLEDGEMENTS
