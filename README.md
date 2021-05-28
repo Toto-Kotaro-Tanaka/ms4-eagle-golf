@@ -151,4 +151,18 @@ The website is created as a desktop-first because it is easy to picture the whol
 - [Wireframes: Profile (`profile.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
 - [Wireframes: Product Management (`product_management.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
 
+### Surface Plane
+
+— **Colours** —
+
+This is an e-commerce website that has a lot of products with images containing different colours, therefore **White** (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is **Hunter Green** (#09572A) and this is used for some icons and fonts. **Jet** (#333333) is used as the main font colour, **Golden Yellow** (#FFDF00) is used for buttons and alerts to stand them out. **Flame** is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/colours.png)
+
+— **Typography** —
+
+**Roboto** which is one of the most popular google fonts is used for all the texts in general because good readability is an important factor for users e-commerce websites. Robot is a default font for Android so many users are very familiar with it as well.
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/roboto.png)
+
 <div align="right"><a href="#top">🔝</a></div>
