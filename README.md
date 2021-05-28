@@ -151,9 +151,4 @@ The website is created as a desktop-first because it is easy to picture the whol
 - [Wireframes: Profile (`profile.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
 - [Wireframes: Product Management (`product_management.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
 
-<!-- Image Quality Test -->
-- [Wireframes: Quality Test 900](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/quality-test900.png)
-
-- [Wireframes: Quality Test 1200](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/quality-test1200.png)
-
 <div align="right"><a href="#top">🔝</a></div>
