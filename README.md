@@ -138,23 +138,72 @@ Below is the chart of the database to show the data relationships.
 
 ### Skeleton Plane
 
-The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is fully mobile responsive website so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of core pages of the website.
-
-- [Wireframes: Home (`index.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/home.png)
-- [Wireframes: Products (`products.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/products.png)
-- [Wireframes: Product Details (`product/<product_id>.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-details.png)
-- [Wireframes: Shopping Cart (`shopping_cart.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopping-cart.png)
-- [Wireframes: Checkout (`checkout.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout.png)
-- [Wireframes: Checkout Success (`checkout_success.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout-success.png)
-- [Wireframes: Register (`register.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/register.png)
-- [Wireframes: Login (`login.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/login.png)
-- [Wireframes: Profile (`profile.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
-- [Wireframes: Product Management (`product_management.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
+The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is fully mobile responsive website so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of core pages of the website.<br>
 
 <details>
-<summary>Wireframes: Home (index.html)</summary>
+<summary>Home (index.html)</summary>
 
-![Wireframes: Home](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/home.png)
+![Wireframe: Home](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/home.png)
+</details>
+
+<details>
+<summary>Products (products.html)</summary>
+
+![Wireframe: Products](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/products.png)
+</details>
+
+<details>
+<summary>Product Details (product/product_id.html)</summary>
+
+![Wireframe: Product Details](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-details.png)
+</details>
+
+<details>
+<summary>Shopping Cart (shopping_cart.html)</summary>
+
+![Wireframe: Shopping Cart](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopping-cart.png)
+</details>
+
+<details>
+<summary>Checkout (checkout.html)</summary>
+
+![Wireframe: Checkout](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout.png)
+</details>
+
+<details>
+<summary>Checkout Success (checkout_success.html)</summary>
+
+![Wireframe: Checkout Success](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout-success.png)
+</details>
+
+<details>
+<summary>Register (register.html)</summary>
+
+![Wireframe: Register](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/register.png)
+</details>
+
+<details>
+<summary>Login (login.html)</summary>
+
+![Wireframe: Login](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/login.png)
+</details>
+
+<details>
+<summary>Profile (profile.html)</summary>
+
+![Wireframe: Profile](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
+</details>
+
+<details>
+<summary>Product Management (product_management.html)</summary>
+
+![Wireframe: Product Management](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
+</details>
+
+<details>
+<summary>Page 404 (page_404.html)</summary>
+
+![Wireframe: Page 404](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/page-404.png)
 </details>
 
 ### Surface Plane
