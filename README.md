@@ -151,6 +151,12 @@ The website is created as a desktop-first because it is easy to picture the whol
 - [Wireframes: Profile (`profile.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/profile.png)
 - [Wireframes: Product Management (`product_management.html`)](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-management.png)
 
+<details>
+<summary>Wireframes: Home (index.html)</summary>
+
+![Wireframes: Home](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/home.png)
+</details>
+
 ### Surface Plane
 
 — **Colours** —
@@ -166,6 +172,27 @@ This is an e-commerce website that has a lot of products with images containing 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/roboto.png)
 
 <div align="right"><a href="#top">🔝</a></div>
+
+## WEBSITE DEVELOPMENT PLAN
+This is a full-stack website that contains both front-end, back-end, so many Django apps, features and functions so a good website development plan is required to maximise the efficiency of the development. GitHub project planner, which has a Kanban planner, is used for this project. Below is the summary of core tasks* for the website and more detailed tasks are listed on [GitHub Projects](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/projects/1). This gives not only very clear planning but also making sure nothing is missed during the process.<br>
+**Follow the same process as Code Institute Mini Project, Boutique Ado*
+
+1. Planning The Website with UX5 Planes
+1. Project Set Up (Installing Django, Setting up Project, Testing connection, Creating Django superuser)
+1. Authentication & Authorisation (Installing Allauth, Testing)
+1. The Base Template (Creating base template)
+1. The Home Page (Navigation bar, Header and Footer)
+1. Products Set Up (Creating Products app, Installing data, Filtering & Searching)
+1. The Shopping Cart (Adding and adjusting products)
+1. Toasts (Real time notification)
+1. Checkout with Stripe (Function, Form, Testing Stripe)
+1. Profile (Displaying personal details and order history)
+1. Product Admin (CRUD function for products)
+1. Deployment (AWS, Heroku)
+1. Emails (Setting up email functionality)
+1. Code Refactoring (Checking code, Reviewing the design and updating)
+1. Testing (Testing for HTML, CSS, JavaScript, Python, User Stories, Functions and Features)
+1. Final Check Before Submission
 
 ## FEATURES
 
@@ -189,6 +216,8 @@ This is an e-commerce website that has a lot of products with images containing 
 - [Git](https://git-scm.com/) for local version control, keeping the files & documents
 - [GitHub](https://github.com/) for online version control and keeping the files & documents
 - [Heroku](https://www.heroku.com/) for deploying the website
+
+<div align="right"><a href="#top">🔝</a></div>
 
 ## RESOURCES
 
