@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="An online Golf Shop website that you can see a lot of golf products and purchase them with secure payments">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" type="text/css" />
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="" type="text/css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <title>Eagle Golf {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+
+    {% block corejs %}
+    <!-- MDB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+    <!-- script.js -->
+    <script src=""></script>
+</body>
+
+</html>
