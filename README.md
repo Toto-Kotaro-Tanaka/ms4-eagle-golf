@@ -8,7 +8,7 @@ This is an e-commerce website for golf products that I create for **Milestone Pr
 
 ## USER STORIES
 
-There are two types of users for the website. One is shoppers whose primary goal is to view golf products and purchase them online. The other one is the shop owner whose primary goal is to sell golf products and run business. I am a full-stack web developer and create an e-commerce website to meet the primary goals of the users and their stories.
+There are two types of users for the website. One is shoppers whose primary goal is to view golf products and purchase them online. The other one is the shop owner whose primary goal is to sell golf products and run a business. I am a full-stack web developer and create an e-commerce website to meet the primary goals of the users and their stories.
 
 **<ins>Shopper's User Story</ins>**
 
@@ -48,12 +48,12 @@ Below are the additional functions and features that can improve the website, ho
 | :------------------------------------------     | :--------: | :---------------------: |
 | Displaying number of product images per product |     4      |            2            |
 | (e.g. Image from front, side, back)             |            |                         |
-| Enlarging image when hoovering                  |     3      |            2            |
+| Enlarging image when hovering                   |     3      |            2            |
 | Refinements options*                            |     3      |            2            |
-| More detailed categories and advetisement       |     3      |            2            |
+| More detailed categories and advertisement      |     3      |            2            |
 | Creating account with social media              |     3      |            2            |
 | Product comparison**                            |     3      |            1            |
-| Payment in different currencie                  |     2      |            1            |
+| Payment in different currencies                 |     2      |            1            |
 
 *[Refinements options](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/refinements.png)<br>
 **[Product comparison](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-comparison.png)
@@ -72,53 +72,53 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 - Register page where users can create an account to keep the shipping address saved and to view order histories
 - Login page where users can log in to the page
 - Profile page where users can see the personal details and order histories
-- Logout function that users can safely log out the website and takes users back to home page
+- Logout function that users can safely log out the website and takes users back to the home page
 - Product Management pages (admin only) where admin can add, edit, and delete products
 
 ### Structure Plane
 
 — **Front-end** —
 
-The website consists of below core `HTML` pages and have some `CSS` and `JavaScript` 
+The website consists of below core `HTML` pages and has some `CSS` and `JavaScript` 
 
 - **Home** (`index.html`)<br>
-The main page of the website. There is a logo, search function, navigation to *Group of Categories & Categories*, *Register* & *Login* and *Shopping Cart* pages, a hero image with Shop Now button. There are icons of popular brands that users can click and view the products of the brand. There is a section of "Why Eagle Golf?" which provides a few reasons of buying products with the shop. There is a footer with a form to subscribe to newsletter and some social icons. **The same header and footer are used accross all html files*
+The main page of the website. There is a logo, search function, navigation to *Group of Categories & Categories*, *Register* & *Login* and *Shopping Cart* pages, a hero image with Shop Now button. There are icons of popular brands that users can click and view the products of the brand. There is a section of "Why Eagle Golf?" which provides a few reasons for buying products with the shop. There is a footer with a form to subscribe to newsletter and some social icons. **The same header and footer are used across all html files*
 
 - **Products** (`products.html`, `products/<category_name>.html`)<br>
-The pages where users can see products by group of categories & category and have an access to product details page.
+The pages where users can see products by a group of categories & category and have an access to the product details page.
 
 - **Product Details** (`product/<product_id>.html`)<br>
 The pages where users can see product details, with an option to select criteria (e.g. size) and add it in shopping cart.
 
 - **Shopping Cart** (`shopping_cart.html`)<br>
-The page where users can view all the selected products and details. Users can adjust quantity and there is an option to remove products. There is a button link to checkout page for the final step of shopping. 
+The page where users can view all the selected products and details. Users can adjust the quantity and there is an option to remove products. There is a button link to a checkout page for the final step of shopping. 
 
 - **Checkout** (`checkout.html`)<br>
 The page where users can process the purchase. Strip, which is a secured platform for credit card payment, is used on the website for processing payments.  
 
 - **Checkout Success** (`checkout_success.html`)<br>
-The confirmation page where users is lead to when the payment process is successfully completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
+The confirmation page where users are lead to when the payment process is successfully completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
 
 - **Register** (`register.html`)<br>
-The page where users can create an account to save their personal details for next shopping and keep their purchase histories. A form with built-in function is created with Django Allauth package.
+The page where users can create an account to save their personal details for next shopping and keep their purchase histories. A form with a built-in function is created with Django Allauth package.
 
 - **Login** (`login.html`)<br>
-The page where users can login the website and access to Profile page to see the personal details and purchase histories. A form with built-in function is created with Django Allauth package.
+The page where users can log in the website and access to Profile page to see the personal details and purchase histories. A form with a built-in function is created with Django Allauth package.
 
 - **Profile** (`profile.html`)<br>
 The page where users can see personal details and purchase histories.
 
 - **Add Products** (`add_products.html`)<br>
-The page where only *Admin* has an access and add a new product on the website.
+The page where only *Admin* has access and add a new product on the website.
 
 - **Edit Products** (`edit_products.html`)<br>
-The page where only *Admin* has an access and edit products.
+The page where only *Admin* has access and edit products.
 
 - **Page 404** (`page_404.html`)<br>
-The error page that appears when the page is not found and where users are led to Home page safely.
+The error page that appears when the page is not found and where users are led to the Home page safely.
 
 - **Base Template** (`base.html`)<br>
-The `html` template document that has core components of html and is used among other html files.
+The `html` template document has core components of html and is used among other html files.
 
 - **Admin** (`/admin`)<br>
 The admin panel, which can be created with Django project, where Admin can take control of products and other data
@@ -126,7 +126,7 @@ The admin panel, which can be created with Django project, where Admin can take 
 - **CSS** & **JavaScript** (`.css` & `.js`)<br>
 CSS and JavaScript files of those HTML files are created within the same app folder
 
-Below is the flowchart of the website to show the core relationships between the pages. (Most of the pages are linked each other subject to permission)<br>
+Below is the flowchart of the website to show the core relationships between the pages. (Most of the pages are linked to each other subject to permission)<br>
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/front-end-chart.png)<br>
 
@@ -141,7 +141,7 @@ Below is the chart of the database to show the data relationships.
 
 ### Skeleton Plane
 
-The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is fully mobile responsive website so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of core pages of the website.<br>
+The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is a fully mobile responsive website so shoppers using a mobile phone have no difficulties looking for products and purchase them. Below are the wireframes of the core pages of the website.<br>
 
 <details>
 <summary>Home (index.html)</summary><br>
@@ -219,7 +219,7 @@ This is an e-commerce website that has a lot of products with images containing 
 
 — **Typography** —
 
-**Roboto** which is one of the most popular google fonts is used for all the texts in general because good readability is an important factor for users e-commerce websites. Robot is a default font for Android so many users are very familiar with it as well.
+**Roboto** which is one of the most popular google fonts is used for all texts in general because good readability is an important factor for users e-commerce websites. Robot is a default font for Android so many users are very familiar with it as well.
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/roboto.png)
 
@@ -278,6 +278,8 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 ### Tools
 
 ## TESTING
+
+Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/TESTING.md)**
 
 ## PROJECT BARRIERS & SOLUTIONS
 
