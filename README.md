@@ -1,4 +1,4 @@
-<!-- Website Image goes here -->
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/general/eagle-golf.png)
 
 # Eagle Golf <a name="top"></a>
 
