@@ -1,3 +1,7 @@
+html {
+    background-color:#fff;
+}
+
 body {
     box-sizing: border-box;
     color: #333;
@@ -17,7 +21,7 @@ body {
     margin: 0 auto;
 }
 
-/* -- Header & Navbar -- */
+/* -- base.html Header & Navbar -- */
 .main--header {
     margin-top: 1rem;
 }
@@ -42,4 +46,11 @@ body {
 
 .vl {
     padding-top: 0.5rem;
+}
+
+/* -- index.html -- */
+
+.main--alert {
+    background-color: rgba(255, 223, 0, 0.7);
+    border-radius: 0;
 }
