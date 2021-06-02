@@ -132,11 +132,74 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <!-- Credit: MDB Footer @ https://mdbootstrap.com/docs/standard/navigation/footer/ -->
+    <!-- Footer -->
+    <footer class="text-center bg-light text-muted">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4 social--media">
+                <a class="btn btn-outline-light" href="https://www.facebook.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light" href="https://twitter.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light" href="https://www.instagram.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light" href="https://www.youtube.com/" role="button"
+                    target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            </section>
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto mb-4 mb-md-0">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 col-12 mb-4 mb-md-0">
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form5Example2" class="form-control" />
+                                <label class="form-label" for="form5Example2">Email address</label>
+                            </div>
+                        </div>
+
+                        <div class="col-auto mb-4 mb-md-0">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-success mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <small>
+                    Sing up for newsletters and receive our special offers and weekly golf blog
+                </small>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            &copy; Eagle Golf <span id="copyright"></span>
+        </div>
+    </footer>
+    <!-- /End of Credit -->
+
     {% block corejs %}
     <!-- MDB -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
     <!-- script.js -->
     <script src=""></script>
+    <script>
+        document.getElementById("copyright").textContent = new Date().getFullYear();
+    </script>
     {% endblock %}
 
     {% block extra_js %}

@@ -1,5 +1,5 @@
 html {
-    background-color:#fff;
+    background-color: #fff;
 }
 
 body {
@@ -13,7 +13,9 @@ body {
 
 /* -- General Settings -- */
 
-.form-control {
+.form-control,
+.form-notch-leading,
+.form-notch-trailing {
     border-radius: 0 !important;
 }
 
@@ -21,12 +23,18 @@ body {
     margin: 0 auto;
 }
 
-/* -- base.html Header & Navbar -- */
+.color--333 {
+    color: #333 !important;
+}
+
+/* -- base.html -- */
+/* Header & Navbar */
 .main--header {
     margin-top: 1rem;
 }
 
-.navbar-brand, .main--logo {
+.navbar-brand,
+.main--logo {
     width: 15rem;
 }
 
@@ -46,6 +54,20 @@ body {
 
 .vl {
     padding-top: 0.5rem;
+}
+
+/* Footer */
+.social--media a {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.social--media a:hover {
+    color: #e84610;
+}
+
+.btn-outline-light:hover {
+    background-color: #fbfbfb;
 }
 
 /* -- index.html -- */

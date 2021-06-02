@@ -293,6 +293,8 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 
 — **HTML5** —
 - [MDB Navbar](https://mdbootstrap.com/docs/standard/navigation/navbar/) for navigation bar
+- [Bootstrap Alerts](https://getbootstrap.com/docs/5.0/components/alerts/) for alert
+- [MDB Masks](https://mdbootstrap.com/docs/standard/content-styles/masks/) for masking the hero image
 
 — **CSS3** —
 
@@ -303,5 +305,11 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 ### Contents
 
 ### Media
+
+— **Logo & Favicon** —
+- Logo and Favicon created by me using [canva](https://www.canva.com/)
+
+— **Images** —
+- Hero Image: [Unsplash](https://unsplash.com/) by [Peter Drew](https://unsplash.com/@pjdrewww24) 
 
 ## ACKNOWLEDGEMENTS
