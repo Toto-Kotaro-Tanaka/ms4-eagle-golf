@@ -4,7 +4,8 @@
 {% block content %}
 <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
 <div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="font-weight-bold">&#128;250</span> or more and get a Dozen Golf Balls <span class="font-weight-bold">FREE</span>!
+    Spend <span class="font-weight-bold">&#128;250</span> or more and get a Dozen Golf Balls <span
+        class="font-weight-bold">FREE</span>!
 </div>
 <!-- /End of Credit -->
 <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
@@ -13,4 +14,46 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
 </div>
 <!-- /End of Credit -->
+
+<section>
+    <h2 class="text-center mt-5">Popular Brand</h2>
+    <div class="container text-center">
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/taylormade.png' %}" alt="Popular Brand TaylorMade"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/callaway.png' %}" alt="Popular Brand Callaway"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/titleist.png' %}" alt="Popular Brand Titleist"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/mizuno.png' %}" alt="Popular Brand Mizuno"></a>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/ping.png' %}" alt="Popular Brand PING"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/cobra.png' %}" alt="Popular Brand Cobra"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/srixon.png' %}" alt="Popular Brand Srixon"></a>
+            </div>
+            <div class="col-3">
+                <a href=""><span class="vertical--align--middle"></span><img class="brand--logo"
+                        src="{% static 'images/nike.png' %}" alt="Popular Brand Nike"></a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
