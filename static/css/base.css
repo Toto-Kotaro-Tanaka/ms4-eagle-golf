@@ -12,19 +12,22 @@ body {
 }
 
 /* -- General Settings -- */
-
 .form-control,
 .form-notch-leading,
 .form-notch-trailing {
     border-radius: 0 !important;
 }
 
+.color--333 {
+    color: #333 !important;
+}
+
 .center {
     margin: 0 auto;
 }
 
-.color--333 {
-    color: #333 !important;
+.w--80 {
+    width: 80%;
 }
 
 /* -- base.html -- */
@@ -98,5 +101,9 @@ body {
 .brand--logo {
     vertical-align: middle;
     width: 7rem;
+}
+
+#reasons--for--purchase {
+    background-color: rgba(255, 223, 0, 0.2);
 }
 
