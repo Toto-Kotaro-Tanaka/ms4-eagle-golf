@@ -1,0 +1,47 @@
+[
+    {
+        "pk": 1,
+        "model": "products.brand",
+        "fields": { "name": "taylormade", "friendly_name": "TaylorMade" }
+    },
+    {
+        "pk": 2,
+        "model": "products.brand",
+        "fields": { "name": "callaway", "friendly_name": "Callaway" }
+    },
+    {
+        "pk": 3,
+        "model": "products.brand",
+        "fields": { "name": "titleist", "friendly_name": "Titleist" }
+    },
+    {
+        "pk": 4,
+        "model": "products.brand",
+        "fields": { "name": "mizuno", "friendly_name": "Mizuno" }
+    },
+    {
+        "pk": 5,
+        "model": "products.brand",
+        "fields": { "name": "ping", "friendly_name": "PING" }
+    },
+    {
+        "pk": 6,
+        "model": "products.brand",
+        "fields": { "name": "cobra", "friendly_name": "Cobra" }
+    },
+    {
+        "pk": 7,
+        "model": "products.brand",
+        "fields": { "name": "srixon", "friendly_name": "Srixon" }
+    },
+    {
+        "pk": 8,
+        "model": "products.brand",
+        "fields": { "name": "nike", "friendly_name": "Nike" }
+    },
+    {
+        "pk": 9,
+        "model": "products.brand",
+        "fields": { "name": "other", "friendly_name": "Other" }
+    }
+]

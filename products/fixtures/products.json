@@ -1,0 +1,937 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021001",
+            "category": 1,
+            "brand": 9,
+            "name": "Honma TW747 460 Vizard Driver",
+            "description": "The TW747 460 is hand shaped by master craftsmen in Japan using a persimmon block prototyping process. This oversize 460cc driver offers explosive distance, high launch and low spin for maximum carry distance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 278.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "350991-Honma-TW-747-460-1.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021002",
+            "category": 1,
+            "brand": 1,
+            "name": "TaylorMade SIM MAX Driver",
+            "description": "New for 2020 the TaylorMade SIM is shaped to improve distance performance. Engineered with advanced aerodynamics for more clubhead speed and with a rear weight that improves forgiveness. The MAX has a slightly larger TWIST FACE™ to improve forgiveness on miss-hit shots to give the inherent golfer more confidence to produce long straight distance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 398.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "356515-TaylorMade-SIM-MAX-Driver-1.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021003",
+            "category": 1,
+            "brand": 6,
+            "name": "Cobra Golf King SPEEDZONE Driver",
+            "description": "The new SPEEDZONE is the fastest driver that Cobra Golf has ever produced. Six zones of performance engineered to maximize power output to deliver unrivalled speed and distance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 348.90,
+            "is_discount": "True",
+            "discount_price": 30.00,
+            "image": "355520-Cobra-Golf-King-SpeedZone-Driver-1.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021004",
+            "category": 1,
+            "brand": 2,
+            "name": "Callaway Golf Big Bertha B21 Driver",
+            "description": "Unlock your inner distance with the new Big Bertha B21 with advanced technologies, this is distance any way you swing it.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 438.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "364431-Callaway-Golf-Big-Bertha-B21-Driver-1.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021005",
+            "category": 1,
+            "brand": 3,
+            "name": "Titleist TSi2 Driver",
+            "description": "The TSi 2 driver is for players seeking incredible speed and accuracy across the entire surface of the face.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 569.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "366605-Titleist-TSi2-Driver-1.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021006",
+            "category": 2,
+            "brand": 6,
+            "name": "Cobra Golf RADSPEED ONE Length Hybrid",
+            "description": "Introducing the New RADSPEED hybrid, offering the next generation of innovative Radial Weighting Technology to deliver unprecedented performance. Engineered with the same ONE length shaft as a 7-iron and the same weighting, for more consistency and simplicity.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 219.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "369341-Cobra-Golf-RADSPEED-ONE-Length-Hybrid-1.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021007",
+            "category": 2,
+            "brand": 3,
+            "name": "Titleist TSi2 Hybrid",
+            "description": "This new TSi2 hybrid was is designed to maximize ball speed. But is more forgiving with head-weight adjustability to meet the demands of any player seeking a long iron replacement.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 279.90,
+            "is_discount": "True",
+            "discount_price": 40.00,
+            "image": "388903-Titleist-TSi2-Hybrid-1.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021008",
+            "category": 2,
+            "brand": 9,
+            "name": "Wilson Staff D300 SL Hybrid",
+            "description": "The D300 hybrid defines distance in a golf club. The technologies included are all designed to increase clubhead speed for maximum distance performance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 114.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "358428-Wilson-Staff-Hybrid-1.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021009",
+            "category": 2,
+            "brand": 1,
+            "name": "TaylorMade SIM MAX Hybrid",
+            "description": "New for 2020, the SIM MAX rescue is a new breed of multi-material head design, reinvented with V STEEL™ sole design and TWIST FACE™ Technology to deliver straight distance performance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 168.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "356629-TaylorMade-SIM-MAX-Hybrid-1.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021010",
+            "category": 2,
+            "brand": 5,
+            "name": "PING G410 Hybrid",
+            "description": "This confidence boosting hybrid has a larger profile, and hot maraging steel face, with flight adjustability for more distance performance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 213.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "343544-PING-G410-Hybrid-1.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021011",
+            "category": 3,
+            "brand": 1,
+            "name": "TaylorMade SIM MAX OS Graphite Sand Wedge",
+            "description": "The SIM MAX OS iron is powered by SPEED BRIDGE™ to deliver maximum distance performance. They provide an enhanced feel and have a more forgiving design, with a low CG position to deliver easy high penetrating distance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 112.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "368959-TaylorMade-SIM-MAX-OS-Graphite-Wedge-1.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021012",
+            "category": 3,
+            "brand": 4,
+            "name": "Mizuno Golf MP-20 HMB Steel Iron",
+            "description": "The MP-20 Hot Metal Blade iron concept is inspired by long iron replacements on the tour, a new breed of hybrid irons with a sharper tour-ready profile.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 199.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "351695-Mizuno-MP-20-HMB-Iron-1.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021013",
+            "category": 3,
+            "brand": 3,
+            "name": "Titleist U.510 Graphite Utility Iron",
+            "description": "This premium utility iron offers a high launch and ball speed, with a larger profile to deliver a hybrid performance but with more control.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 249.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "350910-Titleist-U.510-Graphite-Utility-Iron-1.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021014",
+            "category": 3,
+            "brand": 2,
+            "name": "Callaway Golf Steelhead XR Steel Iron",
+            "description": "The Steelhead XR irons deliver the finest combination of speed, forgiveness, distance, and control, even on miss-hit shots. Based on one of Callaway Golf`s most successful irons of all time the Steelhead XR irons have a combination of playability, beautiful shaping, and next-generation club head technology.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 179.90,
+            "is_discount": "True",
+            "discount_price": 30.00,
+            "image": "305558-Callaway-Golf-Steelhead-XR-Steel-Iron-1.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021015",
+            "category": 3,
+            "brand": 1,
+            "name": "TaylorMade M2 Steel Iron",
+            "description": "The TaylorMade M2 2019 Irons are pushing the limits of distance, engineered with advanced materials and technologies to achieve maximum distance without sacrificing height.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 179.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "350300-TaylorMade-M2-Steel-Irons-1.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021016",
+            "category": 4,
+            "brand": 1,
+            "name": "TaylorMade Spider EX White Small Slant Putter",
+            "description": "The 2021 Spider EX has a new head design that improves forgiveness and distance control. With a new alignment system and a new feel shaft which has a softer section of the shaft located 5” from the tip to enhance feel.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 298.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "368887-TaylorMade-Spider-EX-White-Small-Slant-Putter-new1.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021017",
+            "category": 4,
+            "brand": 3,
+            "name": "Titleist Scotty Cameron Phantom X 11 Putter",
+            "description": "This technologically advanced Scotty Cameron putter continues with a multi-material construction, engineered to take your short game to a whole new level of performance.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 469.90,
+            "is_discount": "True",
+            "discount_price":50.00,
+            "image": "388919-Titleist-Scotty-Cameron-Phantom-X-11-Putter-1.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021018",
+            "category": 4,
+            "brand": 6,
+            "name": "Cobra King Grandsport-35 Putter",
+            "description": "Cobra Golf`s first-ever complete range of putters, using 3D printed multi-material to take putter performance and design to another level.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 318.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "391528-Cobra-King-Grandsport-35-Putter-1.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021019",
+            "category": 4,
+            "brand": 1,
+            "name": "TaylorMade Spider S Platinum/White Single Bend Putter",
+            "description": "The new Spider S putter redefines stability in a putter. Constructed using a high-grade 6061 aluminium and tungsten weighting for the highest levels of stability in a Spider putter.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 298.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "368916-TaylorMade-Spider-S-Platinum-White-Single-Bend-Putter-1.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021020",
+            "category": 4,
+            "brand": 9,
+            "name": "Wilson Staff Infinite Bucktown Putter",
+            "description": "Inspired by the company’s home location in Chicago, this putter is christened after a local landmark or neighbourhood. The fantastic looking Wilson Staff putter utilises counterbalanced technology for a more controlled and consistent putting stroke. This modern performance putter is a winged mallet, featuring a heel shafted hosel, and oversize putter grip, with a perforated pattern to improve your grip and feel.",
+            "has_sizes": "False",
+            "is_club": "True",
+            "price": 159.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "343743-Wilson-Staff-Infinite-Bucktown-Putter-1.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021021",
+            "category": 5,
+            "brand": 5,
+            "name": "PING Edison Midlayer",
+            "description": "Play golf in warmth and comfort with this lightweight and stretchy fleece layer from PING. Engineered with stretch to move better with the body and a grid back fabric for lightweight thermal comfort as you perform. It is highly breathable and is water-resistant with stretch binding on the cuffs and hem for a secure and comfortable fit.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 54.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "353102-OxfordBlue-PING-Edison-Windtop-1.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021022",
+            "category": 5,
+            "brand": 8,
+            "name": "Nike Golf Open Pique Polo Shirt",
+            "description": "Elevate your performance levels in total comfort and harmony, with this classic styled polo shirt from Nike Golf. The shirt has rolled-forward shoulder seams, and has a relaxed fit for a more natural range of motion, perfect for any sport where you need to move more freely.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 44.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "331052-Blkrs1-Nike-Polo-Open-Pique-Polo-Shirt.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021023",
+            "category": 5,
+            "brand": 9,
+            "name": "Greg Norman Shark Slub T-Shirt",
+            "description": "This casual cotton slub shirt allows the golfer to relax off course. Soft and comfortable with a classic crew neck and subtle Shark logo that will appeal to most golfers.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 15.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "364222-redmoon-1.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021024",
+            "category": 5,
+            "brand": 9,
+            "name": "Benross Fade Stripe Polo Shirt",
+            "description": "This striped polo shirt has performance in mind for playing at the highest level of golf. Constructed with a stretch polyester fabric for freedom of movement, and is moisture-wicking and breathable for fewer distractions as you perform.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 31.90,
+            "is_discount": "True",
+            "discount_price": 10.00,
+            "image": "367332-Royal-White-Benross-Fade-Stripe-Polo-Shirt-1.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021025",
+            "category": 5,
+            "brand": 9,
+            "name": "Stromberg Circuit Polo Shirt",
+            "description": "At Stromberg the golfers who design the products are dedicated to bring you the best performance. With decades of experience of working with performance fabrics to make your game more enjoyable than ever.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 39.90,
+            "is_discount": "True",
+            "discount_price": 10.00,
+            "image": "367869-circuit-white-blue-1.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021026",
+            "category": 6,
+            "brand": 9,
+            "name": "Greg Norman Merino V Neck Sweater",
+            "description": "Built upon a unique combination of performance, luxury and style, Greg Norman Collection is a leading worldwide marketer of golf-inspired apparel for men and women. Established in 1992, Greg Norman Collection is inspired by one of golf’s legends the man they call 'The Shark.'",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 67.90,
+            "is_discount": "True",
+            "discount_price": 15.00,
+            "image": "391309-Greg-Norman-Merino-V-Neck-Sweater-1.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021027",
+            "category": 6,
+            "brand": 5,
+            "name": "PING Langdale II Sweater",
+            "description": "With its quality materials providing comfort and warmth, the PING Langdale II Sweater is perfect for those chilly days on the golf course.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 45.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "275117-PING-Langdale-II-Sweater-1.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021028",
+            "category": 6,
+            "brand": 8,
+            "name": "Nike Golf Dri-FIT Crew Sweater",
+            "description": "Stay focused and comfortable when playing in the cold, with this soft and warm sweater from Nike Golf. Constructed with a stretch double-knit fabric to ensure your body is protected during a chilly round of golf.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 45.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "349514-PhotoBlue-Nike-Golf-Dri-FIT-Crew-Sweater-1.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021029",
+            "category": 6,
+            "brand": 9,
+            "name": "Under Armour Heather Snap Mock Sweater",
+            "description": "This lightweight fleece sweater has a warm inner brushed interior to keep you comfortable as you play golf. Styled with a textured outer appearance and woven overlay collar for durability, and 4-snap placket for quick and easy changing.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 56.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "342750-Acadamy-Under-Armour-Crestable-SF-Heather-Snap-Mock-Sweater-1.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021030",
+            "category": 6,
+            "brand": 9,
+            "name": "Palm Grove Quarter Zip Sweater Vest",
+            "description": "An excellent 1/4 zip vest which is perfect for layering during the cooler weather of autumn and winter, with an added tonal Palm Grove logo on the left hem.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 10.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "314735-Palm-Grove-Quarter-Zip-Sweater-Vest.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021031",
+            "category": 7,
+            "brand": 5,
+            "name": "PING Bradley Slim Trousers",
+            "description": "Move freely with less distraction during your golf game, with these premium quality slim fitting golf trousers. Engineered with stretch to ensure greater mobility and comfort during the golf swing.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 69.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "326072-Asphalt-PING-Bradley-Slim-Trousers-1.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021032",
+            "category": 7,
+            "brand": 9,
+            "name": "GOLFINO Tech Trousers",
+            "description": "These modern men's stretch golf trousers offer high-wearing comfort and golf fashion. The trousers adapt optimally to your movements when playing golf to give you the freedom to move during any athletic movements associated with playing golf.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 90.90,
+            "is_discount": "True",
+            "discount_price": 10.00,
+            "image": "390418-BluePrint-GOLFINO-Tech-Trousers-1.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021033",
+            "category": 7,
+            "brand": 9,
+            "name": "GOLFINO Print Capri Trousers",
+            "description": "These water-repellent Ladies' golf Capri pants with a fashionable check pattern look perfect out on the golf course. The functional pants feature a large stretch component, enabling a figure-hugging fit and the high degree of freedom of movement needed in your swing.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 149.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "367626-GOLFINO-Print-CapriTrousers-1.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021034",
+            "category": 7,
+            "brand": 9,
+            "name": "Under Armour EU Performance Taper Trousers",
+            "description": "Designed to move with the body, these soft and stretchy woven trousers offer great performance as you play golf. Constructed with a stretch waistband and material, to ensure you can move freely during any movements associated with golf.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 62.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "342761-Pitch-Under-Armour-EU-Performance-Taper-Trousers-1.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021035",
+            "category": 7,
+            "brand": 9,
+            "name": "GOLFINO Blackwatch Trousers",
+            "description": "Men's stretch golf trousers in modern slim fit style. The trousers impress with the typical high-quality GOLFINO workmanship, effective functional material and modern cut. Equipped with two side pockets, two slit pockets and the GOLFINO ball markers.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 55.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "375580-green-golfino-blackwatch-trousers-1.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021036",
+            "category": 8,
+            "brand": 2,
+            "name": "Callaway Golf Apex Pro S Shoes",
+            "description": "This Tour quality golf shoe delivers absolute comfort without sacrificing any performance. The shoes have been constructed using only the finest materials which includes a full grain leather upper material with a waterproof and breathable membrane to keep you dry as you play golf.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 86.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "341485-WhiteBlack-Callaway-Golf-Apex-Pro-S-Shoes-1.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021037",
+            "category": 8,
+            "brand": 9,
+            "name": "adidas Golf Tour 360 XT-SL 2 Shoes",
+            "description": "From misty morning fairways to dew-covered greens, play with confidence in these men's waterproof golf shoes from adidas Golf. This premium shoe has a leather upper which is seam-sealed to lock out moisture, to keep your feet dry and comfortable all day.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 139.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "362865-White-Blue-Mint-adidas-Golf-Tour-360-XT-SL-2-Shoes-1.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021038",
+            "category": 8,
+            "brand": 9,
+            "name": "PUMA Golf IGNITE Fasten8 Shoes",
+            "description": "The all-new IGNITE Fasten8 shoes offer versatile performance, more support, locked-down feel, and all-day comfort.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 107.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "364639-HighRise-Silver-ScubaBlue-PUMA-Golf-IGNITE-FASTEN8-Shoes-1.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021039",
+            "category": 8,
+            "brand": 9,
+            "name": "Rife RF-10 Edge Spikeless Shoes",
+            "description": "This versatile Edge shoe offers 100% waterproof protection to keep you protected as you play golf. It also has a sleek style for the high-street and features a spikeless traction system to offer performance both on and off the golf course.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 74.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "367777-Rife-RF-10-Edge-Spikeless-Shoes-1.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021040",
+            "category": 8,
+            "brand": 9,
+            "name": "Stromberg Tempo Spikeless Shoes",
+            "description": "The Tempo shoes from Stromberg have an athletic profile for performance on and off the golf course.",
+            "has_sizes": "True",
+            "is_club": "False",
+            "price": 91.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "367800-White-RoyalBlue-Stromberg-Tempo-Shoes-1.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021041",
+            "category": 9,
+            "brand": 1,
+            "name": "TaylorMade Select Plus Cart Bag",
+            "description": "This is the ultimate golf bag in performance and style. The bag is made with a lightweight sturdy construction with 15-way top with two cart easy access handles and an integrated putter well divider. The base sits well on any trolley, with key lock to secure to you mode of transportation.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 144.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "338618-TaylorMade-Select-Plus-Cart-Bag-Navy-1.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021042",
+            "category": 9,
+            "brand": 5,
+            "name": "PING Hoofer Lite Limited Edition Stand Bag",
+            "description": "The Hoofer Lite golf bag features a new stylish design for 2021, with lightweight 5lbs construction for increased endurance during your round of golf. The double shoulder straps strap system has a new back puck which simplifies conversion to a single strap.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 199.90,
+            "is_discount": "True",
+            "discount_price": 30.00,
+            "image": "366456-Black-White-PING-Hoofer-Lite-Limited-Edition-Stand-Bag-1.jpg"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021043",
+            "category": 9,
+            "brand": 6,
+            "name": "Cobra Golf ULTRADRY Pro Cart Bag",
+            "description": "Constructed with waterproof material and zips, seam-sealed to prevent moisture from getting inside enabling you to play all season long.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 229.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "389878-PowerRed-Cobra-Golf-Ultradry-Pro--Cart-Bag-1.jpg"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021044",
+            "category": 9,
+            "brand": 3,
+            "name": "Titleist Hybrid 5 Stand Bag",
+            "description": "The Hybrid 5 stand bag offers a lightweight and more comfortable way to organise your golf gear while you play. Designed to last with premium materials and an aluminium stand with a hinged base to provide best in class stability and durability.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 163.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "344148-Black-Titleist-Hybrid-5-Stand-Bag-1.jpg"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021045",
+            "category": 9,
+            "brand": 1,
+            "name": "TaylorMade FlexTech Crossover Stand Bag",
+            "description": "Play golf with added style and ease, with the fantastic FlexTech Crossover bag system. This bag has been designed for use with both carts or as a stand-alone golf bag, with patented smooth release FlexTech stand system, and collapsible base system.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 269.90,
+            "is_discount": "True",
+            "discount_price": 30.00,
+            "image": "358487-BlackBlue-TaylorMade-FlexTech-Crossover-Stand-Bag-1.jpg"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021046",
+            "category": 10,
+            "brand": 1,
+            "name": "TaylorMade TP5 12 Golf Balls 2021",
+            "description": "The most complete Tour ball, engineered with 5 layers to enhance distance, spin and control for the highest level of performance. The 2021 ball is improved with new aerodynamic dimple pattern and larger, more reactive core to maximise carry distance.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 44.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "369588-White-TaylorMade-TP5-12-Ball-Pack-2021-1.jpg"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021047",
+            "category": 10,
+            "brand": 7,
+            "name": "Srixon Distance 10 12 Golf Balls",
+            "description": "The Distance 10 golf ball offers more confidence to play golf, with a soft feel like a more premium golf ball but with great distance on every swing.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 14.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "389692-White-Srixon-Distance-10-12-Ball-Pack-1.jpg"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021048",
+            "category": 10,
+            "brand": 7,
+            "name": "Srixon Soft Feel 12 Golf Balls 2021",
+            "description": "The Soft Feel 2021 golf ball offers more confidence to play golf, with a soft feel like a more premium golf ball but with great distance on every swing.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 22.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "368938-White-Srixon-Soft-Feel-12-Golf-Ball-Pack-2021-1.jpg"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021049",
+            "category": 10,
+            "brand": 3,
+            "name": "Titleist Pro V1x AIM 12 Golf Balls 2021",
+            "description": "The 2021 Titleist Pro V1x offers total performance and features longer distance. It offers even lower long game spin, higher flight, more Drop-and-Stop™ greenside control and a softer feel.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 50.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "389673-White-Titleist-Pro-V1x-AIM-12-Golf-Balls-2021-1.jpg"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021050",
+            "category": 10,
+            "brand": 9,
+            "name": "Wilson Ultra 15 Golf Balls",
+            "description": "This is the longest Ultra ever, optimised with a high energy core to give you the ultimate in distance. It has a 2-piece construction which is optimised with an elliptical 432 dimple pattern to give you outstanding distance performance.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 15.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "357938-White-Wilson-Ultra-15-Ball-Pack-1.jpg"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021051",
+            "category": 11,
+            "brand": 9,
+            "name": "Garmin Approach S12 GPS Watch",
+            "description": "Take away all the distractions from your game and focus on what is important with the Approach S12 GPS watch from Garmin.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 206.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "390699-White-Garmin-Approach-S12-GPS-Watch-1.jpg"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021052",
+            "category": 11,
+            "brand": 9,
+            "name": "Shot Scope V3 Smart GPS Watch",
+            "description": "The new Shot Scope V3 offers the golfer the latest in GPS technology and shot tracking solutions and is leading the industry with GPS accuracy thanks to its 2 GPS antennas. With an accuracy of only 30cms you'll be sure to avoid more hazards and get closer to the pins. The V3 comes packed with over 35,000 courses worldwide and free firmware updates.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 206.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "359803-Red-Shot-Scope-V3-Smart-GPS-Watch-1.jpg"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021053",
+            "category": 11,
+            "brand": 9,
+            "name": "Garmin Approach G30 GPS",
+            "description": "This compact handheld GPS device has been pre-loaded with 40,000 worldwide golf courses, with a 2.3 inch high resolution colour screen and touch screen display. This high-sensitivity GPS displays distance to greens, hazards and doglegs, and even features a big number mode to make it more easy to view valuable information.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 176.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "313017-Garmin-Approach-G30-GPS.jpg"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021054",
+            "category": 11,
+            "brand": 9,
+            "name": "Bushnell TOUR V5 Slim Rangefinder 2021",
+            "description": "This rangefinder will help you get that extra edge on the golf course. The new Tour V5 has a new slimmer design, improved speed, and rangefinding capabilities with BITE technology for easy placement.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 349.90,
+            "is_discount": "False",
+            "discount_price": 0.00,
+            "image": "390697-Black-Grey-Bushnell-V5-TOUR-Rangefinder-2021-1.jpg"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "products.product",
+        "fields": {
+            "sku": "EG2021055",
+            "category": 11,
+            "brand": 9,
+            "name": "Shot Scope Pro L1 Rangefinder",
+            "description": "Play your game of golf with this quick fire laser rangefinder with slope adjusted measurements at the press of a button. This ergonomic handheld laser rangefinder also feature target-lock vibration mode to help you lock on to the flag.",
+            "has_sizes": "False",
+            "is_club": "False",
+            "price": 209.90,
+            "is_discount": "True",
+            "discount_price": 20.00,
+            "image": "366143-Blue-Shot-Scope-Pro-L1-Rangefinder-1.jpg"
+        }
+    }
+]

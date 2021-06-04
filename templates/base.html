@@ -59,8 +59,8 @@
             <div class="col-4 mt-2">
                 <!-- User Account -->
                 <div class="text-reset me-3 inline">
-                    <div class="{% if grand_total %}font-weight-bold color--e84610{% endif %}"><i
-                            class="fas fa-shopping-cart fa-lg icon"></i></div>
+                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}" href="#"><i
+                            class="fas fa-shopping-cart fa-lg icon"></i></a>
                     <p class="{% if grand_total %}font-weight-bold{% endif %}">
                         {% if grand_total %}
                         €{{ grand_total|floatformat:2 }}
