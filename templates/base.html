@@ -48,12 +48,11 @@
             </div>
             <div class="col-4">
                 <!-- Search Form -->
-                <form class="d-flex input-group w-auto pt-3 search--form" method="GET" action="">
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                    <span class="input-group-text border-0" id="search-addon">
-                        <i class="fas fa-search"></i>
-                    </span>
+                <form class="d-flex input-group w-auto pt-3 search--form" method="GET" action="{% url 'products' %}">
+                    <input class="form-control" type="text" name="q" placeholder="Search Products"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-primary" type="submit" data-mdb-ripple-color="dark"><i
+                            class="fas fa-search"></i></button>
                 </form>
             </div>
             <div class="col-4 mt-2">
@@ -152,7 +151,7 @@
     <!-- Footer -->
     <footer class="text-center bg-light text-muted">
         <!-- Grid container -->
-        <div class="container-fluid p-4">
+        <div class="container-fluid p-4 bg--color--fbfbfb">
             <!-- Section: Social media -->
             <section class="mb-4 social--media">
                 <a class="btn btn-outline-light facebook" href="https://www.facebook.com/" role="button" target="_blank"

@@ -16,15 +16,12 @@
 <!-- /End of Credit -->
 
 <section class="text-center container w--80">
-    <h2 class="mt-5">All Products</h2>
+    <h2 class="mt-5">Individual Product</h2>
     <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        {% for product in products %}
         <div class="col">
             <div class="card h-100">
-                <a href="{% url 'product_detail' product.id %}">
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" />
-                </a>
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" />
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                 </div>
@@ -34,7 +31,6 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
     <!-- /End of Credit -->
 </section>
