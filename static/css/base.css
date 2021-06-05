@@ -1,8 +1,9 @@
 html {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 body {
+    background-color: #fff !important;
     box-sizing: border-box;
     color: #333;
     font-family: 'Roboto', sans-serif;
