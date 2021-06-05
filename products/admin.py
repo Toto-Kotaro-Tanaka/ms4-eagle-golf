@@ -26,7 +26,7 @@ class ProductAdmin(admin.ModelAdmin):
         'is_discount',
         'image',
     )
-    
+
     ordering = ('sku',)
 
 admin.site.register(Category, CategoryAdmin)
