@@ -17,7 +17,8 @@
 
     {% block corecss %}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        type="text/css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" />
@@ -29,8 +30,17 @@
 
     {% block extra_css %}
     {% endblock %}
+
+    {% block jquery %}
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    {% endblock %}
+
+    {% block favicon %}
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    {% endblock %}
 
     <title>Eagle Golf {% block extra_title %}{% endblock %}</title>
 </head>
@@ -113,15 +123,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 center">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">Golf Clubs</a>
+                            <a class="nav-link" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">Golf
+                                Clubs</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">Clothing & Shoes</a>
+                            <a class="nav-link"
+                                href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">Clothing & Shoes</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}?category=bags,golf_balls,gps">Golf Bags & Equipment</a>
+                            <a class="nav-link" href="{% url 'products' %}?category=bags,golf_balls,gps">Golf Bags &
+                                Equipment</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
