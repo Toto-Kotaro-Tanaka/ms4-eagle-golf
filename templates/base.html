@@ -68,7 +68,7 @@
             <div class="col-4 mt-2">
                 <!-- User Account -->
                 <div class="text-reset me-3 inline">
-                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}" href="#"><i
+                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}" href="{% url 'view_cart' %}"><i
                             class="fas fa-shopping-cart fa-lg icon"></i></a>
                     <p class="{% if grand_total %}font-weight-bold{% endif %}">
                         {% if grand_total %}
