@@ -83,6 +83,22 @@ body {
     position: absolute;
 }
 
+/* Toasts Messages */
+.message-container {
+    position: fixed;
+    right: 1rem;
+    top: 4.5rem;
+    z-index: 999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: .125 rem;
+}
+
 /* Footer */
 .social--media a {
     color: #333;
@@ -130,4 +146,5 @@ body {
 #reasons--for--purchase {
     background-color: rgba(255, 223, 0, 0.2);
 }
+
 

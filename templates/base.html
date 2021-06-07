@@ -35,6 +35,14 @@
     <!-- JQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS *** This is added as Bootstrap toasts don't work without it. Having these bottom of body don't work -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
     {% endblock %}
 
     {% block favicon %}
@@ -68,8 +76,8 @@
             <div class="col-4 mt-2">
                 <!-- User Account -->
                 <div class="text-reset me-3 inline">
-                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}" href="{% url 'view_cart' %}"><i
-                            class="fas fa-shopping-cart fa-lg icon"></i></a>
+                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}"
+                        href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg icon"></i></a>
                     <p class="{% if grand_total %}font-weight-bold{% endif %}">
                         {% if grand_total %}
                         €{{ grand_total|floatformat:2 }}
@@ -148,16 +156,27 @@
     </header>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
-    {% endblock %}
-
-    {% block postloadjs %}
     {% endblock %}
 
     <!-- Credit: MDB Footer @ https://mdbootstrap.com/docs/standard/navigation/footer/ -->
@@ -216,6 +235,12 @@
         </div>
     </footer>
     <!-- /End of Credit -->
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
 
     {% block corejs %}
     <!-- MDB -->
