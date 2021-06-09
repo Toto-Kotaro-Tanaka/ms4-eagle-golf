@@ -56,29 +56,19 @@
 <body>
     <header class="container-fluid">
         <!-- Credit: MDB Navbar @ https://mdbootstrap.com/docs/standard/navigation/navbar/ -->
-        <!-- Website Logo -->
-        <div class="row mb-3 main--header">
-            <div class="col-4">
-                <a class="navbar-brand mt-2 mt-lg-0" href="{% url 'home' %}">
+        <div class="row main--header">
+            <!-- Website Logo -->
+            <div class="col-6 order-lg-first col-lg-4">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img class="main--logo" src="{% static 'images/logo.png' %}" alt="Website main logo"
                         loading="lazy" />
                 </a>
             </div>
-            <div class="col-4">
-                <!-- Search Form -->
-                <form class="d-flex input-group w-auto pt-3 search--form" method="GET" action="{% url 'products' %}">
-                    <input class="form-control" type="text" name="q" placeholder="Search Products"
-                        aria-label="Search" />
-                    <button class="btn btn-outline-primary" type="submit" data-mdb-ripple-color="dark"><i
-                            class="fas fa-search"></i></button>
-                </form>
-            </div>
-            <div class="col-4 mt-2">
-                <!-- User Account -->
-                <div class="text-reset me-3 inline">
-                    <a class="{% if grand_total %}font-weight-bold color--e84610{% endif %}"
-                        href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg icon"></i></a>
-                    <p class="{% if grand_total %}font-weight-bold{% endif %}">
+            <!-- User Account -->
+            <div class="col-6 order-lg-last col-lg-4">
+                <div class="text-reset me-3 inline float--right">
+                    <a href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg icon"></i></a>
+                    <p class="text-center m-0 {% if grand_total %}font-weight-bold{% endif %}">
                         {% if grand_total %}
                         €{{ grand_total|floatformat:2 }}
                         {% else %}
@@ -86,47 +76,56 @@
                         {% endif %}
                     </p>
                 </div>
-                <a class="dropdown-toggle d-flex align-items-center hidden-arrow inline" href="#"
-                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user fa-lg icon"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <li>
-                        <a class="dropdown-item" href="#">My Profile</a>
-                    </li>
+                <div class="d-none d-lg-inline float--right">
+                    <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                        id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user fa-lg icon"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        {% if request.user.is_authenticated %}
+                        <li>
+                            <a class="dropdown-item" href="#">My Profile</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="d-none d-lg-inline float--right">
+                    {% if request.user.is_authenticated and request.user.is_superuser%}
+                    <a href="#"><i class="fas fa-tools fa-lg icon"></i></a>
                     {% endif %}
-                    <li>
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li>
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                </ul>
-                {% endif %}
-                {% if request.user.is_authenticated and request.user.is_superuser%}
-                <a href="">
-                    <i class="fas fa-tools fa-lg inline icon"></i>
-                </a>
-                {% endif %}
+                </div>
+            </div>
+            <!-- Search Form -->
+            <div class="col-12 order-lg-second col-lg-4">
+                <form class="d-flex input-group pt-2 search--form float--right" method="GET"
+                    action="{% url 'products' %}">
+                    <input class="form-control" type="text" name="q" placeholder="Search Products"
+                        aria-label="Search" />
+                    <button class="btn btn-outline-primary border--width--0" type="submit"
+                        data-mdb-ripple-color="dark"><i class="fas fa-search font-weight-bold color--333"></i></button>
+                </form>
             </div>
         </div>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light font-weight-bold">
             <!-- Container Wrapper -->
             <div class="container-fluid">
                 <!-- Toggle Button -->
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                <button class="navbar-toggler p-0" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
-
                 <!-- Collapsible Wrapper -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 center">
@@ -146,8 +145,28 @@
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">Sale</a>
+                            <a class="nav-link text-uppercase" href="{% url 'products' %}">Sale</a>
                         </li>
+                        {% if request.user.is_authenticated and request.user.is_superuser%}
+                        <li class="d-lg-none">
+                            <a class="nav-link" href="{% url 'products' %}">Product Management</a>
+                        </li>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                        <li class="d-lg-none">
+                            <a class="nav-link" href="#">My Profile</a>
+                        </li>
+                        <li class="d-lg-none">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="d-lg-none">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li class="d-lg-none">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -158,17 +177,17 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
     {% endif %}

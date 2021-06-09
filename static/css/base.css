@@ -18,12 +18,20 @@ body {
     border-radius: 0 !important;
 }
 
+.border--width--0 {
+    border-width: 0;
+}
+
 .color--333 {
     color: #333 !important;
 }
 
 .color--e84610 {
     color: #e84610;
+}
+
+.color--09572a {
+    color: #09572a;
 }
 
 .bg--color--fbfbfb {
@@ -38,6 +46,10 @@ body {
     width: 80%;
 }
 
+.float--right {
+    float: right;
+}
+
 /* -- base.html -- */
 /* Header & Navbar */
 .main--header {
@@ -46,12 +58,11 @@ body {
 
 .navbar-brand,
 .main--logo {
-    width: 15rem;
+    width: 12rem;
 }
 
-.inline {
-    display: inline;
-    float: right;
+.search--form {
+    width: 85%;
 }
 
 .icon {
@@ -60,14 +71,19 @@ body {
     display: inline-flex;
     height: 3rem;
     justify-content: center;
-    width: 3rem;
+    width: 5rem;
 }
 
 .navbar {
     box-shadow: none !important;
 }
 
-.bg-light {
+.btn-outline-primary {
+    margin-left: .1rem !important;
+}
+
+.bg-light,
+.btn-outline-primary:hover {
     background-color: #fff !important;
 }
 
@@ -147,4 +163,12 @@ body {
     background-color: rgba(255, 223, 0, 0.2);
 }
 
+/* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
+@media only screen and (min-width: 48rem) {}
 
+/* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
+@media only screen and (min-width: 62rem) {
+    .search--form {
+        width: 100%;
+    }
+}
