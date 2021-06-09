@@ -295,6 +295,8 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - [MDB Navbar](https://mdbootstrap.com/docs/standard/navigation/navbar/) for navigation bar
 - [Bootstrap Alerts](https://getbootstrap.com/docs/5.0/components/alerts/) for alert
 - [MDB Masks](https://mdbootstrap.com/docs/standard/content-styles/masks/) for masking the hero image
+- [MDB Cards](https://mdbootstrap.com/docs/standard/components/cards/) for displaying products
+- [MDB Footer](https://mdbootstrap.com/docs/standard/navigation/footer/) for footer
 
 — **CSS3** —
 
@@ -310,6 +312,15 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - Logo and Favicon created by me using [canva](https://www.canva.com/)
 
 — **Images** —
-- Hero Image: [Unsplash](https://unsplash.com/) by [Peter Drew](https://unsplash.com/@pjdrewww24) 
+- Hero Image Desktop: [Unsplash](https://unsplash.com/) by [Peter Drew](https://unsplash.com/photos/_9afczTn6bc) 
+- Hero Image Mobile: [Unsplash](https://unsplash.com/) by [Courtney Cook](https://unsplash.com/photos/SsIIw_MET0E) 
+- Popular Brand Logo: [TaylorMade Golf](https://www.taylormadegolf.eu/)
+- Popular Brand Logo: [Callaway Golf](https://www.callawaygolf.com/) 
+- Popular Brand Logo: [Titleist Golf](https://www.titleist.com/) 
+- Popular Brand Logo: [Mizuno Golf](https://mizunogolf.com/us/) 
+- Popular Brand Logo: [PING Golf](https://ping.com/en-us/) 
+- Popular Brand Logo: [Cobra Golf](https://www.cobragolf.com/) 
+- Popular Brand Logo: [Srixon](https://www.srixon.com/) 
+- Popular Brand Logo: [Nike](https://www.nike.com/ie/) 
 
 ## ACKNOWLEDGEMENTS
