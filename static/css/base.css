@@ -167,4 +167,8 @@ body {
     .search--form {
         width: 100%;
     }
+
+    .reasons--for--purchase--tabs {
+        width: 80%;
+    }
 }

@@ -147,6 +147,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" href="{% url 'products' %}">Sale</a>
                         </li>
+                        <hr class="d-lg-none">
                         {% if request.user.is_authenticated and request.user.is_superuser%}
                         <li class="d-lg-none">
                             <a class="nav-link" href="{% url 'products' %}">Product Management</a>

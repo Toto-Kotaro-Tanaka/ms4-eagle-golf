@@ -4,8 +4,8 @@
 {% block content %}
 <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
 <div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls <span
-        class="font-weight-bold text-uppercase">free</span>!
+    Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
+    <span class="font-weight-bold text-uppercase">free</span>!
 </div>
 <!-- /End of Credit -->
 <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
@@ -13,7 +13,8 @@
     <img class="d-none d-md-block w-100" src="{% static 'images/hero-image.jpg' %}" alt="Main image of home page">
     <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile.png' %}" alt="Main image of home page">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
-    <a class="btn text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop Now</a>
+    <a class="btn text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop
+        Now</a>
 </div>
 <!-- /End of Credit -->
 
@@ -21,79 +22,71 @@
     <h2 class="mt-4 mt-lg-5">Popular Brand</h2>
     <div class="row mt-3 mt-md-3 mt-lg-5">
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=taylormade"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/taylormade.png' %}" alt="Popular Brand TaylorMade"></a>
+            <a href="{% url 'products' %}?brand=taylormade"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/taylormade.png' %}" alt="Popular Brand TaylorMade"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=callaway"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/callaway.png' %}" alt="Popular Brand Callaway"></a>
+            <a href="{% url 'products' %}?brand=callaway"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/callaway.png' %}" alt="Popular Brand Callaway"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=titleist"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/titleist.png' %}" alt="Popular Brand Titleist"></a>
+            <a href="{% url 'products' %}?brand=titleist"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/titleist.png' %}" alt="Popular Brand Titleist"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=mizuno"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/mizuno.png' %}" alt="Popular Brand Mizuno"></a>
+            <a href="{% url 'products' %}?brand=mizuno"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/mizuno.png' %}" alt="Popular Brand Mizuno"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=ping"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/ping.png' %}" alt="Popular Brand PING"></a>
+            <a href="{% url 'products' %}?brand=ping"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/ping.png' %}" alt="Popular Brand PING"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=cobra"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/cobra.png' %}" alt="Popular Brand Cobra"></a>
+            <a href="{% url 'products' %}?brand=cobra"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/cobra.png' %}" alt="Popular Brand Cobra"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=srixon"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/srixon.png' %}" alt="Popular Brand Srixon"></a>
+            <a href="{% url 'products' %}?brand=srixon"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/srixon.png' %}" alt="Popular Brand Srixon"></a>
         </div>
         <div class="col-6 col-md-3 p-3">
-            <a href="{% url 'products' %}?brand=nike"><span class="vertical--align--middle"></span><img class="brand--logo"
-                    src="{% static 'images/nike.png' %}" alt="Popular Brand Nike"></a>
+            <a href="{% url 'products' %}?brand=nike"><span class="vertical--align--middle"></span><img
+                    class="brand--logo" src="{% static 'images/nike.png' %}" alt="Popular Brand Nike"></a>
         </div>
     </div>
 </section>
 
-<section id="reasons--for--purchase" class="text-center container-fluid">
-    <h2 class="pt-5 pb-5">Why Shopping with Eagle Golf?</h2>
-    <!-- Credit: MDB Cards @ https://mdbootstrap.com/docs/standard/components/cards/ -->
-    <div class="row">
-        <div class="col-4 d-flex align-items-stretch">
-            <div class="card mb-5 center w--80">
-                <div class="card-header"><i class="fas fa-truck pt-2 fa-2x"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Express Delivery</h5>
-                    <p class="card-text">
-                        We dispatch your product within 2 working days since the order has been made so you won't wait for long till you get it.
-                    </p>
-                    <p>Click Here to see the cost of delivery</p>
-                </div>
-            </div>
+<section id="reasons--for--purchase" class="text-center container-fluid pb-5">
+    <h2 class="mt-4 pt-4 pb-4">Why Shopping with Eagle Golf?</h2>
+    <!-- Credit: MDB Pills @ https://mdbootstrap.com/docs/standard/navigation/pills/ -->
+    <ul class="nav nav-pills nav-justified mb-3 center reasons--for--purchase--tabs" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="pill" href="#ex3-pills-1" role="tab"
+                aria-controls="ex3-pills-1" aria-selected="true">Express Delivery</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex3-tab-2" data-mdb-toggle="pill" href="#ex3-pills-2" role="tab"
+                aria-controls="ex3-pills-2" aria-selected="false">Competitive Prices</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex3-tab-3" data-mdb-toggle="pill" href="#ex3-pills-3" role="tab"
+                aria-controls="ex3-pills-3" aria-selected="false">Secure Payment</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="ex2-content">
+        <div class="tab-pane fade p-lg-4 show active" id="ex3-pills-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+            We dispatch your product within 2 working days since the order has been made so you won't wait for long till
+            you get it. <i class="fas fa-truck"></i>
         </div>
-        <div class="col-4 d-flex align-items-stretch">
-            <div class="card mb-5 center w--80">
-                <div class="card-header"><i class="fas fa-wallet pt-2 fa-2x"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Competitive Prices</h5>
-                    <p class="card-text">
-                        Our prices are not only cheaper than retail prices but also cheaper than other online shops, so you save money for next shopping
-                    </p>
-                </div>
-            </div>
+        <div class="tab-pane p-lg-4 fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+            Our prices are not only cheaper than retail prices but also cheaper than other online shops, so you save
+            money for next shopping. <i class="fas fa-wallet"></i>
         </div>
-        <div class="col-4 d-flex align-items-stretch">
-            <div class="card mb-5 center w--80">
-                <div class="card-header"><i class="fas fa-credit-card pt-2 fa-2x"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Secure Payment</h5>
-                    <p class="card-text">
-                        Our credit card payment is very secure so you do not worry about providing the details online
-                    </p>
-                </div>
-            </div>
+        <div class="tab-pane p-lg-4 fade" id="ex3-pills-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+            Our credit card payment is very secure so you do not worry about providing the details online. <i class="fas fa-credit-card"></i>
         </div>
     </div>
-    <!-- /End of Credit -->
 </section>
+
 {% endblock %}
