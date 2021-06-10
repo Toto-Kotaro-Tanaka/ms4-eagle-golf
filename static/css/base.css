@@ -137,6 +137,10 @@ body {
     background-color: #fbfbfb;
 }
 
+.footer--text {
+    font-size: .8rem;
+}
+
 /* -- index.html -- */
 
 .main--alert {

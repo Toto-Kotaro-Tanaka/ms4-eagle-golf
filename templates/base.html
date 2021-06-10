@@ -130,8 +130,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 center">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">Golf
-                                Clubs</a>
+                            <a class="nav-link" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">Golf Clubs</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
@@ -140,8 +139,7 @@
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}?category=bags,golf_balls,gps">Golf Bags &
-                                Equipment</a>
+                            <a class="nav-link" href="{% url 'products' %}?category=bags,golf_balls,gps">Golf Bags & Equipment</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
@@ -247,10 +245,58 @@
                 </small>
             </section>
         </div>
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            &copy; Eagle Golf <span id="copyright"></span>
-        </div>
+
+        <!-- Section: Links  -->
+        <section class="bg--color--fbfbfb footer--text">
+            <div class="container text-center text-md-start">
+                <!-- Grid row -->
+                <div class="row pt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-golf-ball"></i> Eagle Golf Ltd
+                        </h6>
+                        <p>
+                            Since 2015, we have been selling golf products online to worldwide customers!
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="{% url 'products' %}?category=drivers,hybrids,irons,putters" class="text-reset">Golf Clubs</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes" class="text-reset">Clothing & Shoes</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'products' %}?category=bags,golf_balls,gps" class="text-reset">Golf Bags & Equipment</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> No.17 Fairgreen Business Park, Galway, H91 W30M, Ireland</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            eagle.golf.ms4@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 353 91 777777</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.5);">
+                &copy; Eagle Golf <span id="copyright"></span>
+            </div>
+        </section>
     </footer>
     <!-- /End of Credit -->
 
