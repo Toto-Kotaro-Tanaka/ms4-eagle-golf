@@ -10,7 +10,7 @@
 <!-- /End of Credit -->
 <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
 <div class="bg-image">
-    <img class="d-none d-md-block w-100" src="{% static 'images/hero-image.jpg' %}" alt="Main image of home page">
+    <img class="d-none d-md-block w-100" src="{% static 'images/hero-image.png' %}" alt="Main image of home page">
     <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile.png' %}" alt="Main image of home page">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
     <a class="btn text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop
@@ -62,29 +62,29 @@
     <ul class="nav nav-pills nav-justified mb-3 center reasons--for--purchase--tabs" id="ex1" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="pill" href="#ex3-pills-1" role="tab"
-                aria-controls="ex3-pills-1" aria-selected="true">Express Delivery</a>
+                aria-controls="ex3-pills-1" aria-selected="true">Express Delivery <i class="fas fa-truck d-none d-md-inline"></i></a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="ex3-tab-2" data-mdb-toggle="pill" href="#ex3-pills-2" role="tab"
-                aria-controls="ex3-pills-2" aria-selected="false">Competitive Prices</a>
+                aria-controls="ex3-pills-2" aria-selected="false">Competitive Prices <i class="fas fa-euro-sign d-none d-md-inline"></i></a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="ex3-tab-3" data-mdb-toggle="pill" href="#ex3-pills-3" role="tab"
-                aria-controls="ex3-pills-3" aria-selected="false">Secure Payment</a>
+                aria-controls="ex3-pills-3" aria-selected="false">Secure Payment <i class="fas fa-credit-card d-none d-md-inline"></i></a>
         </li>
     </ul>
 
     <div class="tab-content" id="ex2-content">
         <div class="tab-pane fade p-lg-4 show active" id="ex3-pills-1" role="tabpanel" aria-labelledby="ex3-tab-1">
             We dispatch your product within 2 working days since the order has been made so you won't wait for long till
-            you get it. <i class="fas fa-truck"></i>
+            you get it.
         </div>
         <div class="tab-pane p-lg-4 fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
             Our prices are not only cheaper than retail prices but also cheaper than other online shops, so you save
-            money for next shopping. <i class="fas fa-wallet"></i>
+            money for next shopping.
         </div>
         <div class="tab-pane p-lg-4 fade" id="ex3-pills-3" role="tabpanel" aria-labelledby="ex3-tab-3">
-            Our credit card payment is very secure so you do not worry about providing the details online. <i class="fas fa-credit-card"></i>
+            Our credit card payment is very secure so you do not worry about providing the details online.
         </div>
     </div>
     <!-- /End of Credit -->
