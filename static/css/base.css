@@ -43,6 +43,11 @@ body {
     float: right;
 }
 
+.card {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 ul.no--bullets {
     list-style-type: none;
   }
@@ -191,10 +196,6 @@ ul.no--bullets {
     .category--name {
         font-size: 1.4rem;
     }
-    
-    .card--title {
-        height: 5.5rem;
-    }
 }
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
@@ -209,9 +210,5 @@ ul.no--bullets {
 
     .product--card {
         width: 90%;
-    }
-
-    .card--title {
-        height: 7rem;
     }
 }
