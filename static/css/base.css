@@ -1,8 +1,5 @@
-html {
-    background-color: #fff !important;
-}
-
 body {
+    background-color: #fff !important;
     box-sizing: border-box;
     color: #333;
     font-family: 'Roboto', sans-serif;
@@ -191,6 +188,10 @@ ul.no--bullets {
 
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
+    .category--name {
+        font-size: 1.4rem;
+    }
+    
     .card--title {
         height: 5.5rem;
     }
