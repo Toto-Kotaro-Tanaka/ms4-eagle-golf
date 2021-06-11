@@ -179,6 +179,16 @@ ul.no--bullets {
     border: none;
 }
 
+.btt--button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt--link {
+    cursor: pointer;
+}
+
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
     .card--title {

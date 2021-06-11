@@ -40,11 +40,11 @@
     <div class="mt-3">
         {% for c in current_categories %}
         <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category={{ c.name }}">
-            <span class="p-2 mt-2">{{ c.friendly_name }}</span>
+            <span class="p-1 p-md-3 mt-2">{{ c.friendly_name }}</span>
         </a>
         {% endfor %}
     </div>
-    <div class="sort--selector--field">
+    <div class="mt-3 mt-lg-0 sort--selector--field">
         <i class="fas fa-filter"></i>
         <select id="sort-selector">
             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -86,13 +86,18 @@
         </div>
         {% endfor %}
     </div>
+    <div class="btt--button">
+        <a class="btt--link">
+            <i class="far fa-caret-square-up fa-2x color--e84610"></i>
+        </a>	
+    </div>
 </section>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('.btt-link').click(function (e) {
+    $('.btt--link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
