@@ -28,8 +28,8 @@ class Brand(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=50, null=True, blank=True)
-    name = models.CharField(max_length=100)
+    sku = models.CharField(max_length=30, null=True, blank=True)
+    name = models.CharField(max_length=50)
     description = models.TextField()
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     is_club = models.BooleanField(default=False, null=True, blank=True)

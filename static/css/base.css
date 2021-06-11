@@ -46,6 +46,10 @@ body {
     float: right;
 }
 
+ul.no--bullets {
+    list-style-type: none;
+  }
+
 /* -- base.html -- */
 /* Header & Navbar */
 .main--header {
@@ -142,7 +146,6 @@ body {
 }
 
 /* -- index.html -- */
-
 .main--alert {
     background-color: rgba(255, 223, 0, 0.7);
     border-radius: 0;
@@ -163,8 +166,25 @@ body {
     background-color: rgba(255, 223, 0, 0.2);
 }
 
+/* -- products.html -- */
+.badge:hover {
+    color: #fff !important;
+}
+
+.sort--selector--field {
+    text-align: right;
+}
+
+#sort-selector {
+    border: none;
+}
+
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
-@media only screen and (min-width: 48rem) {}
+@media only screen and (min-width: 48rem) {
+    .card--title {
+        height: 5.5rem;
+    }
+}
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
 @media only screen and (min-width: 62rem) {
@@ -174,5 +194,13 @@ body {
 
     .reasons--for--purchase--tabs {
         width: 80%;
+    }
+
+    .product--card {
+        width: 90%;
+    }
+
+    .card--title {
+        height: 7rem;
     }
 }
