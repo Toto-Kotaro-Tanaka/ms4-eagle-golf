@@ -8,6 +8,7 @@
     <span class="font-weight-bold text-uppercase">free</span>!
 </div>
 <!-- /End of Credit -->
+
 <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
 <div class="bg-image">
     <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products.png' %}"
@@ -89,6 +90,7 @@
     <div class="row center product--card">
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+            <!-- Credit: MDB Cards @ https://mdbootstrap.com/docs/standard/components/cards/ -->
             <div class="card mt-3 p-3">
                 {% if product.image%}
                 <a href="{% url 'product_detail' product.id %}">
@@ -116,6 +118,7 @@
                 </div>
                 <hr>
             </div>
+            <!-- /End of Credit -->
         </div>
         {% endfor %}
     </div>

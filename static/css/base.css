@@ -52,6 +52,14 @@ ul.no--bullets {
     list-style-type: none;
   }
 
+.btn {
+    letter-spacing: 0.1rem;
+}
+
+.btn-primary, .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #1b4da0 !important;
+}
+
 /* -- base.html -- */
 /* Header & Navbar */
 .main--header {
@@ -168,7 +176,7 @@ ul.no--bullets {
     background-color: rgba(255, 223, 0, 0.2);
 }
 
-/* -- products.html -- */
+/* -- products.html & product_details.html -- */
 .badge:hover {
     color: #fff !important;
 }
@@ -189,6 +197,20 @@ ul.no--bullets {
 
 .btt--link {
     cursor: pointer;
+}
+
+.quantity--selector {
+    width: 7rem;
+}
+
+.decrement-qty, 
+.increment-qty {
+    border: none;
+    background-color: #fff;
+}
+
+#id_product_size {
+    width: 3rem;
 }
 
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
