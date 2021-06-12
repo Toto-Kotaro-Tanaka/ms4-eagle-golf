@@ -36,21 +36,21 @@
 
     {% for b in current_brands %}
     {% if b.name == 'taylormade' %}
-    <h2 class="mt-5">TaylorMade</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">TaylorMade</h3>
     {% elif b.name == 'callaway' %}
-    <h2 class="mt-5">Callaway</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Callaway</h3>
     {% elif b.name == 'titleist' %}
-    <h2 class="mt-5">Titleist</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Titleist</h3>
     {% elif b.name == 'mizuno' %}
-    <h2 class="mt-5">Mizuno</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Mizuno</h3>
     {% elif b.name == 'ping' %}
-    <h2 class="mt-5">PING</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">PING</h3>
     {% elif b.name == 'cobra' %}
-    <h2 class="mt-5">Cobra</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Cobra</h3>
     {% elif b.name == 'srixon' %}
-    <h2 class="mt-5">Srixon</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Srixon</h3>
     {% elif b.name == 'nike' %}
-    <h2 class="mt-5">Nike</h2>
+    <h3 class="mt-3 text-muted font-weight-bold">Nike</h3>
     {% endif %}
     {% endfor %}
 
@@ -105,7 +105,8 @@
                     <h5 class="card-title">{{ product.name }}</h5>
                 </div>
                 <ul class="mt-2 list-group list-group-flush no--bullets">
-                    <li class="font-weight-bold h5">{% if product.is_discount %}<s>Price: €{{ product.price }}</s>
+                    <li class="h5 {% if not product.is_discount %}font-weight-bold{% endif %}">
+                        {% if product.is_discount %}<s>Price: €{{ product.price }}</s>
                         {% else %}Price: €{{ product.price }}{% endif %}</li>
                     {% if product.is_discount %}
                     <li class="font-weight-bold h5 text-uppercase">Sale: €{{ product.discount_price }}</li>

@@ -56,7 +56,9 @@ ul.no--bullets {
     letter-spacing: 0.1rem;
 }
 
-.btn-primary, .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.btn-primary, 
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link {
     background-color: #1b4da0 !important;
 }
 
