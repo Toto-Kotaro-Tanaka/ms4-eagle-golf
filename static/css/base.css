@@ -56,6 +56,11 @@ ul.no--bullets {
     letter-spacing: 0.1rem;
 }
 
+.btn-warning {
+    background-color: #ffdf00;
+    color: #333;
+}
+
 .btn-primary, 
 .nav-pills .nav-link.active, 
 .nav-pills .show>.nav-link {
@@ -106,9 +111,13 @@ ul.no--bullets {
 .shop--now--btn {
     background-color: #ffdf00;
     bottom: 3rem;
-    color: #000;
+    color: #333;
     left: 3rem;
     position: absolute;
+}
+
+.shop--now--btn:hover {
+    color: #fff;
 }
 
 /* Toasts Messages */
@@ -211,7 +220,8 @@ ul.no--bullets {
     background-color: #fff;
 }
 
-#id_product_size {
+#id_product_size,
+#id_is_club {
     width: 3rem;
 }
 
