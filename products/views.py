@@ -16,6 +16,7 @@ def all_products(request):
     brands = None
     sort = None
     direction = None
+    sale = False
 
     if request.GET:
         if 'q' in request.GET:
@@ -53,6 +54,10 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
+        if 'sale' in request.GET:
+            sale = True
+            products = products.filter(is_discount=True)
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -61,6 +66,7 @@ def all_products(request):
         'current_categories': categories,
         'current_brands': brands,
         'current_sorting': current_sorting,
+        'sale': sale,
     }
 
     return render(request, 'products/products.html', context)
