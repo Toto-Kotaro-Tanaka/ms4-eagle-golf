@@ -225,6 +225,19 @@ ul.no--bullets {
     width: 3rem;
 }
 
+/* -- cart.html -- */
+.c--1 {
+    width: 20%;
+}
+
+.cart--product--image {
+    width: 100%;
+}
+
+.cart--product--image--mob {
+    width: 50%;
+}
+
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
     .category--name {
