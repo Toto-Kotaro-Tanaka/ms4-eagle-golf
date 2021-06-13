@@ -11,7 +11,7 @@
 
 <section class="text-center container">
     <h2 class="mt-5">Product Details</h2>
-    <div class="card mt-5 mb-5">
+    <div class="card mt-5 mb-5 p-3">
         <div class="row g-0">
             <div class="col-md-4">
                 {% if product.image%}
@@ -44,7 +44,7 @@
                     <div class="row">
                         <div class="col-12 {% if not product.is_club and not product.has_sizes %}col-md-12{% else %}col-md-6{% endif %}">
                             <p><strong>Quantity:</strong></p>
-                            <div class="form-group center quantity--selector">
+                            <div class="form-group mx-auto quantity--selector">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <button id="decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}" class="decrement-qty" >
@@ -66,7 +66,7 @@
                         {% if c %}
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Right | Left:</strong></p>
-                            <select id="id_is_club" class="form-control center" name="product_club">
+                            <select id="id_is_club" class="form-control mx-auto" name="product_club">
                                 <option value="right" selected>R</option>
                                 <option value="leflt">L</option>
                             </select>
@@ -79,7 +79,7 @@
                         {% if product.category.name == "shoes" %}
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Size:</strong></p>
-                            <select id="id_product_size" class="form-control center" name="product_size">
+                            <select id="id_product_size" class="form-control mx-auto" name="product_size">
                                 <option value="6">6</option>
                                 <option value="6.5">6.5</option>
                                 <option value="7">7</option>
@@ -96,7 +96,7 @@
                         {% else %}
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Size:</strong></p>
-                            <select id="id_product_size" class="form-control center" name="product_size">
+                            <select id="id_product_size" class="form-control mx-auto" name="product_size">
                                 <option value="xs">XS</option>
                                 <option value="s">S</option>
                                 <option value="m" selected>M</option>
