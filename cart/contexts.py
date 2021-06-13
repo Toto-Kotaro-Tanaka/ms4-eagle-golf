@@ -41,14 +41,22 @@ def cart_contents(request):
 
     grand_total = delivery + total
 
+    if total < settings.FREE_GOLF_BALLS_THRESHOLD:
+        free_golf_balls_delta = settings.FREE_GOLF_BALLS_THRESHOLD - total
+    else:
+        free_golf_balls_delta = 0
+
+    grand_total = delivery + total
+
     context = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
-        'free_golf_balls_threshold': settings.FREE_GOLF_BALLS_THRESHOLD,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'free_golf_balls_delta': free_golf_balls_delta,
+        'free_golf_balls_threshold': settings.FREE_GOLF_BALLS_THRESHOLD,
         'grand_total': grand_total,
     }
 

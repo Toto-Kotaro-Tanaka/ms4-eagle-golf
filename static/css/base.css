@@ -31,6 +31,10 @@ body {
     color: #09572a;
 }
 
+.color--1b4da0 {
+    color: #1b4da0;
+}
+
 .bg--color--fbfbfb {
     background-color: #fbfbfb;
 }
@@ -39,8 +43,20 @@ body {
     margin: 0 auto;
 }
 
+.w--70 {
+    width: 70%;
+}
+
 .float--right {
     float: right;
+}
+
+.text--left {
+    text-align: left;
+}
+
+.text--right {
+    text-align: right;
 }
 
 .card {
@@ -65,6 +81,10 @@ ul.no--bullets {
 .nav-pills .nav-link.active, 
 .nav-pills .show>.nav-link {
     background-color: #1b4da0 !important;
+}
+
+.pointer {
+    cursor:pointer;
 }
 
 /* -- base.html -- */
@@ -183,7 +203,8 @@ ul.no--bullets {
     width: 7rem;
 }
 
-#reasons--for--purchase {
+#reasons--for--purchase,
+.prices--display {
     background-color: rgba(255, 223, 0, 0.2);
 }
 
@@ -236,6 +257,14 @@ ul.no--bullets {
 
 .cart--product--image--mob {
     width: 50%;
+}
+
+.qty--update {
+    margin-right: 0.5rem;
+}
+
+.qty--remove {
+    margin-left: 0.5rem;
 }
 
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
