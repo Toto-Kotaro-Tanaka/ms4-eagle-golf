@@ -4,8 +4,8 @@
 {% block content %}
 <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
 <div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
-    <span class="font-weight-bold text-uppercase">free</span>!
+    Spend <span class="fw-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
+    <span class="fw-bold text-uppercase">free</span>!
 </div>
 <!-- /End of Credit -->
 
@@ -13,6 +13,7 @@
     <h2 class="mt-5">Product Details</h2>
     <div class="card mt-5 mb-5 p-3">
         <div class="row g-0">
+            <!-- Product Image -->
             <div class="col-md-4">
                 {% if product.image%}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -24,46 +25,52 @@
                 </div>
                 {% endif %}
             </div>
+            <!-- Product Details -->
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold">{{ product.name }}</h5>
-                    <p><small class="text-muted">Product Category: 
-                        {{ product.category.friendly_name }} | Product ID: {{ product.sku }}</small></p>
+                    <h5 class="card-title fw-bold">{{ product.name }}</h5>
+                    <p class="text-muted small">Product Category: {{ product.category.friendly_name }} | Product ID: {{ product.sku }}</p>
                     <p class="card-text">{{ product.description }}</p>
-                    <p class="card-text h5 {% if not product.is_discount %}font-weight-bold{% endif %}">
-                        {% if product.is_discount %}<s>Price: &#128;{{ product.price }}</s>
-                        {% else %}Price: &#128;{{ product.price }}{% endif %}</p>
+                    <p class="card-text h5 {% if not product.is_discount %}fw-bold{% endif %}">
+                        {% if product.is_discount %}
+                        <s>Price: &#128;{{ product.price }}</s>
+                        {% else %}
+                        Price: &#128;{{ product.price }}
+                        {% endif %}
+                    </p>
                     {% if product.is_discount %}
-                    <p class="card-text h5 text-uppercase font-weight-bold">Sale: &#128;{{ product.discount_price }}</p>
+                    <p class="card-text h5 text-uppercase fw-bold">Sale: &#128;{{ product.discount_price }}</p>
                     {% endif %}
-                    <p><small class="text-muted"></small></p>
                 </div>
-
+                <!-- Product Quantity Form -->
                 <form class="form" method="POST" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-12 {% if not product.is_club and not product.has_sizes %}col-md-12{% else %}col-md-6{% endif %}">
-                            <p><strong>Quantity:</strong></p>
+                            <p class="fw-bold">Quantity:</p>
                             <div class="form-group mx-auto quantity--selector">
                                 <div class="input-group">
+                                    <!-- Decrement Button -->
                                     <div class="input-group-prepend">
-                                        <button id="decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}" class="decrement-qty" >
+                                        <button id="decrement-qty_{{ product.id }}" class="decrement-qty" data-item_id="{{ product.id }}">
                                             <i class="fas fa-minus pt-2 fa-lg"></i>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="20" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <!-- Quantity Input Box -->
+                                    <input id="id_qty_{{ product.id }}" class="form-control qty_input" type="number" name="quantity"
+                                            value="1" min="1" max="20" data-item_id="{{ product.id }}">
+                                    <!-- Increment Button -->
                                     <div class="input-group-append">
-                                        <button id="increment-qty_{{ product.id }}" data-item_id="{{ product.id }}" class="increment-qty" >
+                                        <button id="increment-qty_{{ product.id }}" class="increment-qty" data-item_id="{{ product.id }}">
                                             <i class="fas fa-plus pt-2 fa-lg"></i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         {% with product.is_club as c %}
                         {% if c %}
+                        <!-- Golf Club Right or Left -->
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Right | Left:</strong></p>
                             <select id="id_is_club" class="form-control mx-auto" name="product_club">
@@ -77,6 +84,7 @@
                         {% with product.has_sizes as s %}
                         {% if s %}
                         {% if product.category.name == "shoes" %}
+                        <!-- Product Shoe Size -->
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Size:</strong></p>
                             <select id="id_product_size" class="form-control mx-auto" name="product_size">
@@ -94,6 +102,7 @@
                             </select>
                         </div>
                         {% else %}
+                        <!-- Product Clothe Size -->
                         <div class="col-12 col-md-6 mt-3 mt-md-0">
                             <p><strong>Size:</strong></p>
                             <select id="id_product_size" class="form-control mx-auto" name="product_size">
@@ -107,13 +116,12 @@
                         {% endif %}
                         {% endif %}
                         {% endwith %}
-
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-warning mt-5 m-2">
-                                    <i class="fas fa-chevron-left"></i>
+                            <a class="btn btn-warning mt-5 m-2" href="{% url 'products' %}">
+                                <i class="fas fa-chevron-left"></i>
                                 <span>Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-success m-2" value="Add to Shopping Cart">
+                            <input class="btn btn-success m-2" type="submit" value="Add to Shopping Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
@@ -123,7 +131,6 @@
     </div>
 </section>
 {% endblock %}
-
 
 {% block postloadjs %}
 {{ block.super }}
