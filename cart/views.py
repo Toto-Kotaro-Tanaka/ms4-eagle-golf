@@ -28,13 +28,13 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {cart[item_id]["items_by_size"][size]}')
+                messages.success(request, f'Updated {product.name} [size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added size {size.upper()} {product.name} to the shopping cart')
+                messages.success(request, f'Added {product.name} [size: {size.upper()}] to the shopping cart')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upper()} {product.name} to the shopping cart')
+            messages.success(request, f'Added {product.name} [size: {size.upper()}] to the shopping cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
@@ -60,12 +60,12 @@ def adjust_cart(request, item_id):
     if size:
         if quantity > 0:
             cart[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {cart[item_id]["items_by_size"][size]}')
+            messages.success(request, f'Updated {product.name} [size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from the shopping cart')
+            messages.success(request, f'Removed {product.name} [size: {size.upper()}] from the shopping cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
@@ -92,7 +92,7 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from the shopping cart')
+            messages.success(request, f'Removed {product.name} [size: {size.upper()}] from the shopping cart')
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from the shopping cart')

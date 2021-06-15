@@ -39,6 +39,10 @@ body {
     background-color: #fbfbfb;
 }
 
+.bg--color--09572a {
+    background-color: #09572a;
+}
+
 .w--70 {
     width: 70%;
 }
@@ -129,19 +133,33 @@ ul.no--bullets {
 }
 
 /* Toasts Messages */
-.message-container {
+.message--container {
     position: fixed;
-    right: 1rem;
-    top: 4.5rem;
-    z-index: 999999999;
+    z-index: 999;
 }
 
-.custom-toast {
+.toast-header {
+    border-bottom: none;
+}
+
+.custom--toast {
     overflow: visible;
+    width: 98%;
 }
 
-.toast-capper {
-    height: .125 rem;
+.toast--success--body {
+    border: 0.1rem solid #09572a;
+}
+
+.close--btn {
+    position: absolute;
+    right: 2rem;
+}
+
+.bag--notification--wrapper {
+    max-height: 12rem;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Footer */
@@ -171,7 +189,7 @@ ul.no--bullets {
 }
 
 .footer--text {
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 /* -- index.html -- */
@@ -210,9 +228,8 @@ ul.no--bullets {
 }
 
 .btt--button {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0.625rem;
+    right: 0.625rem;
 }
 
 .btt--link {
@@ -264,6 +281,13 @@ ul.no--bullets {
 @media only screen and (min-width: 48rem) {
     .category--name {
         font-size: 1.4rem;
+    }
+
+    .message--container {
+        position: fixed;
+        right: 1rem;
+        top: auto;
+        width: 25rem;
     }
 }
 
