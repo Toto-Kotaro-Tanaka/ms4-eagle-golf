@@ -18,7 +18,7 @@ def add_to_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
-    golf_club = None
+    club = None
 
     if 'product_size' in request.POST:
         size = request.POST['product_size']
@@ -45,37 +45,6 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
-
-
-# ------- Check -----
-
-    if 'product_club' in request.POST:
-        golf_club = request.POST['product_club']
-    cart = request.session.get('cart', {})
-
-    if golf_club:
-        if item_id in list(cart.keys()):
-            if golf_club in cart[item_id]['items_club'].keys():
-                cart[item_id]['items_club'][golf_club] += quantity
-                messages.success(request, f'Updated Club {golf_club.upper()} {product.name} to {cart[item_id]["items_club"][golf_club]}')
-            else:
-                cart[item_id]['items_club'][golf_club] = quantity
-                messages.success(request, f'Added Club {golf_club.upper()} {product.name} to the shopping cart')
-        else:
-            cart[item_id] = {'items_club': {golf_club: quantity}}
-            messages.success(request, f'Added Club {golf_club.upper()} {product.name} to the shopping cart')
-    else:
-        if item_id in list(cart.keys()):
-            cart[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
-        else:
-            cart[item_id] = quantity
-            messages.success(request, f'Added {product.name} to the shopping cart')
-
-    request.session['cart'] = cart
-    return redirect(redirect_url)
-
-# ------- Check -----
 
 
 def adjust_cart(request, item_id):

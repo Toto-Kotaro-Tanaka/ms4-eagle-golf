@@ -59,30 +59,31 @@
                                                     </button>
                                                 </div>
                                                 <!-- Quantity Input Box -->
-                                                <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" type="number"              
-                                                        name="quantity" value="1" min="1" max="20" data-item_id="{{ item.item_id }}">
+                                                <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" 
+                                                        type="number" name="quantity" value="{{ item.quantity }}" 
+                                                        min="1" max="9" data-item_id="{{ item.item_id }}">
                                                  <!-- Increment Button -->
                                                 <div class="input-group-append">
                                                     <button id="increment-qty_{{ item.item_id }}" class="increment-qty"
                                                         data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
                                                     </button>
                                                 </div>
+                                                <!-- Golf Club Right or Left -->
+                                                {% if item.product.is_club %}
+                                                <input type="hidden" name="product_club" value="{{ item.club }}">
+                                                {% endif %}
+                                                 <!-- Product Size -->
+                                                {% if item.product.has_sizes %}
+                                                <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Golf Club Right or Left -->
-                                    {% if item.prudct.is_club %}
-                                    <input type="hidden" name="product_club" value="{ item.golf_club }">
-                                    {% endif %}
-                                    <!-- Product Size -->
-                                    {% if item.prudct.has_sizes %}
-                                    <input type="hidden" name="product_size" value="{ item.size }">
-                                    {% endif %}
                                 </div>
                             </form>
                             <!-- Product Quantity Update & Remove Options -->
                             <a class="update-link text-info small pointer qty--update"><span class="color--1b4da0">Update</span></a>
-                            <a id="remove_{{ item.item_id }}" class="remove-item text-danger pointer qty--remove"
+                            <a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
                                 data-product_size="{{ item.size }}"><span class="color--e84610">Remove</span></a>
                         </td>
                         <td>
@@ -171,30 +172,31 @@
                                                 </button>
                                             </div>
                                             <!-- Quantity Input Box -->
-                                            <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" type="number"
-                                                    name="quantity" value="1" min="1" max="20" data-item_id="{{ item.item_id }}">
+                                            <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" 
+                                                type="number" name="quantity" value="{{ item.quantity }}" 
+                                                min="1" max="9" data-item_id="{{ item.item_id }}">
                                             <!-- Increment Button -->
                                             <div class="input-group-append">
                                                 <button id="increment-qty_{{ item.item_id }}" class="increment-qty"
                                                     data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
                                                 </button>
                                             </div>
+                                            <!-- Golf Club Right or Left -->
+                                            {% if item.product.is_club %}
+                                            <input type="hidden" name="product_club" value="{{ item.club }}">
+                                            {% endif %}
+                                             <!-- Product Size -->
+                                            {% if item.product.has_sizes %}
+                                            <input type="hidden" name="product_size" value="{{ item.size }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Golf Club Right or Left -->
-                                {% if item.prudct.is_club %}
-                                <input type="hidden" name="product_club" value="{ item.golf_club }">
-                                {% endif %}
-                                <!-- Product Size -->
-                                {% if item.prudct.has_sizes %}
-                                <input type="hidden" name="product_size" value="{ item.size }">
-                                {% endif %}
                             </div>
                         </form>
                         <!-- Product Quantity Update & Remove Options -->
                         <a class="update-link text-info small pointer qty--update"><span class="color--1b4da0">Update</span></a>
-                        <a id="remove_{{ item.item_id }}" class="remove-item text-danger pointer qty--remove"
+                        <a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
                             data-product_size="{{ item.size }}"><span class="color--e84610">Remove</span></a>
                     </div>
                     <!-- Order Summary Section -->

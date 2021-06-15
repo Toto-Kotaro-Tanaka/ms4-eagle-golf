@@ -1,10 +1,10 @@
 <script type="text/javascript">
 
-    // Disable +/- buttons outside 1-20 range
+    // Disable +/- buttons outside 1-9 range
     function handleEnableDisable(itemId) {
         let currentValue = parseInt($(`#id_qty_${itemId}`).val());
         let minusDisabled = currentValue < 2;
-        let plusDisabled = currentValue > 21;
+        let plusDisabled = currentValue > 8;
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
@@ -41,6 +41,7 @@
        let itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
     });
+
 </script>
 
 
