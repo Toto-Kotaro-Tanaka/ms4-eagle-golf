@@ -43,6 +43,10 @@ body {
     background-color: #09572a;
 }
 
+.bg--color--e84610 {
+    background-color: #e84610;
+}
+
 .w--70 {
     width: 70%;
 }
@@ -134,12 +138,10 @@ ul.no--bullets {
 
 /* Toasts Messages */
 .message--container {
+    left: 0.2rem;
     position: fixed;
+    right: 0.2rem;
     z-index: 999;
-}
-
-.toast-header {
-    border-bottom: none;
 }
 
 .custom--toast {
@@ -149,6 +151,14 @@ ul.no--bullets {
 
 .toast--success--body {
     border: 0.1rem solid #09572a;
+}
+
+.toast--error--body {
+    border: 0.1rem solid #e84610;
+}
+
+.toast--error {
+    width: 100%;
 }
 
 .close--btn {
@@ -229,6 +239,7 @@ ul.no--bullets {
 
 .btt--button {
     bottom: 0.625rem;
+    position: fixed;
     right: 0.625rem;
 }
 
@@ -284,6 +295,7 @@ ul.no--bullets {
     }
 
     .message--container {
+        left: auto;
         position: fixed;
         right: 1rem;
         top: auto;
