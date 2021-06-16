@@ -2,13 +2,13 @@
 {% load static %}
 {% load cart_tools %}
 
-
 {% block content %}
 <section class="container p-3">
     <h2 class="mt-5 mb-5 text-center">Checkout</h2>
     <hr>
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <!-- Order Summary -->
             <p class="text-muted text-center mb-3">Order Summary ({{ product_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
@@ -45,6 +45,7 @@
             </div>
             {% endfor %}
             <hr class="mt-2 mb-2">
+            <!-- Order Total -->
             <div class="row prices--display pt-3 pb-3">
                 <div class="col-6 offset-3">
                     <p class="my-0">Order Total:</p>
@@ -58,11 +59,12 @@
                 </div>
             </div>
         </div>
-
+        <!-- Payment -->
         <div class="col-12 col-lg-6">
             <p class="text-muted text-center">Payment</p>
             <p class="text-muted text-center mt-3">Please fill out the form below to complete your order</p>
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <!-- Personal Details Form -->
+            <form id="payment-form" method="POST" action="{% url 'checkout' %}">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
@@ -83,21 +85,21 @@
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
-                            <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            <label class="form-check-label mt-3 text-end" for="id-save-info">
+                                <a class="fw-bold" href="{% url 'account_signup' %}">Register</a> or 
+                                <a class="fw-bold" href="{% url 'account_login' %}">Login</a> to save this information for next shopping
                             </label>
                         {% endif %}
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
-                    <div class="mb-3" id="card-element"></div>
-                    <!-- Used to display form errors -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <legend class="fieldset-label small text-black px-2 w-auto">Credit Card Details</legend>
+                    <!-- A Stripe Card Element -->
+                    <div id="card-element" class="mb-3"></div>
+                    <!-- Display Form Errors -->
+                    <div id="card-errors" class="mb-3 color--e84610" role="alert"></div>
                 </fieldset>
-
+                <!-- Adjust Cart and Complete Order Buttons -->
                 <div class="submit-button text-center text-lg-end mt-5 mb-2">  
                     <a href="{% url 'view_cart' %}" class="btn btn-warning m-2">
                         <i class="fas fa-chevron-left"></i>
