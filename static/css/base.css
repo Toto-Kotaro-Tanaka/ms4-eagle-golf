@@ -47,6 +47,14 @@ body {
     background-color: #e84610;
 }
 
+.bg--color--1b4da0 {
+    background-color: #1b4da0;
+}
+
+.bg--color--f67aff {
+    background-color: #f67aff;
+}
+
 .w--70 {
     width: 70%;
 }
@@ -155,6 +163,14 @@ ul.no--bullets {
 
 .toast--error--body {
     border: 0.1rem solid #e84610;
+}
+
+.toast--info--body {
+    border: 0.1rem solid #1b4da0;
+}
+
+.toast--warning--body {
+    border: 0.1rem solid #f67aff;
 }
 
 .toast--error {
