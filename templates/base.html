@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
     {% endblock %}
 
+    {% block stripe %}
+    <!-- Stripe js-->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endblock %}
+
     {% block extra_css %}
     {% endblock %}
 
@@ -303,6 +308,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
     <!-- script.js -->
     <script src=""></script>
+    <!-- Copyright year -->
     <script>
         document.getElementById("copyright").textContent = new Date().getFullYear();
     </script>
