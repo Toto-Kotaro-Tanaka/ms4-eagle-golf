@@ -282,6 +282,7 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/TESTING.md)**
 
 ## PROJECT BARRIERS & SOLUTIONS
+<!-- Stripe payment, intent issue that sometimes get internal server error 500 and paymentn doesn't go through -->
 
 ## VERSION CONTROL
 
