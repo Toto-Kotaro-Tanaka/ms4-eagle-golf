@@ -1,8 +1,11 @@
-.StripeElement,
+.StripeElement {
+  padding: 0.625rem 0.75rem;
+}
+
 .stripe--style--input {
   box-sizing: border-box;
   height: 2.5rem;
-  padding: 0.625rem 0.75rem;
+  padding: 0 0 0 1rem;
   border: 1px solid transparent;
   border-radius: 0px;
   background-color: #fff;
@@ -31,6 +34,16 @@
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+select,
+select option {
+  color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
 }
 
 #loading-overlay {
