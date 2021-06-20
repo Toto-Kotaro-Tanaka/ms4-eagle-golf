@@ -194,7 +194,12 @@ ul.no--bullets {
 
 /* Allauth */
 #div_id_login,
-#div_id_password {
+#div_id_password,
+#div_id_email,
+#div_id_email2,
+#div_id_username,
+#div_id_password1,
+#div_id_passwprd2 {
     margin-bottom: 1.5rem;
 }
 
@@ -328,7 +333,8 @@ ul.no--bullets {
         width: 25rem;
     }
 
-    .login {
+    .login,
+    .signup {
         width: 50%;
     }
 }
@@ -351,7 +357,8 @@ ul.no--bullets {
         width: 75%;
     }
 
-    .login {
+    .login,
+    .signup {
         width: 30%;
     }
 }
