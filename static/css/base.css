@@ -335,7 +335,8 @@ ul.no--bullets {
 
     .login,
     .signup,
-    .password_reset {
+    .password_reset,
+    .verification--p {
         width: 50%;
     }
 }
