@@ -192,6 +192,12 @@ ul.no--bullets {
     overflow-y: auto;
 }
 
+/* Allauth */
+#div_id_login,
+#div_id_password {
+    margin-bottom: 1.5rem;
+}
+
 /* Footer */
 .social--media a {
     color: #333;
@@ -321,6 +327,10 @@ ul.no--bullets {
         top: auto;
         width: 25rem;
     }
+
+    .login {
+        width: 50%;
+    }
 }
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
@@ -339,5 +349,9 @@ ul.no--bullets {
 
     .w--75 {
         width: 75%;
+    }
+
+    .login {
+        width: 30%;
     }
 }
