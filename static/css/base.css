@@ -334,7 +334,8 @@ ul.no--bullets {
     }
 
     .login,
-    .signup {
+    .signup,
+    .password_reset {
         width: 50%;
     }
 }
@@ -358,7 +359,8 @@ ul.no--bullets {
     }
 
     .login,
-    .signup {
+    .signup,
+    .password_reset {
         width: 30%;
     }
 }
