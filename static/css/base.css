@@ -351,8 +351,8 @@ ul.no--bullets {
     .login,
     .signup,
     .password_reset,
-    .verification--p,
-    .email--confirm {
+    .auth--p,
+    .auth--div {
         width: 50%;
     }
 }
