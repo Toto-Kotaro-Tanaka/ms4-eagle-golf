@@ -203,10 +203,25 @@ ul.no--bullets {
     margin-bottom: 1.5rem;
 }
 
+.invalid-feedback {
+    position: relative;
+}
+
+.alert {
+    border-radius: 0 !important;
+}
+
 /* Footer */
 .social--media a {
     color: #333;
     font-size: 1.5rem;
+}
+
+.facebook,
+.twitter,
+.instagram,
+.youtube {
+    padding: .5rem 1.3rem .3rem;
 }
 
 .facebook:hover {
