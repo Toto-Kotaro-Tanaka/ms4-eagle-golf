@@ -283,6 +283,8 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 
 ## PROJECT BARRIERS & SOLUTIONS
 <!-- Stripe payment, intent issue that sometimes get internal server error 500 and paymentn doesn't go through -->
+<!-- Stripe payment, webhook unauthorised issue -->
+<!-- Saved address not showing properly -->
 
 ## VERSION CONTROL
 
