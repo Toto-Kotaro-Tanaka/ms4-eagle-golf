@@ -356,7 +356,8 @@ ul.no--bullets {
     .signup,
     .password_reset, /* check this class */
     .auth--p,
-    .auth--div {
+    .auth--div,
+    .add--product {
         width: 50%;
     }
 }

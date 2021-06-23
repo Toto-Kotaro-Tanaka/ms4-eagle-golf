@@ -106,7 +106,7 @@
                 </div>
                 <div class="d-none d-lg-inline float--right">
                     {% if request.user.is_authenticated and request.user.is_superuser%}
-                    <a href="#"><i class="fas fa-tools fa-lg icon"></i></a>
+                    <a href="{% url 'add_product' %}"><i class="fas fa-tools fa-lg icon"></i></a>
                     {% endif %}
                 </div>
             </div>
@@ -153,7 +153,7 @@
                         <hr class="d-lg-none">
                         {% if request.user.is_authenticated and request.user.is_superuser%}
                         <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'products' %}">Product Management</a>
+                            <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
                         </li>
                         {% endif %}
                         {% if request.user.is_authenticated %}
