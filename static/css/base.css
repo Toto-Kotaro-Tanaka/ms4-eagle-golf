@@ -91,6 +91,10 @@ ul.no--bullets {
     background-color: #1b4da0 !important;
 }
 
+.btn-danger {
+    background-color: #e84610; 
+}
+
 .pointer {
     cursor:pointer;
 }
@@ -304,7 +308,7 @@ ul.no--bullets {
 }
 
 #id_product_size,
-#id_is_club {
+.is_club {
     width: 3rem;
 }
 
