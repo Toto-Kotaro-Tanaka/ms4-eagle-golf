@@ -312,6 +312,10 @@ ul.no--bullets {
     width: 3rem;
 }
 
+#new-image {
+    width: 50%;
+}
+
 /* -- cart.html -- */
 .c--1 {
     width: 20%;
