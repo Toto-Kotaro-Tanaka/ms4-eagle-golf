@@ -350,7 +350,7 @@ ul.no--bullets {
 
     .login,
     .signup,
-    .password_reset,
+    .password_reset, /* check this class */
     .auth--p,
     .auth--div {
         width: 50%;
