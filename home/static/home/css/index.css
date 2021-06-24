@@ -1,0 +1,30 @@
+/* -- index.html -- */
+.main--alert {
+    background-color: rgba(255, 223, 0, 0.7);
+    border-radius: 0;
+}
+
+.vertical--align--middle {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.brand--logo {
+    vertical-align: middle;
+    width: 7rem;
+}
+
+#reasons--for--purchase,
+.prices--display {
+    background-color: rgba(255, 223, 0, 0.2);
+}
+
+/* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
+@media only screen and (min-width: 62rem) {
+    #popular--brand,
+    #reasons--for--purchase {
+        padding: 3.5rem;
+    }
+}
+

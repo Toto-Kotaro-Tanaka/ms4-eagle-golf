@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+{% endblock %}
+
+{% block page_header %}
 <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
 <div class="alert alert-warning text-center mb-0 main--alert" role="alert">
     Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
@@ -13,12 +17,14 @@
     <img class="d-none d-md-block w-100" src="{% static 'images/hero-image.png' %}" alt="Main image of home page">
     <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile.png' %}" alt="Main image of home page">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
-    <a class="btn btn-warning text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop
+    <a class="btn btn-lg btn-warning text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop
         Now</a>
 </div>
 <!-- /End of Credit -->
+{% endblock %}
 
-<section class="text-center container">
+{% block content %}
+<section id="popular--brand" class="text-center container">
     <h2 class="mt-4 mt-lg-5">Popular Brand</h2>
     <div class="row mt-3 mt-md-3 mt-lg-5">
         <div class="col-6 col-md-3 p-3">
@@ -76,8 +82,9 @@
 
     <div class="tab-content" id="ex2-content">
         <div class="tab-pane fade p-lg-4 show active" id="ex3-pills-1" role="tabpanel" aria-labelledby="ex3-tab-1">
-            We dispatch your product within 2 working days since the order has been made so you won't wait for long till
-            you get it.
+            We dispatch your product within 2 working days since the order has been made so you won't wait for long till you get it. 
+            <br>To see the delivery cost, please click 
+            <a class="fw-bold text-uppercase" type="button" data-mdb-toggle="modal" data-mdb-target="#deliveryCostModal">Delivery Cost</a>
         </div>
         <div class="tab-pane p-lg-4 fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
             Our prices are not only cheaper than retail prices but also cheaper than other online shops, so you save
@@ -89,5 +96,25 @@
     </div>
     <!-- /End of Credit -->
 </section>
+
+<!-- Credit: MDB Modal @ https://mdbootstrap.com/docs/standard/components/modal/ -->
+<!-- Modal -->
+<div id="deliveryCostModal" class="modal fade" tabindex="-1" aria-labelledby="deliveryCostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deliveryCostModalLabel">Delivery Cost</h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-body">
+            You will get <span class="fw-bold">FREE delivery</span> for order <span class="text-decoration-underline ">€90</span> or more.
+            <br>10% on the order value will be charged as a delivery fee if your order is less than €90.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

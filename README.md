@@ -298,6 +298,7 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - [MDB Navbar](https://mdbootstrap.com/docs/standard/navigation/navbar/) for navigation bar
 - [Bootstrap Alerts](https://getbootstrap.com/docs/5.0/components/alerts/) for alert
 - [MDB Masks](https://mdbootstrap.com/docs/standard/content-styles/masks/) for masking the hero image
+- [MDB Modal](https://mdbootstrap.com/docs/standard/components/modal/) for displaying delivery cost
 - [MDB Cards](https://mdbootstrap.com/docs/standard/components/cards/) for displaying products
 - [MDB Pills](https://mdbootstrap.com/docs/standard/navigation/pills/) for displaying products
 - [MDB Footer](https://mdbootstrap.com/docs/standard/navigation/footer/) for footer
