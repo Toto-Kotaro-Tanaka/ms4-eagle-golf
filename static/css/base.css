@@ -105,6 +105,13 @@ ul.no--bullets {
 
 /* -- base.html -- */
 /* Header & Navbar */
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
 .main--header {
     margin-top: 1rem;
 }
