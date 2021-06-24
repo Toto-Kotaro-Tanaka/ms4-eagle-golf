@@ -304,6 +304,7 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - [MDB Footer](https://mdbootstrap.com/docs/standard/navigation/footer/) for footer
 
 — **CSS3** —
+- [Hubspot](https://blog.hubspot.com/website/css-fade-in) for fade-in text
 
 — **JavaScript** —
 

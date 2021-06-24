@@ -21,6 +21,62 @@
     background-color: rgba(255, 223, 0, 0.2);
 }
 
+.catch--phrase {
+    background-color: rgba(232, 70, 16, 0.2);
+    font-size: 3.5rem;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+}
+
+/* Credit: Hubspot @ https://blog.hubspot.com/website/css-fade-in */
+.fade-in-text {
+    animation: fadeIn linear 4s;
+    -webkit-animation: fadeIn linear 4s;
+    -moz-animation: fadeIn linear 4s;
+    -o-animation: fadeIn linear 4s;
+    -ms-animation: fadeIn linear 4s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+/* /End of Credit */
+
+.shop--now--btn {
+    background-color: #ffdf00;
+    bottom: 3rem;
+    color: #333;
+    left: 3rem;
+    position: absolute;
+}
+
+.shop--now--btn:hover {
+    color: #fff;
+}
+
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
 @media only screen and (min-width: 62rem) {
     #popular--brand,

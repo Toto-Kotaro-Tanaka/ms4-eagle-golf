@@ -17,7 +17,11 @@
     <img class="d-none d-md-block w-100" src="{% static 'images/hero-image.png' %}" alt="Main image of home page">
     <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile.png' %}" alt="Main image of home page">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
-    <a class="btn btn-lg btn-warning text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" alt="Shop Now button">Shop Now</a>
+    <a href="{% url 'products' %}?sale">
+        <p class="d-none d-lg-inline-block text-uppercase fw-bold fade-in-text color--e84610 catch--phrase">Sale Now On</p>
+    </a>
+    <a class="btn btn-lg btn-warning text-uppercase font-weight-bold shop--now--btn" href="{% url 'products' %}" 
+        alt="Shop Now button">Shop Now</a>
 </div>
 <!-- /End of Credit -->
 {% endblock %}
