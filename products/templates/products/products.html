@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}
+- Products
+{% for c in current_categories %}
+    {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
+    - Golf Clubs
+    {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
+    - Clothing & Shoes
+    {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
+    - Golf Bags & Equipment
+    {% endif %}
+    {% endfor %}
+{% endblock %}
+
 {% block content %}
 <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
 <div class="alert alert-warning text-center mb-0 main--alert" role="alert">

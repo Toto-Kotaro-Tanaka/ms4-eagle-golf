@@ -35,8 +35,12 @@ body {
     color: #1b4da0;
 }
 
-.bg--color--fbfbfb {
-    background-color: #fbfbfb;
+.color--737373 {
+    color: #737373;
+}
+
+.bg--color--efefef {
+    background-color: #efefef;
 }
 
 .bg--color--09572a {
@@ -116,7 +120,7 @@ ul.no--bullets {
 
 .icon {
     align-items: center;
-    color: #333;
+    color: #737373;
     display: inline-flex;
     height: 3rem;
     justify-content: center;
@@ -245,7 +249,7 @@ ul.no--bullets {
 }
 
 .btn-outline-light:hover {
-    background-color: #fbfbfb;
+    background-color: #efefef;
 }
 
 .footer--text {

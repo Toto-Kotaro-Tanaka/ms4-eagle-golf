@@ -9,16 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="An online Golf Shop website that you can see a lot of golf products and purchase them with secure payments">
-    {% endblock %}
-
-    {% block extra_meta %}
+        content="An online Golf Shop website that you can see a lot of golf products and purchase them with a secure payment method">
     {% endblock %}
 
     {% block corecss %}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" />
@@ -28,20 +24,19 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
     {% endblock %}
 
+    {% block extra_css %}
+    {% endblock %}
+
     {% block stripe %}
     <!-- Stripe js-->
     <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    {% block extra_css %}
     {% endblock %}
 
     {% block jquery %}
     <!-- JQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS *** This is added as Bootstrap toasts don't work without it. Having these bottom of body don't work -->
+    <!-- Bootstrap JS *This needs to be above body otherwise Bootstrap toasts don't work -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
@@ -59,54 +54,56 @@
 </head>
 
 <body>
+    <!-- Main Header -->
     <header class="container-fluid">
         <!-- Credit: MDB Navbar @ https://mdbootstrap.com/docs/standard/navigation/navbar/ -->
         <div class="row main--header">
             <!-- Website Logo -->
             <div class="col-6 order-lg-first col-lg-4">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img class="main--logo" src="{% static 'images/logo.png' %}" alt="Website main logo"
-                        loading="lazy" />
+                    <img class="main--logo" src="{% static 'images/logo.png' %}" alt="Website main logo" loading="lazy" />
                 </a>
             </div>
             <!-- User Account -->
             <div class="col-6 order-lg-last col-lg-4">
                 <div class="text-reset me-3 inline float--right">
-                    <a href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg icon"></i></a>
-                    <p class="text-center m-0 {% if grand_total %}font-weight-bold{% endif %}">
+                    <a href="{% url 'view_cart' %}">
+                        <i class="fas fa-shopping-cart fa-lg icon {% if grand_total %}color--333{% endif %}"></i>
+                    </a>
+                    <p class="text-center m-0 color--737373 {% if grand_total %}font-weight-bold color--333{% endif %}">
                         {% if grand_total %}
-                        €{{ grand_total|floatformat:2 }}
+                            €{{ grand_total|floatformat:2 }}
                         {% else %}
-                        €0.00
+                            €0.00
                         {% endif %}
                     </p>
                 </div>
                 <div class="d-none d-lg-inline float--right">
                     <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                         id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user fa-lg icon"></i>
+                        <i class="fas fa-user fa-lg icon {% if request.user.is_authenticated %}color--333{% endif %}"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                    <ul class="dropdown-menu dropdown-menu-end border" aria-labelledby="navbarDropdownMenuLink">
                         {% if request.user.is_authenticated %}
-                        <li>
-                            <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
                         {% else %}
-                        <li>
-                            <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                        </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                            </li>
                         {% endif %}
                     </ul>
                 </div>
                 <div class="d-none d-lg-inline float--right">
                     {% if request.user.is_authenticated and request.user.is_superuser%}
-                    <a href="{% url 'add_product' %}"><i class="fas fa-tools fa-lg icon"></i></a>
+                        <a href="{% url 'add_product' %}"><i class="fas fa-tools fa-lg icon color--333"></i></a>
                     {% endif %}
                 </div>
             </div>
@@ -116,8 +113,9 @@
                     action="{% url 'products' %}">
                     <input class="form-control" type="text" name="q" placeholder="Search Products"
                         aria-label="Search" />
-                    <button class="btn btn-outline-primary border--width--0" type="submit"
-                        data-mdb-ripple-color="dark"><i class="fas fa-search font-weight-bold color--333"></i></button>
+                    <button class="btn btn-outline-primary border--width--0" type="submit" data-mdb-ripple-color="dark">
+                        <i class="fas fa-search font-weight-bold color--333"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -126,9 +124,8 @@
             <!-- Container Wrapper -->
             <div class="container-fluid">
                 <!-- Toggle Button -->
-                <button class="navbar-toggler p-0" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler p-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" 
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <!-- Collapsible Wrapper -->
@@ -139,8 +136,7 @@
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                                href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">Clothing & Shoes</a>
+                            <a class="nav-link" href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">Clothing & Shoes</a>
                         </li>
                         <li class="vl d-none d-lg-inline"> &nbsp;&#124;&nbsp; </li>
                         <li class="nav-item">
@@ -152,24 +148,24 @@
                         </li>
                         <hr class="d-lg-none">
                         {% if request.user.is_authenticated and request.user.is_superuser%}
-                        <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
-                        </li>
+                            <li class="d-lg-none">
+                                <a class="nav-link" href="{% url 'add_product' %}">Product Management</a>
+                            </li>
                         {% endif %}
                         {% if request.user.is_authenticated %}
-                        <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
-                        </li>
-                        <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
+                            <li class="d-lg-none">
+                                <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+                            </li>
+                            <li class="d-lg-none">
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
                         {% else %}
-                        <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li class="d-lg-none">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                        </li>
+                            <li class="d-lg-none">
+                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li class="d-lg-none">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            </li>
                         {% endif %}
                     </ul>
                 </div>
@@ -179,21 +175,21 @@
     </header>
 
     {% if messages %}
-    <div class="message--container">
-        {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-        {% endwith %}
-        {% endfor %}
-    </div>
+        <div class="message--container">
+            {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -206,37 +202,43 @@
     <!-- Footer -->
     <footer class="text-center bg-light text-muted">
         <!-- Grid container -->
-        <div class="container-fluid p-4 bg--color--fbfbfb">
+        <div class="container-fluid p-4 bg--color--efefef">
             <!-- Section: Social media -->
             <section class="mb-4 social--media">
-                <a class="btn btn-outline-light facebook" href="https://www.facebook.com/" role="button" target="_blank"
-                    rel="noopener"><i class="fab fa-facebook-square"></i></a>
-                <a class="btn btn-outline-light twitter" href="https://twitter.com/" role="button" target="_blank"
-                    rel="noopener"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-light instagram" href="https://www.instagram.com/" role="button"
-                    target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-outline-light youtube" href="https://www.youtube.com/" role="button" target="_blank"
-                    rel="noopener"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-light border-0 facebook" href="https://www.facebook.com/" role="button" 
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="btn btn-outline-light border-0 twitter" href="https://twitter.com/" role="button" 
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-outline-light border-0 instagram" href="https://www.instagram.com/" role="button" 
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-outline-light border-0 youtube" href="https://www.youtube.com/" role="button" 
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </section>
             <!-- Section: Form -->
-            <section class="">
+            <section>
                 <form action="">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto">
                             <p class="pt-2 font-weight-bold">Sign up for our newsletter</p>
                         </div>
                         <div class="col-md-5 col-12">
-                            <!-- Email input -->
+                            <!-- Email Input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form5Example2" class="form-control" />
+                                <input class="form-control" type="email" id="form5Example2" />
                                 <label class="form-label" for="form5Example2">Email address</label>
                             </div>
                         </div>
                         <div class="col-auto">
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary mb-4">
-                                Subscribe
-                            </button>
+                            <!-- Submit Button -->
+                            <button class="btn btn-primary mb-4" type="submit">Subscribe</button>
                         </div>
                     </div>
                 </form>
@@ -247,27 +249,21 @@
         </div>
 
         <!-- Section: Links  -->
-        <section class="bg--color--fbfbfb footer--text">
+        <section class="bg--color--efefef footer--text">
             <div class="container text-center text-md-start">
                 <!-- Grid row -->
                 <div class="row pt-3">
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-golf-ball"></i> Eagle Golf Ltd
-                        </h6>
-                        <p>
-                            Since 2015, we have been selling golf products online to worldwide customers!
-                        </p>
+                        <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd</h6>
+                        <p>Since 2015, we have been selling golf products online to worldwide customers!</p>
                     </div>
 
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
+                        <h6 class="text-uppercase fw-bold mb-4">Products</h6>
                         <p>
                             <a href="{% url 'products' %}?category=drivers,hybrids,irons,putters" class="text-reset">Golf Clubs</a>
                         </p>
@@ -290,8 +286,7 @@
                 </div>
             </div>
             <!-- Copyright -->
-            <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.5);">
-                &copy; Eagle Golf <span id="copyright"></span>
+            <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.5);">&copy; Eagle Golf <span id="copyright"></span>
             </div>
         </section>
     </footer>
