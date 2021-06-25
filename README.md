@@ -318,7 +318,7 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - Logo and Favicon created by me using [canva](https://www.canva.com/)
 
 — **Images** —
-- Hero Image Desktop: [Unsplash](https://unsplash.com/) by [Peter Drew](https://unsplash.com/photos/_9afczTn6bc) 
+- Hero Image Desktop: [Snaintongolf](https://www.snaintongolf.co.uk/) 
 - Hero Image Mobile: [Unsplash](https://unsplash.com/) by [Courtney Cook](https://unsplash.com/photos/SsIIw_MET0E) 
 - Popular Brand Logo: [TaylorMade Golf](https://www.taylormadegolf.eu/)
 - Popular Brand Logo: [Callaway Golf](https://www.callawaygolf.com/) 
