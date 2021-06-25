@@ -145,8 +145,8 @@
                 </ul>
                 {% if request.user.is_superuser %}
                 <div class="card-body">
-                    <a href="{% url 'edit_product' product.id %}" class="card-link">Edit</a>
-                    <a href="{% url 'delete_product' product.id %}" class="card-link">Delete</a>
+                    <a class="card-link" href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="card-link color--e84610" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
                 {% endif %}
                 <hr>
