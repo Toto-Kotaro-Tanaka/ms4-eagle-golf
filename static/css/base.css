@@ -63,6 +63,10 @@ body {
     background-color: rgba(255, 223, 0, 0.3);
 }
 
+.bg--color--ffdf00-07 {
+    background-color:rgba(255, 223, 0, 0.7)
+}
+
 .w--70 {
     width: 70%;
 }
@@ -156,8 +160,6 @@ header {
 }
 
 .main--alert {
-	background-color: rgba(255, 223, 0, 0.7);
-	border-radius: 0;
 	margin-top: 10rem;
 }
 
@@ -166,6 +168,7 @@ header {
     left: 0.2rem;
     position: fixed;
     right: 0.2rem;
+    top: 10.5rem;
     z-index: 999;
 }
 
@@ -204,6 +207,10 @@ header {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* #new-image {
+    width: 50%;
+} */
 
 /* Allauth */
 #div_id_login,
@@ -270,27 +277,6 @@ header {
 .increment-qty {
     border: none;
     background-color: #fff;
-}
-
-/* -- cart.html -- */
-.c--1 {
-    width: 20%;
-}
-
-.cart--product--image {
-    width: 100%;
-}
-
-.cart--product--image--mob {
-    width: 50%;
-}
-
-.qty--update {
-    margin-right: 0.5rem;
-}
-
-.qty--remove {
-    margin-left: 0.5rem;
 }
 
 /* -- checkout.html -- */

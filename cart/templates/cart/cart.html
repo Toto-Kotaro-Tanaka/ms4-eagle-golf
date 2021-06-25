@@ -2,14 +2,15 @@
 {% load static %}
 {% load cart_tools %}
 
-{% block content %}
-<!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
-<div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="fw-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
-    <span class="fw-bold text-uppercase">free</span>!
-</div>
-<!-- /End of Credit -->
+{% block extra_title %}
+- Shopping Cart
+{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+{% endblock %}
+
+{% block content %}
 <!-- Desktop Version with Tables -->
 <section class="container d-none d-lg-block text-center">
     <h2 class="mt-5 mb-5">Shopping Cart</h2>
