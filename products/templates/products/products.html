@@ -126,7 +126,7 @@
             <!-- Credit: MDB Cards @ https://mdbootstrap.com/docs/standard/components/cards/ -->
             <div class="card mt-3 p-3">
                 {% if product.image%}
-                    <a href="{% url 'product_detail' product.id %}">
+                    <a class="hover-zoom" href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" />
                     </a>
                 {% else %}
