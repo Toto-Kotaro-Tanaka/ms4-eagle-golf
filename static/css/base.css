@@ -296,7 +296,6 @@ header {
 
     .message--container {
         left: auto;
-        position: fixed;
         right: 1rem;
         top: auto;
         width: 25rem;
