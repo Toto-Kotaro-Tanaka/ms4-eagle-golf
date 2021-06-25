@@ -31,21 +31,7 @@
     cursor: pointer;
 }
 
-.quantity--selector {
-    width: 7rem;
-}
-
-.decrement-qty, 
-.increment-qty {
-    border: none;
-    background-color: #fff;
-}
-
 #id_product_size,
 .is--club {
     width: 3rem;
-}
-
-#new-image {
-    width: 50%;
 }

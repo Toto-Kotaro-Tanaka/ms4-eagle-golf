@@ -261,6 +261,17 @@ header {
     font-size: 0.8rem;
 }
 
+/* -- Quantity Selector for Product and Cart -- */
+.quantity--selector {
+    width: 7rem;
+}
+
+.decrement-qty, 
+.increment-qty {
+    border: none;
+    background-color: #fff;
+}
+
 /* -- cart.html -- */
 .c--1 {
     width: 20%;
@@ -309,8 +320,7 @@ header {
     .signup,
     .password_reset, /* check this class */
     .auth--p,
-    .auth--div,
-    .add--product {
+    .auth--div {
         width: 50%;
     }
 }
