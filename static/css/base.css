@@ -155,6 +155,12 @@ header {
     padding-top: 0.5rem;
 }
 
+.main--alert {
+	background-color: rgba(255, 223, 0, 0.7);
+	border-radius: 0;
+	margin-top: 10rem;
+}
+
 /* Toasts Messages */
 .message--container {
     left: 0.2rem;
@@ -255,48 +261,6 @@ header {
     font-size: 0.8rem;
 }
 
-/* -- products.html & product_details.html -- */
-.badge:hover {
-    color: #fff !important;
-}
-
-.sort--selector--field {
-    text-align: right;
-}
-
-#sort-selector {
-    border: none;
-}
-
-.btt--button {
-    bottom: 0.625rem;
-    position: fixed;
-    right: 0.625rem;
-}
-
-.btt--link {
-    cursor: pointer;
-}
-
-.quantity--selector {
-    width: 7rem;
-}
-
-.decrement-qty, 
-.increment-qty {
-    border: none;
-    background-color: #fff;
-}
-
-#id_product_size,
-.is--club {
-    width: 3rem;
-}
-
-#new-image {
-    width: 50%;
-}
-
 /* -- cart.html -- */
 .c--1 {
     width: 20%;
@@ -353,6 +317,10 @@ header {
         width: 100%;
     }
 
+    .main--alert {
+		margin-top: 9rem;
+	}
+	
     .reasons--for--purchase--tabs {
         width: 80%;
     }

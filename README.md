@@ -319,7 +319,10 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 
 — **Images** —
 - Hero Image Desktop: [Snaintongolf](https://www.snaintongolf.co.uk/) 
-- Hero Image Mobile: [Unsplash](https://unsplash.com/) by [Courtney Cook](https://unsplash.com/photos/SsIIw_MET0E) 
+- Hero Image Mobile: [Unsplash](https://unsplash.com/) by [Courtney Cook](https://unsplash.com/photos/SsIIw_MET0E)
+- Hero Image Products Golf Clubs: [TaylorMade Golf](https://www.taylormadegolf.eu/)
+- Hero Image Products Clothing: [PING Golf](https://ping.com/en-us/shop/products?category=apparel) 
+- Hero Image Products Golf Balls: [Srixon](https://www.srixon.com/us/golf-ball-fitting.html)
 - Popular Brand Logo: [TaylorMade Golf](https://www.taylormadegolf.eu/)
 - Popular Brand Logo: [Callaway Golf](https://www.callawaygolf.com/) 
 - Popular Brand Logo: [Titleist Golf](https://www.titleist.com/) 

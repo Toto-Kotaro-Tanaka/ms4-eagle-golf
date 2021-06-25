@@ -14,22 +14,30 @@
     {% endfor %}
 {% endblock %}
 
-{% block content %}
-<!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
-<div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
-    <span class="font-weight-bold text-uppercase">free</span>!
-</div>
-<!-- /End of Credit -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
 
+{% block page_header %}
 <!-- Credit: MDB Masks @ https://mdbootstrap.com/docs/standard/content-styles/masks/ -->
 <div class="bg-image">
-    <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products.png' %}"
-        alt="Main image of products page">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+    {% for c in current_categories %}
+    {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
+        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-clubs.png' %}" alt="Main image of products page">
+        <p class="d-none d-lg-inline-block text-uppercase fw-bold catch--phrase--products">High Performance Golf Clubs</p>
+    {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
+        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-clothing.png' %}" alt="Main image of products page">
+        <p class="d-none d-lg-inline-block text-uppercase fw-bold catch--phrase--products">Stylish Clothes & Shoes</p>
+    {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
+        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-balls.png' %}" alt="Main image of products page">
+        <p class="d-none d-lg-inline-block text-uppercase fw-bold catch--phrase--products">Improve Your Game</p>
+    {% endif %}
+    {% endfor %}
 </div>
 <!-- /End of Credit -->
+{% endblock %}
 
+{% block content %}
 <section class="text-center container">
     {% if current_categories == None and sale != True %}
     <h2 class="mt-5">All Products</h2>
