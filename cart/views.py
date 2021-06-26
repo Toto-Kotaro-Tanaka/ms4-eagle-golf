@@ -66,19 +66,31 @@ def adjust_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
+    club= None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
+    elif 'product_club' in request.POST:
+        club = request.POST['product_club']
     cart = request.session.get('cart', {})
 
     if size:
         if quantity > 0:
             cart[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated {product.name} [size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
+            messages.success(request, f'Updated {product.name} [Size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [size: {size.upper()}] from the shopping cart')
+            messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
+    elif club:
+        if quantity > 0:
+            cart[item_id]['items_by_club'][size] = quantity
+            messages.success(request, f'Updated {product.name} [Club: {club.title()}] quantity to {cart[item_id]["items_by_club"][club]}')
+        else:
+            del cart[item_id]['items_by_club'][club]
+            if not cart[item_id]['items_by_club']:
+                cart.pop(item_id)
+            messages.success(request, f'Removed {product.name} [Club: {club.title()}] from the shopping cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
@@ -97,15 +109,23 @@ def remove_from_cart(request, item_id):
     try:
         product = get_object_or_404(Product, pk=item_id)
         size = None
+        club = None
         if 'product_size' in request.POST:
             size = request.POST['product_size']
+        elif 'product_club' in request.POST:
+            club = request.POST['product_club']
         cart = request.session.get('cart', {})
 
         if size:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [size: {size.upper()}] from the shopping cart')
+            messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
+        if club:
+            del cart[item_id]['items_by_club'][club]
+            if not cart[item_id]['items_by_club']:
+                cart.pop(item_id)
+            messages.success(request, f'Removed {product.name} [Club: {club.title()}] from the shopping cart')
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from the shopping cart')
