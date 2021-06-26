@@ -1,18 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}
+- Profile
+{% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block content %}
-<!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
-<div class="alert alert-warning text-center mb-0 main--alert" role="alert">
-    Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
-    <span class="font-weight-bold text-uppercase">free</span>!
-</div>
-<!-- /End of Credit -->
-<section class="container p-3">
+<section class="container mb-md-5 p-3">
     <h2 class="mt-5 mb-5 text-center">My Profile</h2>
     <hr>
     <div class="row">

@@ -18,12 +18,12 @@
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <!-- Order Summary -->
             <p class="text-muted text-center mb-3">Order Summary ({{ product_count }})</p>
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted text--right">Subtotal</p>
+                    <p class="mb-1 mt-0 small text-muted text-end">Subtotal</p>
                 </div>
             </div>
             {% for item in cart_items %}
@@ -47,7 +47,7 @@
                     {% endif %}
                     <p class="my-0 small">Qty: {{ item.quantity }}</p>
                 </div>
-                <div class="col-3 text--right">
+                <div class="col-3 text-end">
                     {% if not item.product.is_discount %}
                     <p class="my-0 small">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     {% else %}
@@ -59,7 +59,7 @@
             <hr class="mt-2 mb-2">
             <!-- Order Total -->
             <div class="row prices--display pt-3 pb-3">
-                <div class="col-6 offset-3">
+                <div class="col-5 col-md-6 offset-3">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">
                         <a type="button" data-mdb-toggle="modal" data-mdb-target="#deliveryCostModal">
@@ -67,7 +67,7 @@
                     </p>
                     <p class="my-0">Grand Total:</p>
                 </div>
-                <div class="col-3 text--right">
+                <div class="col-4 col-md-3 text-end">
                     <p class="my-0">€{{ total | floatformat:2 }}</p>
                     <p class="my-0">€{{ delivery | floatformat:2 }}</p>
                     <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
