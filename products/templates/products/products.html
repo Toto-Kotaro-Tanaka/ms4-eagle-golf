@@ -135,7 +135,7 @@
                     </a>
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
+                    <h5 class="card-title mt-2">{{ product.name }}</h5>
                 </div>
                 <ul class="mt-2 list-group list-group-flush no--bullets">
                     <li class="h5 {% if not product.is_discount %}font-weight-bold{% endif %}">
@@ -162,7 +162,7 @@
         {% endfor %}
     </div>
     {% if products|length > 1 %}
-        <div class="btt--button">
+        <div id="myBtn" class="btt--button">
             <a class="btt--link">
                 <i class="far fa-caret-square-up fa-2x color--e84610"></i>
             </a>	
@@ -173,12 +173,25 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<!-- Credit: W3Schools @ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
+<script>
+    const mybutton = document.getElementById("myBtn");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
     $('.btt--link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
-
+<!-- /End of Credit -->
 <script type="text/javascript">
     $('#sort-selector').change(function () {
         let selector = $(this);
