@@ -279,11 +279,6 @@ header {
     background-color: #fff;
 }
 
-/* -- checkout.html -- */
-.form-group {
-    margin-bottom: 0.5rem;
-}
-
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
     .w--50 {
