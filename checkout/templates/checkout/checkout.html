@@ -49,9 +49,9 @@
                 </div>
                 <div class="col-3 text-end">
                     {% if not item.product.is_discount %}
-                    <p class="my-0 small">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 small">&#128;{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     {% else %}
-                    <p class="my-0 small">€{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 small">&#128;{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
                     {% endif %}
                 </div>
             </div>
@@ -68,9 +68,9 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-4 col-md-3 text-end">
-                    <p class="my-0">€{{ total | floatformat:2 }}</p>
-                    <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0">&#128;{{ total | floatformat:2 }}</p>
+                    <p class="my-0">&#128;{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>&#128;{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
                     </button>
                     <p class="small mt-2 mb-5 color--1b4da0">
                         <i class="fas fa-exclamation-circle"></i>
-                        <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                        <span>Your card will be charged <strong>&#128;{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                 </div>
             </form>
@@ -152,8 +152,8 @@
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
         <div class="modal-body">
-            You will get <span class="fw-bold">FREE delivery</span> for order <span class="text-decoration-underline ">€90</span> or more.
-            <br>10% on the order value will be charged as a delivery fee if your order is less than €90.
+            You will get <span class="fw-bold">FREE delivery</span> for order <span class="text-decoration-underline ">&#128;90</span> or more.
+            <br>10% on the order value will be charged as a delivery fee if your order is less than &#128;90.
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Close</button>
