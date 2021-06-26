@@ -22,19 +22,32 @@ def add_to_cart(request, item_id):
 
     if 'product_size' in request.POST:
         size = request.POST['product_size']
+    elif 'product_club' in request.POST:
+        club = request.POST['product_club']
     cart = request.session.get('cart', {})
 
     if size:
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated {product.name} [size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
+                messages.success(request, f'Updated {product.name} [Size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added {product.name} [size: {size.upper()}] to the shopping cart')
+                messages.success(request, f'Added {product.name} [Size: {size.upper()}] to the shopping cart')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added {product.name} [size: {size.upper()}] to the shopping cart')
+            messages.success(request, f'Added {product.name} [Size: {size.upper()}] to the shopping cart')
+    elif club:
+        if item_id in list(cart.keys()):
+            if club in cart[item_id]['items_by_club'].keys():
+                cart[item_id]['items_by_club'][club] += quantity
+                messages.success(request, f'Updated {product.name} [Club: {club.title()}] quantity to {cart[item_id]["items_by_club"][club]}')
+            else:
+                cart[item_id]['items_by_club'][club] = quantity
+                messages.success(request, f'Added {product.name} [Club: {club.title()}] to the shopping cart')
+        else:
+            cart[item_id] = {'items_by_club': {club: quantity}}
+            messages.success(request, f'Added {product.name} [Club: {club.title()}] to the shopping cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity

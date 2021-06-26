@@ -26,19 +26,34 @@ def cart_contents(request):
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
-                if not product.is_discount:
-                    total += quantity * product.price
-                    product_count += quantity
-                else:
-                    total += quantity * product.discount_price
-                    product_count += quantity 
-                cart_items.append({
-                    'item_id': item_id,
-                    'quantity': quantity,
-                    'product': product,
-                    'size': size,
-                })
+            if product.has_sizes:
+                for size, quantity in item_data['items_by_size'].items():
+                    if not product.is_discount:
+                        total += quantity * product.price
+                        product_count += quantity
+                    else:
+                        total += quantity * product.discount_price
+                        product_count += quantity 
+                    cart_items.append({
+                        'item_id': item_id,
+                        'quantity': quantity,
+                        'product': product,
+                        'size': size,
+                    })
+            elif product.is_club:
+                for club, quantity in item_data['items_by_club'].items():
+                    if not product.is_discount:
+                        total += quantity * product.price
+                        product_count += quantity
+                    else:
+                        total += quantity * product.discount_price
+                        product_count += quantity 
+                    cart_items.append({
+                        'item_id': item_id,
+                        'quantity': quantity,
+                        'product': product,
+                        'club': club,
+                    })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)

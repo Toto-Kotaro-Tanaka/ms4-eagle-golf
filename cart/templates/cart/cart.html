@@ -35,24 +35,24 @@
                         {% for item in cart_items %}
                         <td>
                             {% if item.product.image %}
-                            <img class="cart--product--image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                <img class="cart--product--image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="cart--product--image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                <img class="cart--product--image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                         </td>
                         <td class="text-start">
                             <p class="fw-bold">{{ item.product.name }}</p>
                             <p class="small text-muted">Product ID: {{ item.product.sku }}</p>
                             {% if item.product.has_sizes %}
-                            <p class="small">Size: {{ item.size|upper }}</p>
+                                <p class="small">Size: {{ item.size|upper }}</p>
                             {% endif %}
                             {% if item.product.is_club %}
-                            <p class="small">Club: {{ item.golf_club|upper }}</p>
+                                <p class="small">Club: {{ item.club|title }}</p>
                             {% endif %}
                             {% if not item.product.is_discount %}
-                            <p>Price: &#128;{{ item.product.price }}</p>
+                                <p>Price: &#128;{{ item.product.price }}</p>
                             {% else %}
-                            <p>Price: &#128;{{ item.product.discount_price }}</p>
+                                <p>Price: &#128;{{ item.product.discount_price }}</p>
                             {% endif %}
                         </td>
                         <td>
@@ -172,7 +172,7 @@
                             <p class="small">Size: {{ item.size|upper }}</p>
                             {% endif %}
                             {% if item.product.is_club %}
-                            <p class="small">Club: {{ item.golf_club|upper }}</p>
+                            <p class="small">Club: {{ item.golf_club|title }}</p>
                             {% endif %}
                             <p class="d-inline d-md-none">Price:</p>
                             {% if not item.product.is_discount %}
