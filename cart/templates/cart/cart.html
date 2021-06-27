@@ -95,7 +95,11 @@
                             <!-- Product Quantity Update & Remove Options -->
                             <a class="update-link text-info small pointer qty--update"><span class="color--1b4da0">Update</span></a>
                             <a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
-                                data-product_size="{{ item.size }}"><span class="color--e84610">Remove</span></a>
+                            {% if item.product.is_club %}
+                                data-product_club="{{ item.club }}"
+                            {% elif item.product.has_sizes %}
+                                data-product_size="{{ item.size }}"
+                            {% endif %}><span class="color--e84610">Remove</span></a>
                         </td>
                         <td>
                             {% if not item.product.is_discount %}
@@ -315,13 +319,27 @@
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
         let size = $(this).data('product_size');
+        let club = $(this).data('product_club');
         let url = `/cart/remove/${itemId}/`;
-        let data = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
+        let dataSize = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
+        let dataClub = { 'csrfmiddlewaretoken': csrfToken, 'product_club': club };
 
-        $.post(url, data)
+        if (size) {
+            $.post(url, dataSize)
             .done(function () {
                 location.reload();
             });
+        } else if (club) {
+            $.post(url, dataClub)
+            .done(function () {
+                location.reload();
+            });
+        } else {
+            $.post(url, dataSize)
+            .done(function () {
+                location.reload();
+            });
+        }
     })
 </script>
 {% endblock %}
