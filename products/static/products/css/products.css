@@ -9,6 +9,66 @@
     width: 3.5rem;
 }
 
+/* Credit: Hubspot @ https://blog.hubspot.com/website/css-fade-in */
+.fade--in--text {
+	animation: fadeIn linear 4s;
+	-webkit-animation: fadeIn linear 4s;
+	-moz-animation: fadeIn linear 4s;
+	-o-animation: fadeIn linear 4s;
+	-ms-animation: fadeIn linear 4s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+/* /End of Credit */
+
 .badge:hover {
     background-color: #ffdf00 !important;
     color: #333 !important;
