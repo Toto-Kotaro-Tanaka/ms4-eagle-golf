@@ -67,6 +67,7 @@ def adjust_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     size = None
     club= None
+
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     elif 'product_club' in request.POST:
@@ -84,7 +85,7 @@ def adjust_cart(request, item_id):
             messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
     elif club:
         if quantity > 0:
-            cart[item_id]['items_by_club'][size] = quantity
+            cart[item_id]['items_by_club'][club] = quantity
             messages.success(request, f'Updated {product.name} [Club: {club.title()}] quantity to {cart[item_id]["items_by_club"][club]}')
         else:
             del cart[item_id]['items_by_club'][club]
@@ -121,7 +122,7 @@ def remove_from_cart(request, item_id):
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
             messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
-        if club:
+        elif club:
             del cart[item_id]['items_by_club'][club]
             if not cart[item_id]['items_by_club']:
                 cart.pop(item_id)
