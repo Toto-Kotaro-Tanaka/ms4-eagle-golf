@@ -10,7 +10,8 @@
 }
 
 .badge:hover {
-    color: #fff !important;
+    background-color: #ffdf00 !important;
+    color: #333 !important;
 }
 
 .sort--selector--field {
@@ -30,6 +31,10 @@
 
 .btt--link {
     cursor: pointer;
+}
+
+.product--image {
+    width: 80%;
 }
 
 #id_product_size,

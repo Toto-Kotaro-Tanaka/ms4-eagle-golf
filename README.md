@@ -303,7 +303,7 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 - [MDB Footer](https://mdbootstrap.com/docs/standard/navigation/footer/) for footer
 
 — **CSS3** —
-- [Hubspot](https://blog.hubspot.com/website/css-fade-in) for fade-in text
+- [Stackoverflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3) for blinking text
 
 — **JavaScript** —
 - [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top) for scroll back to top button
