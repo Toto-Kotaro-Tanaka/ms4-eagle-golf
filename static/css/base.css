@@ -67,6 +67,10 @@ body {
     background-color:rgba(255, 223, 0, 0.7)
 }
 
+.bg--color--ffdf00-02 {
+    background-color:rgba(255, 223, 0, 0.2)
+}
+
 .w--70 {
     width: 70%;
 }
