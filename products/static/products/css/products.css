@@ -69,11 +69,6 @@
 }
 /* /End of Credit */
 
-.badge:hover {
-    background-color: #ffdf00 !important;
-    color: #333 !important;
-}
-
 .sort--selector--field {
     text-align: right;
 }

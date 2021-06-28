@@ -71,23 +71,6 @@ body {
     background-color:rgba(255, 223, 0, 0.2)
 }
 
-.w--70 {
-    width: 70%;
-}
-
-.float--right {
-    float: right;
-}
-
-.card {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-ul.no--bullets {
-    list-style-type: none;
-  }
-
 .btn {
     letter-spacing: 0.1rem;
 }
@@ -106,6 +89,28 @@ ul.no--bullets {
 .btn-danger {
     background-color: #e84610; 
 }
+
+.badge:hover {
+    background-color: #ffdf00 !important;
+    color: #333 !important;
+}
+
+.card {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.w--70 {
+    width: 70%;
+}
+
+.float--right {
+    float: right;
+}
+
+ul.no--bullets {
+    list-style-type: none;
+  }
 
 .pointer {
     cursor:pointer;

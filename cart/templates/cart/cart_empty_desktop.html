@@ -1,0 +1,46 @@
+{% load static %}
+
+<div class="container mt-5 mb-3 category--name d-none d-lg-block">
+    <div class="row">
+        <div class="col-3">
+            <div class="col-12">
+                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/driver.jpg' %}" alt="Golf Clubs Category">
+            </div>
+            <div class="col-12">
+                <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">
+                    <span class="p-1 p-md-3 mt-2">Golf Clubs</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-12">
+                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/clothe.jpg' %}" alt="Golf Clubs Category">
+            </div>
+            <div class="col-12">
+                <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">
+                    <span class="p-1 p-md-3 mt-2">Clothing & Shoes</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-12">
+                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/gps.jpg' %}" alt="Golf Clubs Category">
+            </div>
+            <div class="col-12">
+                <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=bags,golf_balls,gps">
+                    <span class="p-1 p-md-3 mt-2">Golf Bags & Equipment</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-12">
+                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/sale.jpg' %}" alt="Golf Clubs Category">
+            </div>
+            <div class="col-12">
+                <a class="badge rounded-pill bg-success" href="{% url 'products' %}?sale">
+                    <span class="p-1 p-md-3 mt-2 text-uppercase">Sale</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
