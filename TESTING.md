@@ -19,6 +19,8 @@
 ### Python
 
 — **Functions** —
+<!-- Sorting products by price including discounted items -->
+
 — **Code Validation** —
 
 ### Web Browser

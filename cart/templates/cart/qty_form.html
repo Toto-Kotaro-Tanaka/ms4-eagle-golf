@@ -1,0 +1,47 @@
+<!-- Product Quantity Form -->
+<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+    {% csrf_token %}
+    <div class="row">
+        <p class="d-lg-none">Qty</p>
+        <div>
+            <div class="form-group mx-auto quantity--selector">
+                <div class="input-group">
+                    <!-- Decrement Button -->
+                    <div class="input-group-prepend">
+                        <button id="decrement-qty_{{ item.item_id }}" class="decrement-qty"
+                            data-item_id="{{ item.item_id }}"><i class="fas fa-minus pt-2 fa-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Quantity Input Box -->
+                    <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" 
+                        type="number" name="quantity" value="{{ item.quantity }}" 
+                        min="1" max="9" data-item_id="{{ item.item_id }}">
+                    <!-- Increment Button -->
+                    <div class="input-group-append">
+                        <button id="increment-qty_{{ item.item_id }}" class="increment-qty"
+                            data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Golf Club Right or Left -->
+                    {% if item.product.is_club %}
+                    <input type="hidden" name="product_club" value="{{ item.club }}">
+                    {% endif %}
+                        <!-- Product Size -->
+                    {% if item.product.has_sizes %}
+                    <input type="hidden" name="product_size" value="{{ item.size }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- Product Quantity Update & Remove Options -->
+<a class="update-link text-info small pointer qty--update"><span class="color--1b4da0">Update</span></a>
+<a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
+    {% if item.product.has_sizes %}
+        data-product_size = "{{ item.size }}"
+    {% elif item.product.is_club %}
+        data-product_club = "{{ item.club }}"
+    {% endif %}>
+    <span class="color--e84610">Remove</span>
+</a>
