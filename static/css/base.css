@@ -9,16 +9,6 @@ body {
 }
 
 /* -- General Settings and Styles -- */
-.form-control,
-.form-notch-leading,
-.form-notch-trailing {
-    border-radius: 0 !important;
-}
-
-.border--width--0 {
-    border-width: 0;
-}
-
 .color--333 {
     color: #333 !important;
 }
@@ -37,6 +27,10 @@ body {
 
 .color--737373 {
     color: #737373;
+}
+
+.bg--color--ffffff {
+    background-color: #fff;
 }
 
 .bg--color--efefef {
@@ -59,16 +53,12 @@ body {
     background-color: #f67aff;
 }
 
-.bg--color--ffdf00--01 {
-    background-color: rgba(255, 223, 0, 0.3);
+.bg--color--ffdf00-02 {
+    background-color:rgba(255, 223, 0, 0.2)
 }
 
 .bg--color--ffdf00-07 {
     background-color:rgba(255, 223, 0, 0.7)
-}
-
-.bg--color--ffdf00-02 {
-    background-color:rgba(255, 223, 0, 0.2)
 }
 
 .btn {
@@ -95,17 +85,15 @@ body {
     color: #333 !important;
 }
 
+.form-control,
+.form-notch-leading,
+.form-notch-trailing {
+    border-radius: 0 !important;
+}
+
 .card {
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-.w--70 {
-    width: 70%;
-}
-
-.float--right {
-    float: right;
 }
 
 ul.no--bullets {
@@ -116,30 +104,23 @@ ul.no--bullets {
     cursor:pointer;
 }
 
+.w--70 {
+    width: 70%;
+}
+
+.w--85 {
+    width: 85%;
+}
+
 /* -- base.html -- */
 /* Header & Navbar */
-header {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-}
-
 .header--border {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.main--header {
-    margin-top: 1rem;
 }
 
 .navbar-brand,
 .main--logo {
     width: 12rem;
-}
-
-.search--form {
-    width: 85%;
 }
 
 .icon {
@@ -216,10 +197,6 @@ header {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-/* #new-image {
-    width: 50%;
-} */
 
 /* Allauth */
 #div_id_login,
