@@ -156,7 +156,12 @@
                             {% elif item.product_club %} - Club: {{ item.product_club|title }}
                             {% endif %}
                         </p>
-                        <p class="">QTY: {{ item.quantity }} @ &#128;{{ item.product.price }} each</p>
+                        <p>QTY: {{ item.quantity }} @ &#128;
+                            {% if not item.product.is_discount %}
+                                {{ item.product.price }}
+                            {% else %}
+                                {{ item.product.discount_price }}
+                            {% endif %} each</p>
                 </div>
                 <div class="d-none d-md-block col-md-2"></div>
             </div>
