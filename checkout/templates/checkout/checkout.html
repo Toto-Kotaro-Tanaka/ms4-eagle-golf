@@ -43,7 +43,7 @@
                     <p class="my-0 small">Size: {{ item.size|upper }}</p>
                     {% endif %}
                     {% if item.product.is_club %}
-                    <p class="my-0 small">Club: {{ item.golf_club|upper }}</p>
+                    <p class="my-0 small">Club: {{ item.club|title }}</p>
                     {% endif %}
                     <p class="my-0 small">Qty: {{ item.quantity }}</p>
                 </div>

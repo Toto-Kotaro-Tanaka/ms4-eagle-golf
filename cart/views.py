@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 
-# Create your views here.
-
 
 def view_cart(request):
     """ A view that renders the cart page """
@@ -66,7 +64,7 @@ def adjust_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
-    club= None
+    club = None
 
     if 'product_size' in request.POST:
         size = request.POST['product_size']

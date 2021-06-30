@@ -151,7 +151,10 @@
                 </div>
                 <div class="col-md-4">
                         <p class="mb-0 text-black">
-                            {{ item.product.name }}{% if item.product_size %} - Size: {{ item.product_size|upper }}{% endif %}
+                            {{ item.product.name }}
+                            {% if item.product_size %} - Size: {{ item.product_size|upper }}
+                            {% elif item.product_club %} - Club: {{ item.product_club|title }}
+                            {% endif %}
                         </p>
                         <p class="">QTY: {{ item.quantity }} @ &#128;{{ item.product.price }} each</p>
                 </div>
