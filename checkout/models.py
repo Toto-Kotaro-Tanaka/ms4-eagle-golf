@@ -9,8 +9,6 @@ from django_countries.fields import CountryField
 from products.models import Product
 from profiles.models import UserProfile
 
-# Create your models here.
-
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -32,7 +30,6 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=100, null=False, blank=False, default='')
 
-    
 
     def _generate_order_number(self):
         """
