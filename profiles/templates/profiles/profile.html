@@ -48,7 +48,10 @@
                 <div class="col-6 col-md-2">
                     <p class="d-md-none fw-bold">Order No.</p>
                     <p>
-                        <a class="small" href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                        <a class="small d-md-none" href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                            {{ order.order_number|truncatechars:12 }}
+                        </a>
+                        <a class="small d-none d-md-block" href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
                             {{ order.order_number|truncatechars:6 }}
                         </a>
                     </p>
