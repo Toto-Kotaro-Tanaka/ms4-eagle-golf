@@ -65,7 +65,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.PROTECT)
     product_size = models.CharField(max_length=2, null=True, blank=True) # XS, S, M, L, XL
     product_club = models.CharField(max_length=5, null=True, blank=True) # R(Right), L(Left) for Golf Clubs
     quantity = models.IntegerField(null=False, blank=False, default=0)
