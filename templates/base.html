@@ -231,13 +231,14 @@
             </section>
             <!-- Section: Form -->
             <section>
-                <form action="">
+                <form action="" method="POST">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto">
                             <p class="pt-2 font-weight-bold">Sign up for our newsletter</p>
                         </div>
                         <div class="col-md-5 col-12">
                             <!-- Email Input -->
+                            {% csrf_token %}
                             <div class="form-outline mb-4">
                                 <input class="form-control" type="email" id="form5Example2" />
                                 <label class="form-label" for="form5Example2">Email address</label>
