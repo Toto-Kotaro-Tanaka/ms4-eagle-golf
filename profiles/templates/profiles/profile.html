@@ -43,6 +43,10 @@
             </div>
             <!-- Order Summary -->
             <div class="row p-3 order--history bg--color--ffdf00-02">
+                {% if not orders %}
+                    <p class="text-center pt-3">There are no orders yet</p>
+                {% endif %}
+
                 {% for order in orders %}
                 <!-- Order Number -->
                 <div class="col-6 col-md-2">
@@ -69,7 +73,9 @@
                             <li class="mb-2">
                                 &#9679; {{ item.product.name }} 
                                 {% if item.product.has_sizes %}
-                                    &#91;Size {{ item.product_size|upper }}&#93;
+                                    <span class="small text-muted">&#91;Size: {{ item.product_size|upper }}&#93;</span>
+                                {% elif item.product.is_club %}
+                                    <span class="small text-muted">&#91;Club: {{ item.product_club|title }}&#93;</span>
                                 {% endif %} x {{ item.quantity }}
                             </li>
                         {% endfor %}
