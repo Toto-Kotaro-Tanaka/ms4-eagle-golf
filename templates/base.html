@@ -231,7 +231,7 @@
             </section>
             <!-- Section: Form -->
             <section>
-                <form action="">
+                <form action="{% url 'home' %}" method="POST">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto">
                             <p class="pt-2 font-weight-bold">Sign up for our newsletter</p>
@@ -239,8 +239,10 @@
                         <div class="col-md-5 col-12">
                             <!-- Email Input -->
                             <div class="form-outline mb-4">
-                                <input class="form-control" type="email" id="form5Example2" />
-                                <label class="form-label" for="form5Example2">Email address</label>
+                                {% csrf_token %}
+                                {{ form }}
+                                <!-- <input class="form-control" type="email" id="form5Example2" />
+                                <label class="form-label" for="form5Example2">Email address</label> -->
                             </div>
                         </div>
                         <div class="col-auto">
