@@ -32,9 +32,9 @@
                     <p class="small">Club: {{ item.club|title }}</p>
                 {% endif %}
                 {% if not item.product.is_discount %}
-                    <p>Price: &#128;{{ item.product.price }}</p>
+                    <p>Price: €{{ item.product.price }}</p>
                 {% else %}
-                    <p>Price: &#128;{{ item.product.discount_price }}</p>
+                    <p>Price: €{{ item.product.discount_price }}</p>
                 {% endif %}
             </td>
             <td>
@@ -42,9 +42,9 @@
             </td>
             <td>
                 {% if not item.product.is_discount %}
-                <p class="text-end">&#128;{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                <p class="text-end">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 {% else %}
-                <p class="text-end">&#128;{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
+                <p class="text-end">€{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
                 {% endif %}
             </td>
         </tr>

@@ -34,13 +34,13 @@
                     <p class="card-text">{{ product.description }}</p>
                     <p class="card-text h5 {% if not product.is_discount %}fw-bold{% endif %}">
                         {% if product.is_discount %}
-                        <s>Price: &#128;{{ product.price }}</s>
+                        <s>Price: €{{ product.price }}</s>
                         {% else %}
-                        Price: &#128;{{ product.price }}
+                        Price: €{{ product.price }}
                         {% endif %}
                     </p>
                     {% if product.is_discount %}
-                    <p class="card-text h5 text-uppercase fw-bold">Sale: &#128;{{ product.discount_price }}</p>
+                    <p class="card-text h5 text-uppercase fw-bold">Sale: €{{ product.discount_price }}</p>
                     {% endif %}
                 </div>
                 <!-- Product Quantity Form -->

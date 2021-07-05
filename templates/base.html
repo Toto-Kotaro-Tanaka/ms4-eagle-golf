@@ -72,9 +72,9 @@
                     </a>
                     <p class="text-center m-0 color--737373 {% if grand_total %}font-weight-bold color--333{% endif %}">
                         {% if grand_total %}
-                            &#128;{{ grand_total|floatformat:2 }}
+                            €{{ grand_total|floatformat:2 }}
                         {% else %}
-                            &#128;0.00
+                            €0.00
                         {% endif %}
                     </p>
                 </div>
@@ -176,7 +176,7 @@
 
     <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
     <div class="alert alert-warning text-center mb-0 border-0 main--alert bg--color--ffdf00-07" role="alert">
-        Spend <span class="font-weight-bold">&#128;{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
+        Spend <span class="font-weight-bold">€{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
         <span class="font-weight-bold text-uppercase">free</span>!
     </div>
     <!-- /End of Credit -->

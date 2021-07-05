@@ -156,7 +156,7 @@
                             {% elif item.product_club %} - Club: {{ item.product_club|title }}
                             {% endif %}
                         </p>
-                        <p class="pb-2 border-bottom">QTY: {{ item.quantity }} @ &#128;
+                        <p class="pb-2 border-bottom">QTY: {{ item.quantity }} @ €
                             {% if not item.product.is_discount %}
                                 {{ item.product.price }}
                             {% else %}
@@ -173,7 +173,7 @@
                     <p class="mb-0 text-black">Grand Total</p>
                 </div>
                 <div class="col-md-4 text-md-right">
-                    <p class="mb-0 fw-bold">&#128;{{ order.grand_total }}</p>
+                    <p class="mb-0 fw-bold">€{{ order.grand_total }}</p>
                 </div>
                 <div class="d-none d-md-block col-md-2"></div>
             </div>
@@ -183,7 +183,7 @@
                 <div class="col-md-4">
                 </div>
                 <div class="col-md-4">
-                    <p class="mt-2 mb-1 text-muted text-start"><small>(Order Total: &#128;{{ order.order_total }})</small></p>
+                    <p class="mt-2 mb-1 text-muted text-start"><small>(Order Total: €{{ order.order_total }})</small></p>
                 </div>
                 <div class="d-none d-md-block col-md-2"></div>
             </div>
@@ -193,7 +193,7 @@
                 <div class="col-md-4">
                 </div>
                 <div class="col-md-4">
-                    <p class="mb-0 text-muted"><small>(Delivery: &#128;{{ order.delivery_cost }})</small></p>
+                    <p class="mb-0 text-muted"><small>(Delivery: €{{ order.delivery_cost }})</small></p>
                 </div>
                 <div class="d-none d-md-block col-md-2"></div>
             </div>
