@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('default_full_name', 'default_email', 
+        fields = ('default_first_name', 'default_last_name', 'default_email', 
                   'default_street_address1', 'default_street_address2',
                   'default_town_or_city', 'default_postcode', 
                   'default_county', 'default_country',
@@ -18,7 +18,8 @@ class UserProfileForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'default_full_name': 'Full Name',
+            'default_first_name': 'First Name',
+            'default_last_name': 'Last Name',
             'default_email': 'Email',
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',

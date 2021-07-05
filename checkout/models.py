@@ -15,7 +15,7 @@ class Order(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
     date = models.DateTimeField(auto_now_add=True)
-    full_name = models.CharField(max_length=50, null=False, blank=False)
+    full_name = models.CharField(max_length=50, null=False, blank=False, default='')
     email = models.EmailField(max_length=100, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
