@@ -69,7 +69,6 @@ def cart_contents(request):
     else:
         free_golf_balls_delta = 0
 
-    grand_total = delivery + total
 
     context = {
         'cart_items': cart_items,
