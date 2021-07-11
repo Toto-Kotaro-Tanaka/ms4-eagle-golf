@@ -79,6 +79,11 @@
                                 {% endif %} x {{ item.quantity }}
                             </li>
                         {% endfor %}
+                        {% if order.free_golf_balls %}
+                        <li class="mb-2">
+                            &#9679; FREE Golf Balls x 1
+                        </li>
+                        {% endif %}
                     </ul>
                     <hr class="d-md-none">
                 </div>
