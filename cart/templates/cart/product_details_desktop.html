@@ -38,6 +38,7 @@
                 {% endif %}
             </td>
             <td>
+                <!-- Form Quantity -->
                 {% include "cart/qty_form.html" %}
             </td>
             <td>
@@ -50,6 +51,7 @@
         </tr>
         {% endfor %}
     </tbody>
+    <!-- Free Golf Balls -->
     {% if free_golf_balls_delta == 0 %}
         {% include "cart/free_golf_balls_desktop.html" %}
     {% endif %}

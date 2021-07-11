@@ -156,16 +156,32 @@
                             {% elif item.product_club %} - Club: {{ item.product_club|title }}
                             {% endif %}
                         </p>
-                        <p class="pb-2 border-bottom">QTY: {{ item.quantity }} @ €
+                        <p class="pb-2 border-bottom">QTY: {{ item.quantity }} @
                             {% if not item.product.is_discount %}
-                                {{ item.product.price }}
+                                €{{ item.product.price }}
                             {% else %}
-                                {{ item.product.discount_price }}
+                                €{{ item.product.discount_price }}
                             {% endif %} each</p>
                 </div>
                 <div class="d-none d-md-block col-md-2"></div>
             </div>
             {% endfor %}
+            <!-- Free Golf Balls -->
+            {% if order.free_golf_balls %}
+            <div class="row">
+                <div class="d-none d-md-block col-md-2"></div>
+                <div class="col-md-4">
+                    <p class="mb-0 text-black">Special Offer:</p>
+                </div>
+                <div class="col-md-4">
+                        <p class="mb-0 text-black fw-bold">
+                            FREE Golf Balls
+                        </p>
+                        <p class="pb-2 border-bottom">QTY: 1 @ €0.00
+                </div>
+                <div class="d-none d-md-block col-md-2"></div>
+            </div>
+            {% endif %}
             <!-- Costs -->
             <div class="row">
                 <div class="d-none d-md-block col-md-2"></div>
