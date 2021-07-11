@@ -275,7 +275,25 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 ### General Resources
 
+- Code Institute Course Materials
+- [Stack Overflow](https://stackoverflow.com/)
+- [YouTube](https://www.youtube.com/)
+- [W3schools](https://www.w3schools.com/)
+- [Google](https://www.google.com/)
+
 ### Tools
+
+- [Balsamiq](https://balsamiq.com/) for wireframes
+- [Adobe](https://www.adobe.com/ie/photoshop/online/resize-image.html) for resizing images
+- [PNG to ICO](https://hnet.com/png-to-ico/) for converting png to ico for favicon
+- [Canva](https://www.canva.com/) for creating logos and some images
+- [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php) for mockup
+- [Autoprefixer](https://autoprefixer.github.io/) for parsing CSS and add vendor prefixes
+- [W3C Markup Validation Service](https://validator.w3.org/) for testing HTML code
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for testing CSS code
+- [jshint](https://jshint.com/) for testing JavaScript code
+- [PEP8 Online](http://pep8online.com/) for checking Python code compliance
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) for testing, style checking and debugging
 
 ## TESTING
 
