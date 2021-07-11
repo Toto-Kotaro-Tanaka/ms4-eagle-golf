@@ -19,6 +19,8 @@ There are two types of users for the website. One is shoppers whose primary goal
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/owner-user-story.png)
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ## UX 5 PLANES
 
 ### Strategy Plane
@@ -246,11 +248,15 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 1. Testing (Testing for HTML, CSS, JavaScript, Python, User Stories, Functions and Features)
 1. Final Check Before Submission
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ## FEATURES
 
 ### Existing Features
 
 ### Features Left To Implement
+
+<div align="right"><a href="#top">🔝</a></div>
 
 ## TECHNOLOGIES USED
 
@@ -264,6 +270,8 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 - [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as database in production mode
 - [Google Fonts](https://fonts.google.com/) for fonts
 - [Font Awesome](https://fontawesome.com/) for icons
+- [Stripe](https://stripe.com/en-ie) for credit card payment
+- [AWS](https://aws.amazon.com/) (Amazon Web Services) for host static files and images for the website
 - [Gitpod](https://www.gitpod.io/) as Integrated Development Environment (IDE)
 - [Git](https://git-scm.com/) for local version control, keeping the files & documents
 - [GitHub](https://github.com/) for online version control and keeping the files & documents
@@ -295,6 +303,8 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 - [PEP8 Online](http://pep8online.com/) for checking Python code compliance
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) for testing, style checking and debugging
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ## TESTING
 
 Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/TESTING.md)**
@@ -305,7 +315,48 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 <!-- First name Last name for allauth -->
 <!-- Newsletters -->
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ## VERSION CONTROL
+
+[Git](https://git-scm.com/) as a local repository and [GitHub](https://github.com/) as a remote repository are used for the project, and below is how they are used as the version control for the project.
+
+— **Setting Up** —
+
+1. Create a **remote repository** in GitHub by clicking **"New repository"** on the main page<br><br>
+   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control1.png)
+
+2. Use **Code Institute Template**, put the repository name and click Create Repository making sure to select public<br><br>
+   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control2.png)
+
+3. Open the repository with [Gitpod](https://www.gitpod.io/) which is my Integrated Development Environment (IDE). By using Code Institue Template, initialisation including initial commit is done so no need to do `git init` command when open IDE, or to use `git push -u origin main` command for my first commit. `gitignore` file, which is very important for the project including some confidential information, is created with Code Institute template so not necessary to create it<br><br>
+   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control3.png)
+
+— **Commitments** —
+
+- When a section or even a group of work is completed, it is committed in git and pushed into GitHub, to make sure to keep the history of the work logged properly and not to lose the work in unexpected situations. Below commands are used for this.
+
+```
+* git status | To check the status of new/modified folders, files, and documents
+* git add . | To put all new and updated work on the stage in git
+  git add <specific file> is used when different types of work are done but do not want to commit everything on the same commitment
+* git commit -m "Example commit" | To commit the work on the stage in git before pushing it to GitHub
+* git push | To update the repository in GitHub for main branch
+  git push origin <branch name> is used when pushing git into GitHub for sub-branches
+```
+
+— **Branches** —
+
+- When some testing is needed, create a branch and test is on it instead of using the main branch. When the testing is successful, then merge the branch into the main and when it is not, leave the branch unmerged and keep working on the main branch. Below commands are used for this.
+
+```
+* git branch <branch name> | To create a new branch
+* git checkout <branch name> | To switch branch
+* git branch | To check current branch
+* git merge <branch name> | To merge sub-branch into main, do this on main branch
+```
+
+<div align="right"><a href="#top">🔝</a></div>
 
 ## DEPLOYMENT
 
@@ -467,4 +518,9 @@ Below are the processes of deploying the website to Heroku and setting up static
 - Popular Brand Logo: [Srixon](https://www.srixon.com/) 
 - Popular Brand Logo: [Nike](https://www.nike.com/ie/) 
 
+<div align="right"><a href="#top">🔝</a></div>
+
 ## ACKNOWLEDGEMENTS
+
+<div align="right"><a href="#top">🔝</a></div>
+
