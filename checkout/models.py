@@ -27,6 +27,7 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    free_golf_balls = models.BooleanField(default=False, null=True, blank=True)
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=100, null=False, blank=False, default='')
 
@@ -48,6 +49,14 @@ class Order(models.Model):
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
+        self.save()
+
+        """
+        Identify if users get free golf balls or not
+        """
+        self.free_golf_balls = False
+        if self.order_total >= settings.FREE_GOLF_BALLS_THRESHOLD:
+            self.free_golf_balls = True
         self.save()
 
     def save(self, *args, **kwargs):
