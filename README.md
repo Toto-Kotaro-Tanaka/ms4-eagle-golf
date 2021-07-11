@@ -326,13 +326,13 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 — **Setting Up** —
 
 1. Create a **remote repository** in GitHub by clicking **"New repository"** on the main page<br><br>
-   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control1.png)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control1.png)
 
 2. Use **Code Institute Template**, put the repository name and click Create Repository making sure to select public<br><br>
-   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control2.png)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control2.png)
 
 3. Open the repository with [Gitpod](https://www.gitpod.io/) which is my Integrated Development Environment (IDE). By using Code Institue Template, initialisation including initial commit is done so no need to do `git init` command when open IDE, or to use `git push -u origin main` command for my first commit. `gitignore` file, which is very important for the project including some confidential information, is created with Code Institute template so not necessary to create it<br><br>
-   ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control3.png)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control3.png)
 
 — **Commitments** —
 
@@ -357,6 +357,10 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 * git branch | To check current branch
 * git merge <branch name> | To merge sub-branch into main, do this on main branch
 ```
+
+> **Note:**<br>
+> There are no static files available in the master branch on production mode for some reason so free-golf-balls branch is used for update and the same code is transferred to the master without merging<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/version-control/version-control4.png)
 
 <div align="right"><a href="#top">🔝</a></div>
 
