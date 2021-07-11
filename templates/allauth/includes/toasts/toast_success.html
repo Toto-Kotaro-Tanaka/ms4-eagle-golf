@@ -54,6 +54,11 @@
                             Spend <span class="fw-bold">&#128;{{ free_golf_balls_delta }}</span> or more to get free golf balls!
                         </p>
                     {% endif %}
+                    {% if free_golf_balls_delta == 0 %}
+                        <p class="mb-0 p-2 text-black text-center bg--color--ffdf00-07">
+                            You get Free Golf Balls with your purchase!
+                        </p>
+                    {% endif %}
                     <a href="{% url 'view_cart' %}" class="btn btn-success mt-3 m-2 bg--color--09572a">
                         <i class="fas fa-lock"></i> Process Your Order
                     </a>
