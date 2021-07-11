@@ -2,7 +2,7 @@
 
 # Eagle Golf <a name="top"></a>
 
-This is an e-commerce website for golf products that I create for **Milestone Project 4 (Full Stack Frameworks with Django)** in [Code Institute](https://codeinstitute.net/), Ireland. The use of the website is for educational purpose only, however, all the functionalities work as if it is an actual e-commerce website. It is a mobile responsive website and the link to the website is available HERE. <!-- Live Site Link here -->
+This is an e-commerce website for golf products that I create for **Milestone Project 4 (Full Stack Frameworks with Django)** in [Code Institute](https://codeinstitute.net/), Ireland. The use of the website is for educational purpose only, however, all the functionalities work as if it is an actual e-commerce website. It is a mobile responsive website and the link to the website is available [HERE](https://ms4-eagle-golf.herokuapp.com/).
 
 <!-- Mock up goes here -->
 
@@ -55,8 +55,8 @@ Below are the additional functions and features that can improve the website, ho
 | Product comparison**                            |     3      |            1            |
 | Payment in different currencies                 |     2      |            1            |
 
-*[Refinements options](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/refinements.png)<br>
-**[Product comparison](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-comparison.png)
+*[Example of Refinements options](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/refinements.png)<br>
+**[Example of Product comparison](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/product-comparison.png)
 
 ### Scope Plane
 
@@ -299,29 +299,29 @@ Below are the processes of deploying the website to Heroku and setting up static
 
 1. Create an app in Heroku. Click *New*, put App name and select region<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-app1.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-app2.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-app2.png)
 
 1. Add Heroku Postgres for the database<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/heroku-postgres.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/heroku-postgres.png)
 
 1. Install `dj_database_url` and `psycopg2-binary` to use Heroku Postgres, and run `pip3 freeze > requirements.txt` command to add them on requirments.txt<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt.png)
 
 1. Update `settings.py` of the product (eagle_golf). Import `dj_database_url`, comment out sqlite databases and add dj databases variable temporary while the database is transferred to Heroku Postgres<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/databases.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/databases.png)
 
 1. Run `python3 manage.py showmigrations` command to see the status of migrations (Currently not migrated). Run `python3 manage.py migrate` command to migrate<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/migrate.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/migrate.png)
 
 1. Import all products data. Run `python3 manage.py loaddata` command to load the **categories** first, **brands** next and **products** the last. The order of loading is important as all the products are associated with categories and brands
 
 1. Create a super user with `python3 manage.py createsuperuser` command for product admin
 
 1. Install `gunicorn` which acts as the webserver, and freeze it into requirments file with `pip3 freeze > requirements.txt` command<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt2.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt2.png)
 
 1. Create a **Procfile** which specifies the commands that are executed by the app on startup<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/procfile.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/procfile.png)
 
 1. Temporary disable collectstatic by setting `heroku config:set DISABLE_COLLECTSTATIC = 1` and host name of Heroku to allowed hosts in `settings.py`
 
@@ -330,76 +330,78 @@ Below are the processes of deploying the website to Heroku and setting up static
 1. Set up automatic deployment when git is pushed to GitHub. Go to Deployment on Heroku, search the GitHub repository, connect and click Enable Automatic Deploys<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/auto-deployment.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/auto-deployment2.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/auto-deployment3.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/auto-deployment3.png)
 
 1. Generate a new secret key, set it up in Heroku and update `settings.py`. Change the setting of Debug mode that only True in Development mode<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/secret-key.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/secret-key2.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/secret-key2.png)
 
 1. Check Activity Feed to see Build in Progress to confirm automatic deployment is working
 
 — **AWS** —
 
 1. Open S3 and create a new bucket, which stores the files, by completing the name and region<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-bucket.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-bucket.png)
 
 1. Set up basic settings. Enable static website hosting so that give a new endpoint for accessing from the internet. Put `index.html` and `error.html` as default values<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-settings.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-settings.png)
 
 1. Set up CORS configuration which is the access between Heroku and this S3 Bucket<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cors.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cors.png)
 
 1. Set up Bucket Policy. Generate a policy with AWS pocicy generator. Add /* at the end of Resource to allow access to all recources in the bucket<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-policy.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-policy.png)
 
 1. Create a user to access to the bucket. Go to IAM (Identity and Access Management) and create a group for user to live in. Then, create a policy by importing pre-built policy<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-group.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-policy.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-import-policy.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-s3-policy.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-review-policy.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-review-policy.png)
 
 1. Attach the policy to the group<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/attach-policy.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/attach-policy2.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/attach-policy2.png)
 
 1. Create a user and add it to the group. When the user is added to the group, it creates csv file containing Access Key ID and Secret access key which are used to authenticate them from Django app. *It is very important to download the file and save it as you cannot download it again<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-user.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-user2.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-user2.png)
 
 — **Connecting to DJANGO** —
 
 1. Install two new packages, `pip3 install boto3`, `pip3 install django-storages`, and run `pip3 freeze > requirements.txt` command to add them on requirments.txt<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt3.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt3.png)
 
 1. Update `settings.py` to tell Django which bucket it should be communicating with *It is very important to keep AWS access keys secrets as these can be used to store or move data in the bucket and you will be charged by Amazon for it<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/django-aws-settings.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/django-aws-settings.png)
 
 1. Add these secret keys on Heroku and set USE_AWS = True<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/heroku-config-vars.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/heroku-config-vars.png)
 
 1. Create `custome_storages.py` to tell Django to use S3 to store static files and upload images when it is in production<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/custom-storages.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/custom-storages.png)
 
 1. Add `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'` to tell Django where the static files come from in production and add some settings for Static and Media files on `settings.py`<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/settings-static.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/settings-static.png)
 
 1. Add all the update in git, commit it and push it to GitHub. Heroku runs `python3 manage.py` to collectstatic during the process which also searches through all the apps and project folders looking for static files. Then, it uses S3 domain settings in conjunction with the custom storage classes that tells the location at the URL where the things should be saved when it is in production. This can be confirmed in S3 bucket<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/static-folders-s3.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/static-folders-s3.png)
 
 1. Add Cache control on `settings.py` as static files do not change often and to improve the perfomance for users<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cache-control.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cache-control.png)
 
 1. Upload product images via S3. Create a folder, and upload images<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-folder.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/upload.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/upload.png)
 
 1. Verify superuser's email address on Heroku Postgres. Login admin and check the VERIFIED and PRIMARY boxes<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/verify.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/verify.png)
 
 1. Add Stripe keys to Heroku Config Vars and create a new webhook endpoint<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/stripe-config-vars.png)<br><br>
-![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/endpoint.png)<br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/endpoint.png)
+
+<div align="right"><a href="#top">🔝</a></div>
 
 ## CREDITS
 
