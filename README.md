@@ -316,6 +316,7 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 <!-- +- qty buttons -->
 <!-- First name Last name for allauth -->
 <!-- Newsletters -->
+<!-- Free golf balls migrations -->
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -475,6 +476,10 @@ Below are the processes of deploying the website to Heroku and setting up static
 1. Add Stripe keys to Heroku Config Vars and create a new webhook endpoint<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/stripe-config-vars.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/endpoint.png)
+
+1. Create Gmail account, add email host pass & user to Heroku Config Vars and add code on `settings.py` of the product (eagle_golf)
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/email.png)<br><br>
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/email2.png)
 
 <div align="right"><a href="#top">🔝</a></div>
 
