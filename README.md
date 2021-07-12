@@ -263,6 +263,20 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 ### Features Left To Implement
 
+- **Displaying number of product images per product:** This would probably be possible to implement by using the same principal as Carousel, however, cannot confirm it for sure and do not have time to work on this, decide to leave it out in this project
+
+- **Enlarging image when hovering:** Find a few ways of enlargin (zooming) images on hover, however, not sure if these are same as enlargin images of products that are used in e-commerce websites. Currently no time to look at the details so decide to leave it out in this project
+
+- **Refinements options:** This might be implemented by different combinations of filter, however, currently have no skill to achieve this so decide to leave it out in this project
+
+- **More detailed categories and advertisement:** This is to have more detailed categories (e.g. There are only 11 categories but actual e-commerce website, there should be more categories available = more products) and more detailed advertisement such as having different colours, guidance for size etc. Currently have no time to work on this, decide to leave it out in this project
+
+- **Creating account with social media:** <!-- This might be possible so take a look at it if have time -->
+
+- **Product comparison:** This seems to be a very advanced feature and do not even know how to look up for this with my current skill and knowledge so decide to leave it out in this project
+
+- **Payment in different currencies:** This might be possible with Stripe rather than Django, but not sure how to achieve this. As this is not important feature with current project and do not have time to look at it, decide to leave it out in this project
+
 <div align="right"><a href="#top">🔝</a></div>
 
 ## TECHNOLOGIES USED
