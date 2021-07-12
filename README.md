@@ -254,6 +254,13 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 ### Existing Features
 
+- Create with **HTML5**, **CSS3** (with Material Design for Bootstrap), **JavaScript**, **Python** (Django Framework), **Stripe**, **AWS** and **Heroku**
+- It consists of 1 product with 5 apps in Django
+- It consists of 1 base html template and 12 main html files. (Excluding sub html files and some allauth html files)
+- Modal for "Delivery Cost" information
+- Toast for user's action
+- All the features planned on [Strategy Plane](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/features/strategy-plane.png) and [Scope Plane](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/features/scope-plane.png)
+
 ### Features Left To Implement
 
 <div align="right"><a href="#top">🔝</a></div>
