@@ -92,6 +92,7 @@ class StripeWH_Handler:
                     grand_total=grand_total,
                     original_cart=cart,
                     stripe_pid=pid,
+                    free_golf_balls=free_golf_balls,
                 )
                 order_exists = True
                 break
@@ -119,6 +120,7 @@ class StripeWH_Handler:
                     phone_number=shipping_details.phone,
                     original_cart=cart,
                     stripe_pid=pid,
+                    free_golf_balls=free_golf_balls,
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
