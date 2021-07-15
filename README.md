@@ -293,7 +293,7 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML) for markup
 - [CSS3](https://en.wikipedia.org/wiki/CSS) for style
-- [Material Design for Bootstrap 5 & 4](https://mdbootstrap.com/) (an open-source toolkit based on Bootstrap for developing Material Design) for the mainframe of the website <!-- MDB or Bootstrap TBC -->
+- [Material Design for Bootstrap 5 & 4](https://mdbootstrap.com/) (an open-source toolkit based on Bootstrap for developing Material Design) for the mainframe of the website
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for interaction
 - [Python3](https://www.python.org/) as a backend programming language
 - [Django](https://www.djangoproject.com/) (an open-source web framework) as the main framework of Python
@@ -343,11 +343,23 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 <div align="right"><a href="#top">🔝</a></div>
 
 ## PROJECT BARRIERS & SOLUTIONS
-<!-- Stripe payment, webhook unauthorised issue -->
-<!-- +- qty buttons -->
-<!-- First name Last name for allauth -->
-<!-- Newsletters -->
-<!-- Free golf balls migrations -->
+
+— **Stripe Webhook payment.intent_succeeded** —
+
+On the development mode, I get payment.intent_succeeded randomly failing although everything else for payment is working.
+According to debug,it shows `local variable ‘intent’ referenced before assignment` error so I try to fix the issue by looking at the internet first, but cannot solve it so look at Code Institute Slack. I find similar post which suggests this can be caused by error on the form (POST), so check my code on the form to make sure if everything is correct. There are no errors on the form but still get the error so post my query on Code Institute slack and get a feedback that also suggests form is usually the issue for `local variable ‘intent’ referenced before assignment`. I check the form a few more times but cannot find the error so decide to leave it to revisit the issue. When I look at Code Institute slack for something else, I find a post that GitPod workspace URL sometimes changes (e.g. eu10 --> eu11) and discover that this is causing the issue for payment.intent_succeeded because the URL I put in Stripe Webhook and my GitPod URL do not match. Also, I find another post that localhost needs to be on public (not private) when payments are taken on the website so the issue is solved by having the same URL for Stripe webhook endpoint and GitPod workspace, and having the localhost on public. 
+
+— **Quantity Buttons for Products** —
+
+On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however when there are same product with different sizes, it causes an error that the button for the first product works fine but the button for the second product does not. (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when the button of one of the product is disabled, the other product is also disabled so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website.
+
+— **First Name and Last Name for Allauth** —
+
+On the checkout form for registered users, there is a full name field which picks up first name and last name of the user account. In order to show the full name from the database, first name and last name fields need to be filled so I try to have these fields availalbe when users create an account. These fields belong to Allauth package, which is pre-built, well secured and has all necessary features, so I copy the file from the site packages directory and try to modify it but cannot find models.py, forms.py and views.py for it. I search the internet but is not sure how to do it so post the query on Code Institute Slack but get no feedback so contact a tutor support. Apparently, modifying Allauth (possibly all built in packages unless you are familiar with them?) is not easy as it looks according to the tutor. I do not want to break some other code by trying to implement this and this is a minor improvement for the webiste, I decide to leave it.  
+
+— **Newsletters App** —
+
+— **Free Golf Balls Field** —
 
 <div align="right"><a href="#top">🔝</a></div>
 
