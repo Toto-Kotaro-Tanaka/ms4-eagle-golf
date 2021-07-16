@@ -91,6 +91,19 @@
     <!-- /End of Credit -->
 </section>
 
+<section>
+    <form method="POST" action="{% url 'home' %}">
+        <p class="pt-2 font-weight-bold">Sign up for our newsletter</p>
+        {% csrf_token %}
+        <!-- {{ subscription_form }} -->
+        <div class="input-group">
+            <div class="input-group-append">
+                <button class="form-control" type="submit">Subscribe</button>
+            </div>
+        </div>
+    </form>
+</section>
+
 <!-- Credit: MDB Modal @ https://mdbootstrap.com/docs/standard/components/modal/ -->
 <!-- Modal -->
 <div id="deliveryCostModal" class="modal fade" tabindex="-1" aria-labelledby="deliveryCostModalLabel" aria-hidden="true">
