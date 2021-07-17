@@ -298,7 +298,8 @@ ul.no--bullets {
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
 @media only screen and (min-width: 62rem) {
-    .search--form {
+    .search--form, 
+    .error {
         width: 100%;
     }
 
