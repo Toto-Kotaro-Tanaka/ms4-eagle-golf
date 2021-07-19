@@ -22,13 +22,13 @@
                             data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
                         </button>
                     </div>
+                    <!-- Product Size -->
+                    {% if item.product.has_sizes %}
+                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                    {% endif %}
                     <!-- Golf Club Right or Left -->
                     {% if item.product.is_club %}
-                    <input type="hidden" name="product_club" value="{{ item.club }}">
-                    {% endif %}
-                        <!-- Product Size -->
-                    {% if item.product.has_sizes %}
-                    <input type="hidden" name="product_size" value="{{ item.size }}">
+                        <input type="hidden" name="product_club" value="{{ item.club }}">
                     {% endif %}
                 </div>
             </div>
@@ -36,12 +36,12 @@
     </div>
 </form>
 <!-- Product Quantity Update & Remove Options -->
-<a class="update-link text-info small pointer qty--update"><span class="color--1b4da0">Update</span></a>
+<a class="update-link text-info pointer qty--update"><span class="color--1b4da0">Update</span></a>
 <a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
     {% if item.product.has_sizes %}
         data-product_size = "{{ item.size }}"
     {% elif item.product.is_club %}
         data-product_club = "{{ item.club }}"
     {% endif %}>
-    <span class="color--e84610">Remove</span>
+    <span class="color--737373"><i class="far fa-trash-alt"></i></span>
 </a>

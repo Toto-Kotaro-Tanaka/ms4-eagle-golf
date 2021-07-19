@@ -109,6 +109,10 @@ ul.no--bullets {
     cursor:pointer;
 }
 
+.w--50 {
+    width: 50%;
+}
+
 .w--70 {
     width: 70%;
 }

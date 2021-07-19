@@ -1,10 +1,13 @@
 {% load static %}
 
-<div class="container mt-5 mb-3 category--name d-none d-lg-block">
+<div class="container mt-5 mb-3 d-none d-lg-block category--name ">
     <div class="row">
+        <!-- Golf Clubs Category -->
         <div class="col-3">
             <div class="col-12">
-                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/driver.jpg' %}" alt="Golf Clubs Category">
+                <a href="{% url 'products' %}?category=drivers,hybrids,irons,putters">
+                    <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/driver.jpg' %}" alt="Golf Clubs Category">
+                </a>
             </div>
             <div class="col-12">
                 <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=drivers,hybrids,irons,putters">
@@ -12,9 +15,12 @@
                 </a>
             </div>
         </div>
+        <!-- Clothing & Shoes Category -->
         <div class="col-3">
             <div class="col-12">
-                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/clothe.jpg' %}" alt="Golf Clubs Category">
+                <a href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">
+                    <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/clothe.jpg' %}" alt="Clothing & Shoes Category">
+                </a>
             </div>
             <div class="col-12">
                 <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=shirts,sweaters,trousers,shoes">
@@ -22,9 +28,12 @@
                 </a>
             </div>
         </div>
+        <!-- Golf Bags & Equipment Category -->
         <div class="col-3">
             <div class="col-12">
-                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/gps.jpg' %}" alt="Golf Clubs Category">
+                <a href="{% url 'products' %}?category=bags,golf_balls,gps">
+                    <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/gps.jpg' %}" alt="Golf Bags & Equipment Category">
+                </a>
             </div>
             <div class="col-12">
                 <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category=bags,golf_balls,gps">
@@ -32,9 +41,12 @@
                 </a>
             </div>
         </div>
+        <!-- Sale -->
         <div class="col-3">
             <div class="col-12">
-                <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/sale.jpg' %}" alt="Golf Clubs Category">
+                <a href="{% url 'products' %}?sale">
+                    <img class="d-block mx-auto mb-2 category--img" src="{% static 'images/sale.jpg' %}" alt="Sale">
+                </a>
             </div>
             <div class="col-12">
                 <a class="badge rounded-pill bg-success" href="{% url 'products' %}?sale">

@@ -537,6 +537,7 @@ Below are the processes of deploying the website to Heroku and setting up static
 - [MDB Modal](https://mdbootstrap.com/docs/standard/components/modal/) for displaying delivery cost
 - [MDB Cards](https://mdbootstrap.com/docs/standard/components/cards/) for displaying products
 - [MDB Pills](https://mdbootstrap.com/docs/standard/navigation/pills/) for displaying products
+- [MDB Tables](https://mdbootstrap.com/docs/standard/data/tables/) for displaying product summary
 - [MDB Footer](https://mdbootstrap.com/docs/standard/navigation/footer/) for footer
 
 — **CSS3** —

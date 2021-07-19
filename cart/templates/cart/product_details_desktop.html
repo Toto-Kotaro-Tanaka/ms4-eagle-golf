@@ -5,8 +5,8 @@
     <!-- Product Details Headings -->
     <thead>
         <tr>
-            <th class="c--1" scope="col">Product</th>
-            <th class="text--left" scope="col">Description</th>
+            <th scope="col">Product</th>
+            <th scope="col">Description</th>
             <th scope="col">Qty</th>
             <th class="text-end" scope="col">Sub Total</th>
         </tr>
@@ -17,9 +17,9 @@
             {% for item in cart_items %}
             <td>
                 {% if item.product.image %}
-                    <img class="cart--product--image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    <img class="w--50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                 {% else %}
-                    <img class="cart--product--image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                    <img class="w--50" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                 {% endif %}
             </td>
             <td class="text-start">
