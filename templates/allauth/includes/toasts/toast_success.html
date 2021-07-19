@@ -60,9 +60,16 @@
                             You get Free Golf Balls with your purchase!
                         </p>
                     {% endif %}
+                    {% if on_cart_page %}
+                    <a href="{% url 'checkout' %}" class="btn btn-success mt-3 m-2">
+                        <i class="fas fa-lock"></i> Secure Checkout
+                    </a>
+                    {% endif %}
+                    {% if not on_cart_page %}                
                     <a href="{% url 'view_cart' %}" class="btn btn-success mt-3 m-2 bg--color--09572a">
                         <i class="fas fa-lock"></i> Process Your Order
                     </a>
+                    {% endif %}
                 </div>
             </div>
         {% endif %}

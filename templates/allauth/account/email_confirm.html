@@ -5,6 +5,10 @@
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
+{% block extra_title %}
+- Email Confirmation
+{% endblock %}
+
 {% block content %}
 <section class="mb-5 p-4 text-center">
     <h2 class="m-3">{% trans "Confirm E-mail Address" %}</h2>
@@ -15,7 +19,7 @@
                 Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> 
                 is an e-mail address for user {{ user_display }}.{% endblocktrans %}
             </p>
-            <form class="mx-auto mt-3 text-start" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+            <form class="mx-auto mt-3 text-center" method="post" action="{% url 'account_confirm_email' confirmation.key %}">
                 {% csrf_token %}
                 <button class="btn btn-primary mt-4 mb-4" type="submit">{% trans 'Confirm' %}</button>
             </form>

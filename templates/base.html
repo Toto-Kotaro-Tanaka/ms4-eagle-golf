@@ -175,7 +175,7 @@
     </header>
 
     <!-- Credit: Bootstrap Alerts @ https://getbootstrap.com/docs/5.0/components/alerts/ -->
-    <div class="alert alert-warning text-center mb-0 border-0 main--alert bg--color--ffdf00-07" role="alert">
+    <div class="alert alert-warning text-center mb-0 border-0 pt-4 pt-lg-3 main--alert bg--color--ffdf00-07" role="alert">
         Spend <span class="font-weight-bold">€{{ free_golf_balls_threshold }}</span> or more and get a Dozen Golf Balls
         <span class="font-weight-bold text-uppercase">free</span>!
     </div>
@@ -234,7 +234,7 @@
                 <form method="POST" action="{% url 'home' %}">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto">
-                            <p class="pt-2 font-weight-bold">Sign up for our newsletter</p>
+                            <p class="pt-2 font-weight-bold">Subscribe to our newsletter</p>
                         </div>
                         <div class="col-md-5 col-12">
                             <div class="form-outline mb-4">
@@ -248,7 +248,7 @@
                     </div>
                 </form>
                 <p class="small d-none d-md-block mb-4">
-                    Sing up for newsletters and receive our special offers and weekly golf blog
+                    Subscribe to newsletters and receive our special offers and weekly golf blog
                 </p>
             </section>
         </div>
@@ -261,7 +261,7 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd</h6>
+                        <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd <i class="fas fa-golf-ball"></i></h6>
                         <p>Since 2015, we have been selling golf products online to worldwide customers!</p>
                     </div>
 
@@ -291,7 +291,14 @@
                 </div>
             </div>
             <!-- Copyright -->
-            <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.5);">&copy; Eagle Golf <span id="copyright"></span>
+            <div class="text-center text-white pt-3 bg--color--000-05">
+                <p class="mb-0 pb-3">&copy; Eagle Golf <span id="copyright"></span></p>
+            </div>
+            <div id="important--note" class="text-center text-white bg--color--000-05 hide">
+                <p class="mx-auto w-75 mb-0 pb-3">*This website is created by Kotaro Tanaka for educational purpose only. Some images are used from some e-commerce websites and the copyrights belong to them </p>
+            </div>    
+            <div class="text-center text-white pb-3 bg--color--000-05">
+                <i class="fas fa-exclamation-circle fa-lg pointer" onclick="showImportantNote()"></i> Important Note
             </div>
         </section>
     </footer>
@@ -309,6 +316,13 @@
     <!-- Copyright year -->
     <script>
         document.getElementById("copyright").textContent = new Date().getFullYear();
+    </script>
+    <!-- Important Note -->
+    <script>
+        function showImportantNote() {
+            const importantNote = document.getElementById("important--note");
+            importantNote.classList.toggle("hide");
+        }
     </script>
     {% endblock %}
 

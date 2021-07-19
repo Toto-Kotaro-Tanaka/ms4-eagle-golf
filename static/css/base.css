@@ -4,7 +4,8 @@ body {
     color: #333;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.1rem;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 95rem;
     padding: 0;
 }
 
@@ -59,6 +60,10 @@ body {
 
 .bg--color--ffdf00-07 {
     background-color:rgba(255, 223, 0, 0.7)
+}
+
+.bg--color--000-05 {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -252,6 +257,10 @@ ul.no--bullets {
 
 .footer--text {
     font-size: 0.8rem;
+}
+
+.hide {
+    display: none;
 }
 
 /* -- Quantity Selector for Product and Cart -- */
