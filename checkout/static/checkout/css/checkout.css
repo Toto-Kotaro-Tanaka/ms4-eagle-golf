@@ -3,12 +3,12 @@
 }
 
 .stripe--style--input {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 0px;
   box-sizing: border-box;
   height: 2.5rem;
   padding: 0 0 0 1rem;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: #fff;
 }
 
 .StripeElement--focus,
@@ -49,20 +49,20 @@ select option[value=""] {
 #loading-overlay {
 	display: none;
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(9, 87, 42, 0.4);
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
     z-index: 9999;
 }
 
 .loading-spinner {
 	display: flex;
     align-items: center;
+    height: 100%;
     justify-content: center;
     margin: 0;
-    height: 100%;
 }
 
 .golf--ball--spinner {

@@ -64,42 +64,42 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function (e) {
-        let form = $(this).prev('.update-form');
-        form.submit();
-    })
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function (e) {
+            let form = $(this).prev('.update-form');
+            form.submit();
+        })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function (e) {
-        let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
-        let size = $(this).data('product_size');
-        let club = $(this).data('product_club');
-        let url = `/cart/remove/${itemId}/`;
-        let dataSize = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
-        let dataClub = { 'csrfmiddlewaretoken': csrfToken, 'product_club': club };
+        // Remove item and reload on click
+        $('.remove-item').click(function (e) {
+            let csrfToken = "{{ csrf_token }}";
+            let itemId = $(this).attr('id').split('remove_')[1];
+            let size = $(this).data('product_size');
+            let club = $(this).data('product_club');
+            let url = `/cart/remove/${itemId}/`;
+            let dataSize = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
+            let dataClub = { 'csrfmiddlewaretoken': csrfToken, 'product_club': club };
 
-        if (size) {
-            $.post(url, dataSize)
-            .done(function () {
-                location.reload();
-            });
-        } else if (club) {
-            $.post(url, dataClub)
-            .done(function () {
-                location.reload();
-            });
-        } else {
-            $.post(url, dataSize)
-            .done(function () {
-                location.reload();
-            });
-        }
-    })
-</script>
+            if (size) {
+                $.post(url, dataSize)
+                .done(function () {
+                    location.reload();
+                });
+            } else if (club) {
+                $.post(url, dataClub)
+                .done(function () {
+                    location.reload();
+                });
+            } else {
+                $.post(url, dataSize)
+                .done(function () {
+                    location.reload();
+                });
+            }
+        })
+    </script>
 {% endblock %}

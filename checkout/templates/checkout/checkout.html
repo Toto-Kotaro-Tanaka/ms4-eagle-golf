@@ -40,18 +40,18 @@
                 <div class="col-6">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     {% if item.product.has_sizes %}
-                    <p class="my-0 small">Size: {{ item.size|upper }}</p>
+                        <p class="my-0 small">Size: {{ item.size|upper }}</p>
                     {% endif %}
                     {% if item.product.is_club %}
-                    <p class="my-0 small">Club: {{ item.club|title }}</p>
+                        <p class="my-0 small">Club: {{ item.club|title }}</p>
                     {% endif %}
                     <p class="my-0 small">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 text-end">
                     {% if not item.product.is_discount %}
-                    <p class="my-0 small">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 small">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     {% else %}
-                    <p class="my-0 small">€{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 small">€{{ item.product.discount_price | calc_subtotal:item.quantity }}</p>
                     {% endif %}
                 </div>
             </div>
@@ -180,8 +180,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{{ stripe_public_key|json_script:"id_stripe_public_key" }}
-{{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
