@@ -20,68 +20,70 @@
 
 {% block page_header %}
 <div class="bg-image">
+    <!-- Group of Categories and Images -->
     {% for c in current_categories %}
-    {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
-        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-clubs.png' %}" 
-            alt="Main image of Golf Clubs Products">
-        <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-golf-clubs.png' %}" 
-            alt="Main image of Golf Clubs Products">
-        <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">High Performance Golf Clubs</p>
-    {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
-        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-clothing.png' %}" 
-            alt="Main image of Clothing and Shoes products">
-        <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-shoes.png' %}" 
-            alt="Main image of Clothing and Shoes Products">
-        <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">Stylish Clothes & Shoes</p>
-    {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
-        <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-balls.png' %}" 
-            alt="Main image of Golf Bags and Equipment products">
-        <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-bag.png' %}" 
-            alt="Main image of Golf Bags and Equipment Products">
-        <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">Improve Your Game</p>
-    {% endif %}
+        {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
+            <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-clubs.png' %}" 
+                alt="Main image of Golf Clubs Products">
+            <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-golf-clubs.png' %}" 
+                alt="Main image of Golf Clubs Products">
+            <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">High Performance Golf Clubs</p>
+        {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
+            <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-clothing.png' %}" 
+                alt="Main image of Clothing and Shoes products">
+            <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-shoes.png' %}" 
+                alt="Main image of Clothing and Shoes Products">
+            <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">Stylish Clothes & Shoes</p>
+        {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
+            <img class="d-none d-md-block w-100" src="{% static 'images/hero-image-products-golf-balls.png' %}" 
+                alt="Main image of Golf Bags and Equipment products">
+            <img class="d-md-none w-100" src="{% static 'images/hero-image-mobile-products-bag.png' %}" 
+                alt="Main image of Golf Bags and Equipment Products">
+            <p class="d-none d-lg-inline-block text-uppercase fw-bold fade--in--text catch--phrase--products">Improve Your Game</p>
+        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
 
 {% block content %}
 <section class="container text-center {% if products|length < 1 %}mb-5{% endif %}">
+    <!-- Product Display -->
     {% if current_categories == None and sale != True %}
         <h2 class="m-5">All Products</h2>
     {% elif sale == True %}
         <h2 class="m-5">Sale</h2>
     {% endif %}
-
+    <!-- Group of Categories -->
     {% for c in current_categories %}
-    {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
-        <h2 class="mt-5">Golf Clubs</h2>
-    {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
-        <h2 class="mt-5">Clothing & Shoes</h2>
-    {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
-        <h2 class="mt-5">Golf Bags & Equipment</h2>
-    {% endif %}
+        {% if c.name == 'drivers' and 'hybrids' and 'irons' and 'putters' %}
+            <h2 class="mt-5">Golf Clubs</h2>
+        {% elif c.name == 'shirts' and 'sweaters' and 'trousers' and 'shoes' %}
+            <h2 class="mt-5">Clothing & Shoes</h2>
+        {% elif c.name == 'bags' and 'golf_balls' and 'gps' %}
+            <h2 class="mt-5">Golf Bags & Equipment</h2>
+        {% endif %}
     {% endfor %}
-
+    <!-- Brands -->
     {% for b in current_brands %}
-    {% if b.name == 'taylormade' %}
-        <h3 class="mt-3 text-muted font-weight-bold">TaylorMade</h3>
-    {% elif b.name == 'callaway' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Callaway</h3>
-    {% elif b.name == 'titleist' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Titleist</h3>
-    {% elif b.name == 'mizuno' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Mizuno</h3>
-    {% elif b.name == 'ping' %}
-        <h3 class="mt-3 text-muted font-weight-bold">PING</h3>
-    {% elif b.name == 'cobra' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Cobra</h3>
-    {% elif b.name == 'srixon' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Srixon</h3>
-    {% elif b.name == 'nike' %}
-        <h3 class="mt-3 text-muted font-weight-bold">Nike</h3>
-    {% endif %}
+        {% if b.name == 'taylormade' %}
+            <h3 class="mt-3 text-muted font-weight-bold">TaylorMade</h3>
+        {% elif b.name == 'callaway' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Callaway</h3>
+        {% elif b.name == 'titleist' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Titleist</h3>
+        {% elif b.name == 'mizuno' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Mizuno</h3>
+        {% elif b.name == 'ping' %}
+            <h3 class="mt-3 text-muted font-weight-bold">PING</h3>
+        {% elif b.name == 'cobra' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Cobra</h3>
+        {% elif b.name == 'srixon' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Srixon</h3>
+        {% elif b.name == 'nike' %}
+            <h3 class="mt-3 text-muted font-weight-bold">Nike</h3>
+        {% endif %}
     {% endfor %}
-
+    <!-- Product Search -->
     <div>
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -96,7 +98,7 @@
             {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
         </p>
     </div>
-
+    <!-- Categories -->
     <div class="mt-3 category--name">
         {% for c in current_categories %}
         <a class="badge rounded-pill bg-success" href="{% url 'products' %}?category={{ c.name }}">
@@ -104,6 +106,7 @@
         </a>
         {% endfor %}
     </div>
+    <!-- Product Sort -->
     {% if products|length > 1 %}
         <div class="mt-3 mt-lg-0 sort--selector--field">
             <i class="fas fa-filter"></i>
@@ -119,6 +122,7 @@
         </div>
     {% endif %}
     <div class="row mx-auto product--card">
+        <!-- Product Details Display -->
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
             <!-- Credit: MDB Cards @ https://mdbootstrap.com/docs/standard/components/cards/ -->
@@ -170,46 +174,44 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-<!-- Credit: W3Schools @ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
-<script>
-    const mybutton = document.getElementById("myBtn");
-    
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-    
-    $('.btt--link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
-</script>
-<!-- /End of Credit -->
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        let selector = $(this);
-        let currentUrl = new URL(window.location);
-
-        let selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            let sort = selectedVal.split("_")[0];
-            let direction = selectedVal.split("_")[1];
-
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
-
-            window.location.replace(currentUrl);
+    {{ block.super }}
+    <!-- Credit: W3Schools @ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
+    <script type="text/javascript">
+        const mybutton = document.getElementById("myBtn");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+            mybutton.style.display = "block";
         } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
+            mybutton.style.display = "none";
         }
-    })
-</script>
+        }
+        
+        $('.btt--link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
+    <!-- /End of Credit -->
+    <script type="text/javascript">
+        $('#sort-selector').change(function () {
+            let selector = $(this);
+            let currentUrl = new URL(window.location);
+            let selectedVal = selector.val();
+
+            if (selectedVal != "reset") {
+                let sort = selectedVal.split("_")[0];
+                let direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

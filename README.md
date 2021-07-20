@@ -543,6 +543,7 @@ Below are the processes of deploying the website to Heroku and setting up static
 — **CSS3** —
 - [Stackoverflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3) for blinking text
 - [Hover.css](https://ianlunn.github.io/Hover/) for floating logos with shadow
+- [Hubspot](https://blog.hubspot.com/website/css-fade-in) for fade in text
 
 — **JavaScript** —
 - [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top) for scroll back to top button
