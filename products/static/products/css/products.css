@@ -88,10 +88,6 @@
     cursor: pointer;
 }
 
-.product--image {
-    width: 80%;
-}
-
 #id_product_size,
 .is--club {
     width: 3.6rem;

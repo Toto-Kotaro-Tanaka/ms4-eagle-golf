@@ -18,11 +18,11 @@
             <div class="col-md-4">
                 {% if product.image%}
                     <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top product--image" src="{{ product.image.url }}" alt="{{ product.name }}" />
+                        <img class="card-img-top w--75" src="{{ product.image.url }}" alt="{{ product.name }}" />
                     </a>
                 {% else %}
                     <div>
-                        <img class="card-img-top product--image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
+                        <img class="card-img-top w--75" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
                     </div>
                 {% endif %}
             </div>

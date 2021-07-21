@@ -101,10 +101,6 @@ body {
     box-shadow: none;
 }
 
-ul.no--bullets {
-    list-style-type: none;
-  }
-
 .pointer {
     cursor:pointer;
 }
@@ -113,8 +109,8 @@ ul.no--bullets {
     width: 50%;
 }
 
-.w--70 {
-    width: 70%;
+.w--75 {
+    width: 75%;
 }
 
 .w--85 {
@@ -215,15 +211,11 @@ ul.no--bullets {
 #div_id_username,
 #div_id_password1,
 #div_id_passwprd2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .invalid-feedback {
     position: relative;
-}
-
-.alert {
-    border-radius: 0 !important;
 }
 
 /* Footer */
@@ -285,7 +277,8 @@ ul.no--bullets {
   
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
-    .w--50 {
+
+    .w--md--50 {
         width: 50%;
     }
 
@@ -302,7 +295,7 @@ ul.no--bullets {
 
     .login,
     .signup,
-    .password_reset, /* check this class */
+    .password_reset,
     .auth--p,
     .auth--div {
         width: 50%;
@@ -311,25 +304,18 @@ ul.no--bullets {
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
 @media only screen and (min-width: 62rem) {
-    .search--form {
-        width: 100%;
+
+    .w--lg--75 {
+        width: 75%;
+    }
+
+    .w--lg--90 {
+        width: 90%;
     }
 
     .main--alert {
 		margin-top: 9rem;
 	}
-	
-    .reasons--for--purchase--tabs {
-        width: 80%;
-    }
-
-    .product--card {
-        width: 90%;
-    }
-
-    .w--75 {
-        width: 75%;
-    }
 
     .login,
     .signup,
