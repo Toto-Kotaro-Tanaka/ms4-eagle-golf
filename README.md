@@ -247,17 +247,17 @@ This is an e-commerce website that has a lot of products with images containing 
 <div align="right"><a href="#top">🔝</a></div>
 
 ## WEBSITE DEVELOPMENT PLAN
-This is a full-stack website that contains both front-end, back-end, so many Django apps, features and functions so a good website development plan is required to maximise the efficiency of the development. GitHub project planner, which has a Kanban planner, is used for this project. Below is the summary of core tasks* for the website and more detailed tasks are listed on [GitHub Projects](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/projects/1). This gives not only very clear planning but also making sure nothing is missed during the process.<br>
+This is a full-stack website that contains both front-end & back-end, so many Django apps, features and functions so a good website development plan is required to maximise the efficiency of the development. GitHub project planner, which has a Kanban planner, is used for this project. Below is the summary of core tasks* for the website and more detailed tasks are listed on [GitHub Projects](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/projects/1). This gives not only very clear planning but also making sure nothing is missed during the process.<br>
 **Follow the same process as Code Institute Mini Project, Boutique Ado*
 
 1. Planning The Website with UX5 Planes
-1. Project Set Up (Installing Django, Setting up Project, Testing connection, Creating Django superuser)
+1. Project Set-Up (Installing Django, Setting up Project, Testing connection, Creating Django superuser)
 1. Authentication & Authorisation (Installing Allauth, Testing)
 1. The Base Template (Creating base template)
 1. The Home Page (Navigation bar, Header and Footer)
-1. Products Set Up (Creating Products app, Installing data, Filtering & Searching)
+1. Products Set-Up (Creating Products app, Installing data, Filtering & Searching)
 1. The Shopping Cart (Adding and adjusting products)
-1. Toasts (Real time notification)
+1. Toasts (Real-time notification)
 1. Checkout with Stripe (Function, Form, Testing Stripe)
 1. Profile (Displaying personal details and order history)
 1. Product Admin (CRUD function for products)
@@ -282,19 +282,19 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 ### Features Left To Implement
 
-- **Displaying number of product images per product:** This would probably be possible to implement by using the same principal as Carousel, however, cannot confirm it for sure and do not have time to work on this, decide to leave it out in this project
+- **Displaying number of product images per product:** This would probably be possible to implement by using the same principle as Carousel, however, cannot confirm it for sure and do not have time to work on this, decide to leave it out in this project
 
-- **Enlarging image when hovering:** Find a few ways of enlargin (zooming) images on hover, however, not sure if these are same as enlargin images of products that are used in e-commerce websites. Currently no time to look at the details so decide to leave it out in this project
+- **Enlarging image when hovering:** Find a few ways of enlarging (zooming) images on hover, however, not sure if these are the same as enlarging images of products that are used in e-commerce websites. Currently, no time to look at the details so decide to leave it out in this project
 
 - **Refinements options:** This might be implemented by different combinations of filter, however, currently have no skill to achieve this so decide to leave it out in this project
 
 - **More detailed categories and advertisement:** This is to have more detailed categories (e.g. There are only 11 categories but actual e-commerce website, there should be more categories available = more products) and more detailed advertisement such as having different colours, guidance for size etc. Currently have no time to work on this, decide to leave it out in this project
 
-- **Creating account with social media:** <!-- This might be possible so take a look at it if have time -->
+- **Creating an account with social media:** <!-- This might be possible so take a look at it if have time -->
 
 - **Product comparison:** This seems to be a very advanced feature and do not even know how to look up for this with my current skill and knowledge so decide to leave it out in this project
 
-- **Payment in different currencies:** This might be possible with Stripe rather than Django, but not sure how to achieve this. As this is not important feature with current project and do not have time to look at it, decide to leave it out in this project
+- **Payment in different currencies:** This might be possible with Stripe rather than Django, but not sure how to achieve this. As this is not an important feature with the current project and do not have time to look at it, decide to leave it out in this project
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -306,12 +306,12 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for interaction
 - [Python3](https://www.python.org/) as a backend programming language
 - [Django](https://www.djangoproject.com/) (an open-source web framework) as the main framework of Python
-- [SQLite](https://www.sqlite.org/index.html) (Django built-in database) as database in development mode
-- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as database in production mode
+- [SQLite](https://www.sqlite.org/index.html) (Django built-in database) as a database in development mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) (Heroku built-in) as a database in production mode
 - [Google Fonts](https://fonts.google.com/) for fonts
 - [Font Awesome](https://fontawesome.com/) for icons
 - [Stripe](https://stripe.com/en-ie) for credit card payment
-- [AWS](https://aws.amazon.com/) (Amazon Web Services) for host static files and images for the website
+- [AWS](https://aws.amazon.com/) (Amazon Web Services) for hosting static files and images for the website
 - [Gitpod](https://www.gitpod.io/) as Integrated Development Environment (IDE)
 - [Git](https://git-scm.com/) for local version control, keeping the files & documents
 - [GitHub](https://github.com/) for online version control and keeping the files & documents
@@ -333,7 +333,7 @@ This is a full-stack website that contains both front-end, back-end, so many Dja
 
 - [Balsamiq](https://balsamiq.com/) for wireframes
 - [Adobe](https://www.adobe.com/ie/photoshop/online/resize-image.html) for resizing images
-- [PNG to ICO](https://hnet.com/png-to-ico/) for converting png to ico for favicon
+- [PNG to ICO](https://hnet.com/png-to-ico/) for converting png to icon for favicon
 - [Canva](https://www.canva.com/) for creating logos and some images
 - [Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php) for mockup
 - [Autoprefixer](https://autoprefixer.github.io/) for parsing CSS and add vendor prefixes
@@ -356,15 +356,18 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 — **Stripe Webhook payment.intent_succeeded** —
 
 On the development mode, I get payment.intent_succeeded randomly failing although everything else for payment is working.
-According to debug,it shows `local variable ‘intent’ referenced before assignment` error so I try to fix the issue by looking at the internet first, but cannot solve it so look at Code Institute Slack. I find similar post which suggests this can be caused by error on the form (POST), so check my code on the form to make sure if everything is correct. There are no errors on the form but still get the error so post my query on Code Institute slack and get a feedback that also suggests form is usually the issue for `local variable ‘intent’ referenced before assignment`. I check the form a few more times but cannot find the error so decide to leave it to revisit the issue. When I look at Code Institute slack for something else, I find a post that GitPod workspace URL sometimes changes (e.g. eu10 --> eu11) and discover that this is causing the issue for payment.intent_succeeded because the URL I put in Stripe Webhook and my GitPod URL do not match. Also, I find another post that localhost needs to be on public (not private) when payments are taken on the website so the issue is solved by having the same URL for Stripe webhook endpoint and GitPod workspace, and having the localhost on public. 
+According to debug,it shows `local variable ‘intent’ referenced before assignment` error so I try to fix the issue by looking at the internet first, but cannot solve it so look at Code Institute Slack. I find a similar post that suggests this can be caused by an error on the form (POST), so check my code on the form to make sure if everything is correct. There are no errors on the form but still get the error so post my query on Code Institute slack and get feedback that also suggests form is usually the issue for `local variable ‘intent’ referenced before assignment`. I check the form a few more times but cannot find the error so decide to leave it to revisit the issue. When I look at Code Institute slack for something else, I find a post that GitPod workspace URL sometimes changes (e.g. eu10 --> eu11) and discover that this is causing the issue for payment.intent_succeeded because the URL I put in Stripe Webhook and my GitPod URL do not match. Also, I find another post that localhost needs to be public (not private) when payments are taken on the website so the issue is solved by having the same URL for Stripe webhook endpoint and GitPod workspace, and having the localhost on the public. 
 
 — **Quantity Buttons for Products** —
 
-On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however when there are same product with different sizes, it causes an error that the button for the first product works fine but the button for the second product does not. (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when the button of one of the product is disabled, the other product is also disabled so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website.
+On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however, when there is the same product with different sizes, it causes an error that [the button for the first product works fine but the button for the second product does not](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons.png). (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when the button of one of the product is disabled, the other product is also disabled so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website. *On mobile size, the button is not disabled, even with a single product, as id is being used and that is what I am told by the tutor.
 
 — **First Name and Last Name for Allauth** —
 
-On the checkout form for registered users, there is a full name field which picks up first name and last name of the user account. In order to show the full name from the database, first name and last name fields need to be filled so I try to have these fields availalbe when users create an account. These fields belong to Allauth package, which is pre-built, well secured and has all necessary features, so I copy the file from the site packages directory and try to modify it but cannot find models.py, forms.py and views.py for it. I search the internet but is not sure how to do it so post the query on Code Institute Slack but get no feedback so contact a tutor support. Apparently, modifying Allauth (possibly all built in packages unless you are familiar with them?) is not easy as it looks according to the tutor. I do not want to break some other code by trying to implement this and this is a minor improvement for the webiste, I decide to leave it.  
+On the checkout form for registered users, there is a full name field that picks up the first name and last name of the user account. To show the full name from the database, first name and last name fields need to be filled so I try to have these fields available when users create an account. These fields belong to Allauth package, which is pre-built, well secured and has all necessary features, so I copy the file from the site-packages directory and try to modify it but cannot find models.py, forms.py and views.py for it. I search the internet but not sure how to do it so post the query on Code Institute Slack but get no feedback so contact a tutor support. Apparently, modifying Allauth (possibly all built in packages unless you are familiar with them?) is not easy as it looks according to the tutor. I do not want to break some other code by trying to implement this and this is a minor improvement for the webiste, I decide to leave it.
+
+> **Note:**<br>
+> Create a branch for testing and it gives errors for Stripe webhook so take no further action on this
 
 — **Newsletters App** —
 
