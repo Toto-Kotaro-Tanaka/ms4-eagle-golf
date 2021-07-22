@@ -16,8 +16,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- MDB -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" type="text/css" />
     <!-- Styles CSS -->
@@ -264,7 +265,6 @@
                         <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd <i class="fas fa-golf-ball"></i></h6>
                         <p>Since 2015, we have been selling golf products online to worldwide customers!</p>
                     </div>
-
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
@@ -279,10 +279,8 @@
                             <a href="{% url 'products' %}?category=bags,golf_balls,gps" class="text-reset">Golf Bags & Equipment</a>
                         </p>
                     </div>
-
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                         <p><i class="fas fa-home"></i> No.17 Fairgreen Business Park, Galway, H91 W30M, Ireland</p>
                         <p><i class="fas fa-envelope"></i> eagle.golf.ms4@gmail.com</p>
@@ -290,7 +288,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Copyright -->
+            <!-- Copyright and Important Note -->
             <div class="text-center text-white pt-3 bg--color--000-05">
                 <p class="mb-0 pb-3">&copy; Eagle Golf <span id="copyright"></span></p>
             </div>
@@ -305,25 +303,25 @@
     <!-- /End of Credit -->
 
     {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
     {% endblock %}
 
     {% block corejs %}
-    <!-- MDB -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-    <!-- Copyright year -->
-    <script>
-        document.getElementById("copyright").textContent = new Date().getFullYear();
-    </script>
-    <!-- Important Note -->
-    <script>
-        function showImportantNote() {
-            const importantNote = document.getElementById("important--note");
-            importantNote.classList.toggle("hide");
-        }
-    </script>
+        <!-- MDB -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+        <!-- Copyright year -->
+        <script type="text/javascript">
+            document.getElementById("copyright").textContent = new Date().getFullYear();
+        </script>
+        <!-- Important Note -->
+        <script type="text/javascript">
+            function showImportantNote() {
+                const importantNote = document.getElementById("important--note");
+                importantNote.classList.toggle("hide");
+            }
+        </script>
     {% endblock %}
 
     {% block extra_js %}

@@ -2,7 +2,7 @@
 
 # Eagle Golf <a name="top"></a>
 
-This is an e-commerce website for golf products that I create for **Milestone Project 4 (Full Stack Frameworks with Django)** in [Code Institute](https://codeinstitute.net/), Ireland. The use of the website is for educational purpose only, however, all the functionalities work as if it is an actual e-commerce website. It is a mobile responsive website and the link to the website is available [HERE](https://ms4-eagle-golf.herokuapp.com/).
+This is an e-commerce website for golf products that I create for **Milestone Project 4 (Full Stack Frameworks with Django)** in [Code Institute](https://codeinstitute.net/), Ireland. The use of the website is for educational purposes only, however, all the functionalities work as if it is an actual e-commerce website. It is a mobile responsive website and the link to the website is available [HERE](https://ms4-eagle-golf.herokuapp.com/).
 
 <!-- Mock up goes here -->
 
@@ -16,14 +16,14 @@ There are two types of users for the website. One is shoppers whose primary goal
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/shopper-user-story2.png)
 
 > **Note:**<br>
-> ID9: Search function works with a keyword only
+> **ID9**: Search function works with a keyword only
 
 **<ins>Owner's User Story</ins>**
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/owner-user-story.png)
 
 > **Note:**<br>
-> ID5: In a real e-commerce website, products should never be deleted but make it unavailable or something instead. As this is an educational purpose website that CRUD should be implemented, there is delete products function
+> **ID5**: In a real e-commerce website, products should never be deleted but make them unavailable or something instead. As this is an educational purpose website that CRUD should be implemented, there is a delete products function
 
 <div align="right"><a href="#top">🔝</a></div>
 
@@ -50,7 +50,7 @@ To achieve the user's primary goals and stories outlined in the User Stories sec
 | Email subscription                          |     3      |            4            |
 | Add, Edit, Remove products (Admin only)     |     4      |            4            |
 
-Below are the additional functions and features that can improve the website, however, these are not mandatory to achieve the current user goals and stories. Some are not implemented due to a lack of my current skills & knowledge and some due to a lack of time.
+Below are the additional functions and features that can improve the website, however, these are not mandatory to achieve the current user goals and stories. Some are not implemented due to a lack of my current skills & knowledge and some are due to a lack of time.
 
 | Opportunity                                     | Importance | Viability / Feasibility |
 | :------------------------------------------     | :--------: | :---------------------: |
@@ -59,7 +59,7 @@ Below are the additional functions and features that can improve the website, ho
 | Enlarging image when hovering                   |     3      |            2            |
 | Refinements options*                            |     3      |            2            |
 | More detailed categories and advertisement      |     3      |            2            |
-| Creating account with social media              |     3      |            2            |
+| Creating an account with social media           |     3      |            2            |
 | Product comparison**                            |     3      |            1            |
 | Payment in different currencies                 |     2      |            1            |
 
@@ -68,7 +68,7 @@ Below are the additional functions and features that can improve the website, ho
 
 ### Scope Plane
 
-Based on the requirements of achieving user's and owner's goals and stories, below is the list of planning pages with the features and functions. CRUD (Create, Read, Update, and Delete) functions are implemented on the website as it is required for admin user's product management.
+Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions. CRUD (Create, Read, Update, and Delete) functions are implemented on the website as it is required for admin user's product management.
 
 - Simple design Home page that the purpose of the website is obvious to anybody and even first-time users know how to navigate the website. Clearly displayed group of categories (e.g. Golf Clubs | Clothing & Shoes) that have categories in it (e.g. Golf Clubs --> Drivers | Irons | Putters)
 - Product pages by the group of categories where users can view all the products belong to the group. Users are navigated to categories in this group from this page
@@ -82,7 +82,7 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 - Profile page where users can see the personal details and order histories
 - Logout function that users can safely log out the website and takes users back to the home page
 - Product Management pages (admin only) where admin can add, edit, and delete products
-- 404 page where users are taken back to home page safely when they visit a page does not exist
+- 404 & 500 pages where users are taken back to home page safely when they visit a page does not exist or an invalid page
 
 ### Structure Plane
 
@@ -97,7 +97,7 @@ The main page of the website. There is a logo, search function, navigation to *G
 The pages where users can see products by a group of categories & category and have an access to the product details page.
 
 - **Product Details** (`product/<product_id>.html`)<br>
-The pages where users can see product details, with an option to select criteria (e.g. size) and add it in shopping cart.
+The pages where users can see product details, with an option to select criteria (e.g. size) and add it in the shopping cart.
 
 - **Shopping Cart** (`shopping_cart.html`)<br>
 The page where users can view all the selected products and details. Users can adjust the quantity and there is an option to remove products. There is a button link to a checkout page for the final step of shopping. 
@@ -106,13 +106,13 @@ The page where users can view all the selected products and details. Users can a
 The page where users can process the purchase. Strip, which is a secured platform for credit card payment, is used on the website for processing payments.  
 
 - **Checkout Success** (`checkout_success.html`)<br>
-The confirmation page where users are lead to when the payment process is successfully completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
+The confirmation page where users are lead to when the payment process is completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
 
 - **Register** (`register.html`)<br>
-The page where users can create an account to save their personal details for next shopping and keep their purchase histories. A form with a built-in function is created with Django Allauth package.
+The page where users can create an account to save their details for next shopping and keep their purchase histories. A form with a built-in function is created with Django Allauth package.
 
 - **Login** (`login.html`)<br>
-The page where users can log in the website and access to Profile page to see the personal details and purchase histories. A form with a built-in function is created with Django Allauth package.
+The page where users can log in to the website and access to Profile page to see the personal details and purchase histories. A form with a built-in function is created with Django Allauth package.
 
 - **Profile** (`profile.html`)<br>
 The page where users can see personal details and purchase histories.
@@ -123,11 +123,11 @@ The page where only *Admin* has access and add a new product on the website.
 - **Edit Products** (`edit_products.html`)<br>
 The page where only *Admin* has access and edit products.
 
-- **Page 404** (`page_404.html`)<br>
-The error page that appears when the page is not found and where users are led to the Home page safely.
+- **Page 404 & 500** (`page_404.html`)<br>
+The error pages that appear when the page is not found or invalid and where users are led to the Home page safely.
 
-- **Base Template** (`base.html`)<br>
-The `html` template document that has core components of html and is used among other html files.
+- **Base Templates** (`base.html` and `base.css`)<br>
+The template documents that have core components of html and css and are used among other html files.
 
 - **Admin** (`/admin`)<br>
 The admin panel, which can be created with Django project, where Admin can take control of products and other data
@@ -139,9 +139,12 @@ Below is the flowchart of the website to show the core relationships between the
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/front-end-chart.png)<br>
 
+> **Note:**<br>
+> **Page 500** is added after the initial planning and it belongs to the same place as Page 404
+
 — **Back-end** —<br>
 
-Users have options to purchase products as a guest user or account holder user. Guest users cannot save personal details for their next shopping as personal details such as name, email address, shipping address etc belong to their order in the database. Account holder users create an account with their <ins>email address</ins> and <ins>username</ins>, and user name (user profile) is linked with their order so that personal details can be retrieved. Each product belongs to a category, a brand and these are identified by id. Each order has an unique order number which is generated by when order is processed and orders have shopper's and product details.<br>
+Users have options to purchase products as guest users or account holder users. Guest users cannot save personal details for their next shopping as personal details such as name, email address, shipping address etc belong to their order in the database. Account holder users create an account with their <ins>email address</ins> and <ins>username</ins>, and user name (user profile) is linked with their order so that personal details can be retrieved. Each product belongs to a category, a brand and these are identified by id. Each order has a unique order number which is generated by when the order is processed and orders have shopper's and product details.<br>
 SQLite, which is Django built-in database is used for development mode and Heroku Postgre is used for production mode. AWS (Amazon Web Services) is used to hold all static files and folders for the website for production mode. 
 
 Below is the chart of the database to show the data relationships.
@@ -188,6 +191,9 @@ The website is created as a desktop-first because it is easy to picture the whol
 ![Wireframe: Checkout Success](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/checkout-success.png)
 </details>
 
+> **Note:**<br>
+> No product image and product details are shown in the same place as other details
+
 <details>
 <summary>Register (register.html)</summary><br>
 
@@ -217,6 +223,9 @@ The website is created as a desktop-first because it is easy to picture the whol
 
 ![Wireframe: Page 404](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/page-404.png)
 </details>
+
+> **Note:**<br>
+> **Page 500**: Same as page 404
 
 ### Surface Plane
 
