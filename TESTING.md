@@ -68,6 +68,16 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 - Solve the warning by removing `type` attribute
 
+**Products Page** (`products.html`): [0 Errors & 2 Warnings]
+
+1. Warning: The `type` attribute is unnecessary for JavaScript resources.
+
+- Solve the warning by removing `type` attribute
+
+2. Warning: The `type` attribute is unnecessary for JavaScript resources.
+
+- Solve the warning by removing `type` attribute
+
 — **Form Validation** —
 
 — **Quality** —
