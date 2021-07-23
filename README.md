@@ -360,7 +360,7 @@ According to debug,it shows `local variable ‘intent’ referenced before assig
 
 — **Quantity Buttons for Products** —
 
-On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however, when there is the same product with different sizes, it causes an error that [the button for the first product works fine but the button for the second product does not](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons.png). (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when the button of one of the product is disabled, the other product is also disabled so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website. *On mobile size, the button is not disabled, even with a single product, as id is being used and that is what I am told by the tutor.
+On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however, when there is the same product with different sizes, it causes an error that [the button for the first product works fine but the button for the second product does not](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons.png). (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when [the button of one of the product is disabled, the other product is also disabled](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons-class.png) so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website. *On mobile size, the button is not disabled, even with a single product, as id is being used and that is what I am told by the tutor.
 
 — **First Name and Last Name for Allauth** —
 
@@ -400,19 +400,19 @@ On the checkout form for registered users, there is a full name field that picks
 * git add . | To put all new and updated work on the stage in git
   git add <specific file> is used when different types of work are done but do not want to commit everything on the same commitment
 * git commit -m "Example commit" | To commit the work on the stage in git before pushing it to GitHub
-* git push | To update the repository in GitHub for main branch
+* git push | To update the repository in GitHub for main / master branch
   git push origin <branch name> is used when pushing git into GitHub for sub-branches
 ```
 
 — **Branches** —
 
-- When some testing is needed, create a branch and test is on it instead of using the main branch. When the testing is successful, then merge the branch into the main and when it is not, leave the branch unmerged and keep working on the main branch. Below commands are used for this.
+- When some testing is needed, create a branch and test it on the branch instead of using the main / master branch. When the testing is successful, then merge the branch into the main / master and when it is not, leave the branch unmerged and keep working on the main / master branch. Below commands are used for this.
 
 ```
 * git branch <branch name> | To create a new branch
 * git checkout <branch name> | To switch branch
 * git branch | To check current branch
-* git merge <branch name> | To merge sub-branch into main, do this on main branch
+* git merge <branch name> | To merge sub-branch into main / master, do this on main / master branch
 ```
 
 > **Note:**<br>
@@ -423,7 +423,7 @@ On the checkout form for registered users, there is a full name field that picks
 
 ## DEPLOYMENT
 
-The website of this project requires back-end technologies such as server, application, and database so the website is deployed in [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static website. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has *no files system to store new files* [*Reference from Code Institue Slack](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/reference-aws.png).
+The website of this project requires back-end technologies such as server, application, and database so the website is deployed in [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static website. Heroku Postgres is used for the database. [AWS services](https://aws.amazon.com/), which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/reference-aws.png).
 
 Below are the processes of deploying the website to Heroku and setting up static files & images in AWS.
 
@@ -449,7 +449,7 @@ Below are the processes of deploying the website to Heroku and setting up static
 
 1. Create a super user with `python3 manage.py createsuperuser` command for product admin
 
-1. Install `gunicorn` which acts as the webserver, and freeze it into requirments file with `pip3 freeze > requirements.txt` command<br><br>
+1. Install `gunicorn` which acts as the webserver, and freeze it into requirements file with `pip3 freeze > requirements.txt` command<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/requirements-txt2.png)
 
 1. Create a **Procfile** which specifies the commands that are executed by the app on startup<br><br>
@@ -475,16 +475,16 @@ Below are the processes of deploying the website to Heroku and setting up static
 1. Open S3 and create a new bucket, which stores the files, by completing the name and region<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/create-bucket.png)
 
-1. Set up basic settings. Enable static website hosting so that give a new endpoint for accessing from the internet. Put `index.html` and `error.html` as default values<br><br>
+1. Set up basic settings. Enable static website hosting so that it gives a new endpoint for accessing from the internet. Put `index.html` and `error.html` as default values<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-settings.png)
 
 1. Set up CORS configuration which is the access between Heroku and this S3 Bucket<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cors.png)
 
-1. Set up Bucket Policy. Generate a policy with AWS pocicy generator. Add /* at the end of Resource to allow access to all recources in the bucket<br><br>
+1. Set up Bucket Policy. Generate a policy with AWS policy generator. Add /* at the end of Resource to allow access to all resources in the bucket<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/bucket-policy.png)
 
-1. Create a user to access to the bucket. Go to IAM (Identity and Access Management) and create a group for user to live in. Then, create a policy by importing pre-built policy<br><br>
+1. Create a user to access the bucket. Go to IAM (Identity and Access Management) and create a group for the user to live in. Then, create a policy by importing pre-built policy<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-group.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-policy.png)<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/iam-import-policy.png)<br><br>
@@ -516,10 +516,10 @@ Below are the processes of deploying the website to Heroku and setting up static
 1. Add `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'` to tell Django where the static files come from in production and add some settings for Static and Media files on `settings.py`<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/settings-static.png)
 
-1. Add all the update in git, commit it and push it to GitHub. Heroku runs `python3 manage.py` to collectstatic during the process which also searches through all the apps and project folders looking for static files. Then, it uses S3 domain settings in conjunction with the custom storage classes that tells the location at the URL where the things should be saved when it is in production. This can be confirmed in S3 bucket<br><br>
+1. Add all the updates in git, commit it and push it to GitHub. Heroku runs `python3 manage.py` to collectstatic during the process which also searches through all the apps and project folders looking for static files. Then, it uses S3 domain settings in conjunction with the custom storage classes that tell the location at the URL where the things should be saved when it is in production. This can be confirmed in S3 bucket<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/static-folders-s3.png)
 
-1. Add Cache control on `settings.py` as static files do not change often and to improve the perfomance for users<br><br>
+1. Add Cache control on `settings.py` as static files do not change often and to improve the performance for users<br><br>
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/deployment/cache-control.png)
 
 1. Upload product images via S3. Create a folder, and upload images<br><br>
@@ -555,12 +555,10 @@ Below are the processes of deploying the website to Heroku and setting up static
 — **CSS3** —
 - [Stackoverflow](https://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css-3) for blinking text
 - [Hover.css](https://ianlunn.github.io/Hover/) for floating logos with shadow
-- [Hubspot](https://blog.hubspot.com/website/css-fade-in) for fade in text
+- [Hubspot](https://blog.hubspot.com/website/css-fade-in) for fade-in text
 
 — **JavaScript** —
 - [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top) for scroll back to top button
-
-— **Python** —
 
 ### Contents
 
@@ -586,6 +584,7 @@ Below are the processes of deploying the website to Heroku and setting up static
 - Popular Brand Logo: [Cobra Golf](https://www.cobragolf.com/) 
 - Popular Brand Logo: [Srixon](https://www.srixon.com/) 
 - Popular Brand Logo: [Nike](https://www.nike.com/ie/) 
+- All products images and descriptions: [Online Golf](https://www.onlinegolf.eu/)
 
 <div align="right"><a href="#top">🔝</a></div>
 
