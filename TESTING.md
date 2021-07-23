@@ -78,6 +78,32 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 - Solve the warning by removing `type` attribute
 
+**Product Detail Page** (`product_detail.html`): [0 Errors & 0 Warnings]
+
+**Add Product Page** (`add_product.html`): [3 Errors & 0 Warnings]
+
+1. Error: Duplicate attribute `id`.
+<!-- TBC -->
+
+2. Error: Element `p` not allowed as child of element `strong` in this context. (Suppressing further errors from this subtree.)
+
+- Solve the error by removing `strong` element
+
+3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
+<!-- TBC -->
+
+**Edit Product Page** (`edit_product.html`): [3 Errors & 0 Warnings]
+
+1. Error: An `img` element must have an `alt` attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
+
+- Solve the error by putting `alt` attribute
+
+2. Error: Duplicate attribute `id`.
+<!-- TBC -->
+
+3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
+<!-- TBC -->
+
 — **Form Validation** —
 
 — **Quality** —
