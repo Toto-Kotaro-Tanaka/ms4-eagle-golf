@@ -50,6 +50,7 @@ def checkout(request):
             'county': request.POST['county'],
             'phone_number': request.POST['phone_number'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
