@@ -3,7 +3,7 @@
 <div class="text-end mt-2 p-3 bg--color--ffdf00-02">
     <p class="fw-normal mt-3">Cart Total: €{{ total|floatformat:2 }}</p>
     <p class="fw-normal mt-3"></p>
-        <a type="button" data-mdb-toggle="modal" data-mdb-target="#deliveryCostModal">
+        <a data-mdb-toggle="modal" data-mdb-target="#deliveryCostModal">
             Delivery <i class="fas fa-truck fw-bold color--333"></i></a>: €{{ delivery|floatformat:2 }}
     </p>
     <p class="fw-bold mt-5">Grand Total: €{{ grand_total|floatformat:2 }}</p>
