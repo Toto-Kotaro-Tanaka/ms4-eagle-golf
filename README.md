@@ -561,6 +561,8 @@ Below are the processes of deploying the website to Heroku and setting up static
 - [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top) for scroll back to top button
 
 ### Contents
+- All products contents: [Online Golf](https://www.onlinegolf.eu/)
+- All other contents: Self-written
 
 ### Media
 
@@ -584,7 +586,7 @@ Below are the processes of deploying the website to Heroku and setting up static
 - Popular Brand Logo: [Cobra Golf](https://www.cobragolf.com/) 
 - Popular Brand Logo: [Srixon](https://www.srixon.com/) 
 - Popular Brand Logo: [Nike](https://www.nike.com/ie/) 
-- All products images and descriptions: [Online Golf](https://www.onlinegolf.eu/)
+- All products images: [Online Golf](https://www.onlinegolf.eu/)
 
 <div align="right"><a href="#top">🔝</a></div>
 
