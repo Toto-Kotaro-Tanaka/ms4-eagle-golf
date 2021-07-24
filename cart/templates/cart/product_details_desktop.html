@@ -12,9 +12,9 @@
         </tr>
     </thead>
     <tbody>
+        {% for item in cart_items %}
         <tr>
             <!-- Product Details -->
-            {% for item in cart_items %}
             <td>
                 {% if item.product.image %}
                     <img class="w--50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">

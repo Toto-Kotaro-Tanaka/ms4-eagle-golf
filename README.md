@@ -99,7 +99,7 @@ The pages where users can see products by a group of categories & category and h
 - **Product Details** (`product/<product_id>.html`)<br>
 The pages where users can see product details, with an option to select criteria (e.g. size) and add it in the shopping cart.
 
-- **Shopping Cart** (`shopping_cart.html`)<br>
+- **Shopping Cart** (`cart.html`)<br>
 The page where users can view all the selected products and details. Users can adjust the quantity and there is an option to remove products. There is a button link to a checkout page for the final step of shopping. 
 
 - **Checkout** (`checkout.html`)<br>

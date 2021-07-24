@@ -6,7 +6,7 @@
 
 As the HTML code is completed on all HTML files, a code validation test is carried out by using [W3C Markup Validation Service](https://validator.w3.org/), which is a validator by the World Wide Web Consortium that allows checking HTML and XHTML documents for well-formed markup, to check any warnings and errors.
 
-**Home Page** (`index.html`): [10 Errors & 5 Warnings]
+**Home Page** (`index.html`): [10 Errors & 5 Warnings] *Some duplicated errors and warning and they are not repeated below
 
 1. Error: Element `hr` not allowed as child of element `ul` in this context. (Suppressing further errors from this subtree.)
 
@@ -36,45 +36,17 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 - Solve the error by using Django form `.as_p`
 
-8. Error: Stray start tag `th`.
+8. Error: Stray start tag `td`.
 
 - Solve the error by using Django form `.as_p`
 
-9. Error: Stray start tag `td`.
-
-- Solve the error by using Django form `.as_p`
-
-10. Error: Stray start tag `td`.
-
-- Solve the error by using Django form `.as_p`
-
-11. Error: Stray start tag `tr`.
-
-- Solve the error by using Django form `.as_p`
-
-12. Warning: Section lacks heading. Consider using `h2-h6` elements to add identifying headings to all sections.
-
-- Solve the warning by using `div` instead of `section`
-
-13. Warning: The `type` attribute is unnecessary for JavaScript resources.
+9. Warning: The `type` attribute is unnecessary for JavaScript resources.
 
 - Solve the warning by removing `type` attribute
 
-14. Warning: The `type` attribute is unnecessary for JavaScript resources.
-
-- Solve the warning by removing `type` attribute
-
-15. Warning: The `type` attribute is unnecessary for JavaScript resources.
-
-- Solve the warning by removing `type` attribute
-
-**Products Page** (`products.html`): [0 Errors & 2 Warnings]
+**Products Page** (`products.html`): [0 Errors & 2 Warnings] *Some duplicated errors and warning and they are not repeated below
 
 1. Warning: The `type` attribute is unnecessary for JavaScript resources.
-
-- Solve the warning by removing `type` attribute
-
-2. Warning: The `type` attribute is unnecessary for JavaScript resources.
 
 - Solve the warning by removing `type` attribute
 
@@ -102,6 +74,30 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 <!-- TBC -->
 
 3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
+<!-- TBC -->
+
+**Shopping Cart Page Desktop Size** (`cart.html`): [20 Errors & 16 Warnings] *Some duplicated errors and warning and they are not repeated below
+
+1. Error: `td` start tag in table body.
+
+- Solve the error by putting `{% for item in cart_items %}` above `<tr>` tag. Solve the error for Free golf balls by putting `<td>` tags in `<tr>` tag
+
+2. Error: Duplicate ID `###`
+<!-- TBC -->
+
+3. Warning: The first occurrence of ID `###` was here.
+<!-- TBC -->
+
+4. Error: No `p` element in scope but a `p` end tag seen.
+
+- Solve the error by removing additional `</p>` tag
+
+**Shopping Cart Page Mobile Size** (`cart.html`): [16 Errors & 16 Warnings] *Repeated errors and warnings of Duplicate ID and The first occurence of ID was here
+
+1. Error: Duplicate ID `###`
+<!-- TBC -->
+
+2. Warning: The first occurrence of ID `###` was here.
 <!-- TBC -->
 
 — **Form Validation** —
