@@ -87,10 +87,12 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 - Solve the error by putting `{% for item in cart_items %}` above `<tr>` tag. Solve the error for Free golf balls by putting `<td>` tags in `<tr>` tag
 
 2. Error: Duplicate ID `###`
-<!-- TBC -->
+
+- Solve the error by using `class` instead of `id`
 
 3. Warning: The first occurrence of ID `###` was here.
-<!-- TBC -->
+
+- Solve the error by using `class` instead of `id`
 
 4. Error: No `p` element in scope but a `p` end tag seen.
 
@@ -99,10 +101,12 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **Shopping Cart Page Mobile Size** (`cart.html`): [16 Errors & 16 Warnings] *Repeated errors and warnings of Duplicate ID and The first occurence of ID was here
 
 1. Error: Duplicate ID `###`
-<!-- TBC -->
+
+- Solve the error by using `class` instead of `id`
 
 2. Warning: The first occurrence of ID `###` was here.
-<!-- TBC -->
+
+- Solve the error by using `class` instead of `id`
 
 **Checkout Page** (`checkout.html`): [1 Errors & 0 Warnings]
 

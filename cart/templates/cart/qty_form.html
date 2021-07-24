@@ -8,17 +8,17 @@
                 <div class="input-group">
                     <!-- Decrement Button -->
                     <div class="input-group-prepend">
-                        <button id="decrement-qty_{{ item.item_id }}" class="decrement-qty"
+                        <button class="decrement-qty decrement-qty_{{ item.item_id }}{% if item.product.has_sizes %}_{{ item.size }}{% endif %}{% if item.product.is_club %}_{{ item.club }}{% endif %}"
                             data-item_id="{{ item.item_id }}"><i class="fas fa-minus pt-2 fa-lg"></i>
                         </button>
                     </div>
                     <!-- Quantity Input Box -->
-                    <input id="id_qty_{{ item.item_id }}" class="form-control qty_input" 
+                    <input class="form-control qty_input id_qty_{{ item.item_id }}" 
                         type="number" name="quantity" value="{{ item.quantity }}" 
                         min="1" max="9" data-item_id="{{ item.item_id }}">
                     <!-- Increment Button -->
                     <div class="input-group-append">
-                        <button id="increment-qty_{{ item.item_id }}" class="increment-qty"
+                        <button class="increment-qty increment-qty_{{ item.item_id }}{% if item.product.has_sizes %}_{{ item.size }}{% endif %}{% if item.product.is_club %}_{{ item.club }}{% endif %}"
                             data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
                         </button>
                     </div>
@@ -37,7 +37,7 @@
 </form>
 <!-- Product Quantity Update & Remove Options -->
 <a class="update-link text-info pointer qty--update"><span class="color--1b4da0">Update</span></a>
-<a id="remove_{{ item.item_id }}" class="remove-item small pointer qty--remove"
+<a class="remove-item small pointer qty--remove remove_{{ item.item_id }}"
     {% if item.product.has_sizes %}
         data-product_size = "{{ item.size }}"
     {% elif item.product.is_club %}
