@@ -251,6 +251,10 @@ body {
     background-color: #efefef;
 }
 
+.subscription--input {
+	border: solid 1px #757575 !important;
+}
+
 .footer--text {
     font-size: 0.8rem;
 }

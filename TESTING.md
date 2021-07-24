@@ -55,14 +55,16 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **Add Product Page** (`add_product.html`): [3 Errors & 0 Warnings]
 
 1. Error: Duplicate attribute `id`.
-<!-- TBC -->
+
+- Solve the error by removing `id="new-image"`
 
 2. Error: Element `p` not allowed as child of element `strong` in this context. (Suppressing further errors from this subtree.)
 
 - Solve the error by removing `strong` element
 
 3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
-<!-- TBC -->
+
+- Solve the error by using `{% for field in form %}`
 
 **Edit Product Page** (`edit_product.html`): [3 Errors & 0 Warnings]
 
