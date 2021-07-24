@@ -158,13 +158,17 @@ When mandatory fields are not filled in or form is invalid, [it displays an erro
 
 As the CSS code is completed, a code validation test is carried out by using [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), which is a validator by the World Wide Web Consortium that allows checking Cascading Style Sheets, to make sure that CSS complies with the standards set by the World Wide Web Consortium
 
-**`base.css`, `cart.css`, `checkout.css`, `index.css`, `products.css`, `profile.css`** are tested and there are [no errors on any of CSS files](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-validation.png).
+**`base.css`, `cart.css`, `checkout.css`, `index.css`, `products.css` and `profile.css`** are tested and there are [no errors on any of CSS files](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-validation.png).
 
 - There are some [warnings](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-warnings.png) related to WebKit, which is one of [web browser rendering engines](https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css), for base.css, index.css and product.css. By looking at the [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about) post and a [Code Institue Slack](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-webkit.png) threads, no further actions are required so decide to leave as it is
 
 ### JavaScript
 
 — **Code Validation** —
+
+As the JavaScript code is completed, a code validation test is carried out by using [JSHint](https://jshint.com/), which is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules
+
+**`quantity_input_script.html` (js code in cart app), `stripe_elements.js`, `quantity_input_script.html` (js code in product app), `countryfield.js` and js script on `cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`. `$` shows on all the files as undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as undefined variable but this comes from Stripe document so it can be ignored
 
 ### Python
 
