@@ -100,6 +100,16 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 2. Warning: The first occurrence of ID `###` was here.
 <!-- TBC -->
 
+**Checkout Page** (`checkout.html`): [1 Errors & 0 Warnings]
+
+1. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
+
+- Solve the error by removing `for="id-save-info"` attribute from the label
+
+**Checkout Success Page** (`checkout_success.html`): [0 Errors & 0 Warnings]
+
+
+
 — **Form Validation** —
 
 — **Quality** —
