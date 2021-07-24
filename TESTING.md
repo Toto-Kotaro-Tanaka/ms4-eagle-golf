@@ -108,7 +108,8 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 **Checkout Success Page** (`checkout_success.html`): [0 Errors & 0 Warnings]
 
-
+**Allauth Account Pages** (`signup.html`, `login.html`, `logout.html`, `password_reset`): [0 Errors & 0 Warnings]
+- Check only core pages of Allauth templates but as they are Django package, presume no errors or warnings
 
 — **Form Validation** —
 
