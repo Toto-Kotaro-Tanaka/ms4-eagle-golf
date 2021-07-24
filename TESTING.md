@@ -177,6 +177,18 @@ As the JavaScript code is completed, a code validation test is carried out by us
 
 — **Code Validation** —
 
+As Python code is completed, a code validation test is carried out by using [PEP8 &#40;Python Enhancement Proposal&#41; online](http://pep8online.com) to see if the code meets guidelines and best practices for the readability and consistency of Python code.
+
+Below is the list of `py` files that are customised therefore checked by the validator.
+
+**eagle-golf Product**
+
+`asgi.py`, `settings.py`, `urls.py` and `wsgi.py`: Line too long <!-- Check the long lines on settings.py -->
+
+**cart App**
+
+`apps.py`, `contexts.py`, `urls.py` and `views.py`: There are trailing whitespace, two blank lines, no newline at end of file, line too long warnings and errors, and they are all fixed.
+
 ### Web Browser
 
 — **Visibilities and CRUD functionality** —

@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse,
+    HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
 
@@ -32,38 +34,52 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated {product.name} [Size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
+                messages.success(request, f'Updated \
+                    {product.name} [Size: {size.upper()}] \
+                        quantity to {cart[item_id]["items_by_size"][size]}')
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added {product.name} [Size: {size.upper()}] to the shopping cart')
+                messages.success(request, f'Added \
+                    {product.name} [Size: {size.upper()}] \
+                        to the shopping cart')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added {product.name} [Size: {size.upper()}] to the shopping cart')
+            messages.success(request, f'Added \
+                {product.name} [Size: {size.upper()}] to the shopping cart')
     elif club:
         if item_id in list(cart.keys()):
             if club in cart[item_id]['items_by_club'].keys():
                 cart[item_id]['items_by_club'][club] += quantity
-                messages.success(request, f'Updated {product.name} [Club: {club.title()}] quantity to {cart[item_id]["items_by_club"][club]}')
+                messages.success(request, f'Updated \
+                    {product.name} [Club: {club.title()}] quantity to \
+                        {cart[item_id]["items_by_club"][club]}')
             else:
                 cart[item_id]['items_by_club'][club] = quantity
-                messages.success(request, f'Added {product.name} [Club: {club.title()}] to the shopping cart')
+                messages.success(request, f'Added \
+                    {product.name} [Club: {club.title()}] \
+                        to the shopping cart')
         else:
             cart[item_id] = {'items_by_club': {club: quantity}}
-            messages.success(request, f'Added {product.name} [Club: {club.title()}] to the shopping cart')
+            messages.success(request, f'Added \
+                {product.name} [Club: {club.title()}] \
+                    to the shopping cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(request, f'Updated \
+                {product.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = quantity
-            messages.success(request, f'Added {product.name} to the shopping cart')
+            messages.success(request, f'Added \
+                {product.name} to the shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
 
 
 def adjust_cart(request, item_id):
-    """ Adjust the quantity of the specific product to the specific amount """
+    """ Adjust the quantity of the specific product \
+        to the specific amount """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -79,28 +95,38 @@ def adjust_cart(request, item_id):
     if size:
         if quantity > 0:
             cart[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated {product.name} [Size: {size.upper()}] quantity to {cart[item_id]["items_by_size"][size]}')
+            messages.success(request, f'Updated \
+                {product.name} [Size: {size.upper()}] quantity to \
+                    {cart[item_id]["items_by_size"][size]}')
         else:
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} [Size: {size.upper()}] \
+                    from the shopping cart')
     elif club:
         if quantity > 0:
             cart[item_id]['items_by_club'][club] = quantity
-            messages.success(request, f'Updated {product.name} [Club: {club.title()}] quantity to {cart[item_id]["items_by_club"][club]}')
+            messages.success(request, f'Updated \
+                {product.name} [Club: {club.title()}] quantity to \
+                    {cart[item_id]["items_by_club"][club]}')
         else:
             del cart[item_id]['items_by_club'][club]
             if not cart[item_id]['items_by_club']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [Club: {club.title()}] from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} [Club: {club.title()}] \
+                    from the shopping cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(request, f'Updated \
+                {product.name} quantity to {cart[item_id]}')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} from the shopping cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -123,15 +149,20 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [Size: {size.upper()}] from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} [Size: {size.upper()}] \
+                    from the shopping cart')
         elif club:
             del cart[item_id]['items_by_club'][club]
             if not cart[item_id]['items_by_club']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} [Club: {club.title()}] from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} [Club: {club.title()}] \
+                    from the shopping cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from the shopping cart')
+            messages.success(request, f'Removed \
+                {product.name} from the shopping cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

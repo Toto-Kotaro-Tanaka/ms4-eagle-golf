@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -33,7 +34,7 @@ def cart_contents(request):
                         product_count += quantity
                     else:
                         total += quantity * product.discount_price
-                        product_count += quantity 
+                        product_count += quantity
                     cart_items.append({
                         'item_id': item_id,
                         'quantity': quantity,
@@ -47,7 +48,7 @@ def cart_contents(request):
                         product_count += quantity
                     else:
                         total += quantity * product.discount_price
-                        product_count += quantity 
+                        product_count += quantity
                     cart_items.append({
                         'item_id': item_id,
                         'quantity': quantity,
