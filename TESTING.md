@@ -111,6 +111,11 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **Allauth Account Pages** (`signup.html`, `login.html`, `logout.html`, `password_reset`): [0 Errors & 0 Warnings]
 - Check only core pages of Allauth templates but as they are Django package, presume no errors or warnings
 
+**Toast Messages** (`toast_error.html`, `toast_info.html`, `toast_success.html`, `toast_warning.html`): [0 Errors & 0 Warnings]
+
+**404 and 500 Pages** (`404.html`, `500.html`): [0 Errors & 0 Warnings]
+- Check only 404 page but they have the same structure so presume no errors or warnings on 500 page
+
 — **Form Validation** —
 
 — **Quality** —
