@@ -123,7 +123,7 @@ The page where only *Admin* has access and add a new product on the website.
 - **Edit Products** (`edit_products.html`)<br>
 The page where only *Admin* has access and edit products.
 
-- **Page 404 & 500** (`page_404.html`)<br>
+- **Page 404 & 500** (`404.html`, `500.html`)<br>
 The error pages that appear when the page is not found or invalid and where users are led to the Home page safely.
 
 - **Base Templates** (`base.html` and `base.css`)<br>

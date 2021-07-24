@@ -116,6 +116,8 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **404 and 500 Pages** (`404.html`, `500.html`): [0 Errors & 0 Warnings]
 - Check only 404 page but they have the same structure so presume no errors or warnings on 500 page
 
+**Profile & Order History Page** (`profile.html`, `profile_order_history`): [0 Errors & 0 Warnings]
+
 — **Form Validation** —
 
 — **Quality** —
