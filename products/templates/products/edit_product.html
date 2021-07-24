@@ -13,7 +13,13 @@
         <h5 class="text-center mt-3 mb-3">Edit Product</h5>
         <form class="form mb-2 mx-auto w--md--50" method="POST" action="{% url 'edit_product' product.id %}" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form|crispy }}
+            {% for field in form %}
+                {% if field.name != 'image' %}
+                    {{ field | as_crispy_field }}
+                {% else %}
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
             <div>
                 <button class="btn btn-success m-2" type="submit">Update Product</button>
                 <a class="btn btn-danger m-2" href="{% url 'products' %}">Cancel</a>

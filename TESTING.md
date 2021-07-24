@@ -73,10 +73,12 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 - Solve the error by putting `alt` attribute
 
 2. Error: Duplicate attribute `id`.
-<!-- TBC -->
+
+- Solve the error by removing `id="new-image"`
 
 3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
-<!-- TBC -->
+
+- Solve the error by using `{% for field in form %}`
 
 **Shopping Cart Page Desktop Size** (`cart.html`): [20 Errors & 16 Warnings] *Some duplicated errors and warning and they are not repeated below
 
