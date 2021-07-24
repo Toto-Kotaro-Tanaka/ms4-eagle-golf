@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .catch--phrase--products {
 	background-color: rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.8);
@@ -28,37 +35,7 @@
 	}
 }
 
-@-moz-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
 @-webkit-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@-o-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@-ms-keyframes fadeIn {
 	0% {
 		opacity: 0;
 	}

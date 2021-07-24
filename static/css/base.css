@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
     background-color: #fff !important;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: #333;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.1rem;
@@ -129,16 +137,23 @@ body {
 }
 
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #737373;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     height: 3rem;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 5rem;
 }
 
 .navbar {
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
 }
 
 .btn-outline-primary {
@@ -281,7 +296,6 @@ body {
   
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {
-
     .w--md--50 {
         width: 50%;
     }
@@ -308,7 +322,6 @@ body {
 
 /* -- Media Query: Desktop Screen Size Bigger Than 62rem / 992px -- */
 @media only screen and (min-width: 62rem) {
-
     .w--lg--75 {
         width: 75%;
     }

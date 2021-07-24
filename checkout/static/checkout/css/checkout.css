@@ -1,24 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .StripeElement {
-  padding: 0.625rem 0.75rem;
+    padding: 0.625rem 0.75rem;
 }
 
 .stripe--style--input {
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  box-sizing: border-box;
-  height: 2.5rem;
-  padding: 0 0 0 1rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 2.5rem;
+    padding: 0 0 0 1rem;
 }
 
 .StripeElement--focus,
 .stripe--style--input:focus,
 .stripe--style--input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+    -webkit-box-shadow: 0 1px 3px 0 #cfd7df;
+            box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
+}
+
+.stripe--style--input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.stripe--style--input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.stripe--style--input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.stripe--style--input::-ms-input-placeholder {
+    color: #aab7c4;
 }
 
 .stripe--style--input::placeholder {
@@ -38,17 +63,17 @@
 
 select,
 select option {
-  color: #000;
+    color: #000;
 }
 
 select:invalid,
 select option[value=""] {
-  color: #aab7c4 !important;
+    color: #aab7c4 !important;
 }
 
 #loading-overlay {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     background: rgba(9, 87, 42, 0.4);
     height: 100%;
     left: 0;
@@ -58,13 +83,19 @@ select option[value=""] {
 }
 
 .loading-spinner {
-	display: flex;
-    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
 }
 
 .golf--ball--spinner {
-  width: 10rem;
+    width: 10rem;
 }
