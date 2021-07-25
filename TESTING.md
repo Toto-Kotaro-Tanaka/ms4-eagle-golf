@@ -280,4 +280,21 @@ The website is available on the major web browsers, such as **Chrome**, **Safari
 
 — **Evidence Of Achieving The Website From UX Point Of View** —
 
+There are some key features to achieve the primary goals of the website from user's point of view (both shoppers and the owner) and this is to confirm that all the features planned on **Strategy and Scope Planes** are implemented.
+
+<ins>Strategy Plane</ins>
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/strategy-plane.png)
+
+<ins>Strategy Plane</ins>
+
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/scope-plane.png)
+
 <div align="right"><a href="#testing-top">🔝</a></div>
+
+---
+
+### Unsolved Issues
+
+<div align="right"><a href="#testing-top">🔝</a></div>
+
