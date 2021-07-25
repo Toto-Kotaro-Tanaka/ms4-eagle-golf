@@ -10,45 +10,45 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 1. Error: Element `hr` not allowed as child of element `ul` in this context. (Suppressing further errors from this subtree.)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `hr` in `<li>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `hr` in `<li>`
 
 2. Error: Attribute `alt` not allowed on element `a` at this point.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `title` instead of `alt`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `title` instead of `alt`
 
 3. Error: Bad value `button` for attribute `type` on element `a`: Subtype missing.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `type="button"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `type="button"`
 
 4. Error: Element `a` is missing required attribute `href`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by solving error No. 3
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by solving error No. 3
 
 5. Warning: Section lacks heading. Consider using `h2-h6` elements to add identifying headings to all sections.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by using `div` instead of `section`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by using `div` instead of `section`
 
 6. Error: Stray start tag `tr`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
 
 7. Error: Stray start tag `th`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
 
 8. Error: Stray start tag `td`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using Django form `.as_p`
 
 9. Warning: The `type` attribute is unnecessary for JavaScript resources.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by removing `type` attribute
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by removing `type` attribute
 
 **Products Page** (`products.html`): [0 Errors & 2 Warnings] *Some duplicated errors and warning and they are not repeated below
 
 1. Warning: The `type` attribute is unnecessary for JavaScript resources.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by removing `type` attribute
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the warning by removing `type` attribute
 
 **Product Detail Page** (`product_detail.html`): [0 Errors & 0 Warnings]
 
@@ -56,63 +56,63 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 1. Error: Duplicate attribute `id`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `id="new-image"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `id="new-image"`
 
 2. Error: Element `p` not allowed as child of element `strong` in this context. (Suppressing further errors from this subtree.)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `strong` element
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `strong` element
 
 3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `{% for field in form %}`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `{% for field in form %}`
 
 **Edit Product Page** (`edit_product.html`): [3 Errors & 0 Warnings]
 
 1. Error: An `img` element must have an `alt` attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `alt` attribute
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `alt` attribute
 
 2. Error: Duplicate attribute `id`.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `id="new-image"`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `id="new-image"`
 
 3. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `{% for field in form %}`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `{% for field in form %}`
 
 **Shopping Cart Page Desktop Size** (`cart.html`): [20 Errors & 16 Warnings] *Some duplicated errors and warning and they are not repeated below
 
 1. Error: `td` start tag in table body.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `{% for item in cart_items %}` above `<tr>` tag. Solve the error for Free golf balls by putting `<td>` tags in `<tr>` tag
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by putting `{% for item in cart_items %}` above `<tr>` tag. Solve the error for Free golf balls by putting `<td>` tags in `<tr>` tag
 
 2. Error: Duplicate ID `###`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
 
 3. Warning: The first occurrence of ID `###` was here.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
 
 4. Error: No `p` element in scope but a `p` end tag seen.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing additional `</p>` tag
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing additional `</p>` tag
 
 **Shopping Cart Page Mobile Size** (`cart.html`): [16 Errors & 16 Warnings] *Repeated errors and warnings of Duplicate ID and The first occurence of ID was here
 
 1. Error: Duplicate ID `###`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
 
 2. Warning: The first occurrence of ID `###` was here.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by using `class` instead of `id`
 
 **Checkout Page** (`checkout.html`): [1 Errors & 0 Warnings]
 
 1. Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `for="id-save-info"` attribute from the label
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solve the error by removing `for="id-save-info"` attribute from the label
 
 **Checkout Success Page** (`checkout_success.html`): [0 Errors & 0 Warnings]
 
@@ -188,10 +188,35 @@ As the JavaScript code is completed, a code validation test is carried out by us
 
 — **Functions** —
 
-There are some functionalities, which are run by views.py file in each app, on the website. Manual test is carried out to see if these functions work as expected.
+There are some functionalities, which are run by `views.py` file in each app (in some case by `contexts.py`), on the website. Manual test is carried out to see if these functions work as expected.
 
-**Initial Function:** As an initial function in Python is created, a test is carried out.
+**cart App:**
 
+- View Cart: Products in the cart can be viewed by clicking the cart icon or a process your order button &#10004;
+- Add Cart: Products can be added from the product page by clicking an add to shopping cart button. If the same product has different sizes (and right or left for golf clubs), they are added separately &#10004;
+- Adjust Cart: Products can be adjusted in the cart. Change the quantity of the product and remove it &#10004;
+- Special Offer: Free Golf Balls appear for any order €250 or more. This is not run by `views.py` but should work when total purchase is €250 or more &#10004;
+- Display: Price per product, discount price and total value inluding shipping cost show based on the products in the cart &#10004;
+
+**checkout App:**
+
+- Checkout: Checkout is done by completing the form & credit card details and clicking a complete order button. Products in the cart can be views by clicking the cart icon or a process your order button &#10004;
+- Checkout Success: When the order is completed, it creates an order in the database and save the info. It also shows checkout success page for users &#10004;
+- Stripe: When the order is completed, it creates a record of [payment_intent, charge.succeeded and payment_intent.succeeded](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/stripe-function.png) &#10004;
+
+**home App:**
+
+- Subscribe to our newsletter: When a unique and valid email is submitted, it saves in the database with Subscribed = True status &#10004;
+
+**products App:**
+
+- Product Display: Products are displayed by... group of categories, category, brand, sale products and all products. They can be sorted by price, category and product name both ascending and descending. Products can be searched by a key word &#10004;
+- Product Details Display: Product details can be viewed by clicking an image of the product. It displays product category, ID, description, price, size (if applicable), discount price (applicable) &#10004;
+- Product Add, Edit and Delete: Only authorised user (admin) is allowed to do these &#10004;
+
+**profile App:**
+
+- Profile: Access to profile page where users can update the personal details and access to the order history &#10004;
 
 ---
 
