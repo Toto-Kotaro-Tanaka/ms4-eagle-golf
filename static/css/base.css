@@ -293,6 +293,11 @@ body {
 .form-group {
     margin-bottom: 0.5rem;
   }
+
+/* Remove controls from Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
   
 /* -- Media Query: Tablet Screen Size Bigger Than 48rem / 768px -- */
 @media only screen and (min-width: 48rem) {

@@ -202,6 +202,7 @@ There are some functionalities, which are run by `views.py` file in each app (in
 
 - Checkout: Checkout is done by completing the form & credit card details and clicking a complete order button. Products in the cart can be views by clicking the cart icon or a process your order button &#10004;
 - Checkout Success: When the order is completed, it creates an order in the database and save the info. It also shows checkout success page for users &#10004;
+- Confirmation email: When the order is successed (means payment in Stripe goes through), confirmation email is sent &#10004;
 - Stripe: When the order is completed, it creates a record of [payment_intent, charge.succeeded and payment_intent.succeeded](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/stripe-function.png) &#10004;
 
 **home App:**
@@ -256,7 +257,20 @@ Below is the list of `py` files that are customised therefore checked by the val
 
 ### Web Browser
 
-— **Visibilities and CRUD functionality** —
+— **Visibilities and functionalities** —
+
+The website is available on the major web browsers, such as **Chrome**, **Safari**, **Firefox**, **Opera** and **Microsoft Edge**. To make sure all the visual contents are shown and functions work properly on those browsers, the below tests are carried out on all of them. *Except Chrom that is used to build the website
+
+1. Open the website on the browser to do a visual test. Look at all the pages to see if everything appears as expected (both desktop and mobile sizes)
+2. Try all the functions outlined on the Python Functions test
+
+<details>
+<summary>Python Functions</summary><br>
+
+![Python Functions](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/python-functions.png)
+</details><br>
+
+> All the above visibilities and functions work without any problem on each browser, except a small issue on Firefox that browser [default input display causes an issues on Firefox](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/firefox-input.png) so it is fixed by making it inactive by putting `input[type=number] {-moz-appearance: textfield;}` on `base.css`
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
