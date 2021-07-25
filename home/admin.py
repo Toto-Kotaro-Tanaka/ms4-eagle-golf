@@ -12,4 +12,5 @@ class SubscribeEmail(admin.ModelAdmin):
         'subscribe_email',
         'subscribed',)
 
+
 admin.site.register(Newsletter, SubscribeEmail)

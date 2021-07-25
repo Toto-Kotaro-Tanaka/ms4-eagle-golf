@@ -126,6 +126,8 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 **Profile & Order History Page** (`profile.html`, `profile_order_history`): [0 Errors & 0 Warnings]
 
+---
+
 — **Form Validation** —
 
 There are some forms on the website. Some of them are validated by front-end (e.g. @ mark for email input) and some by back-end (e.g. existing user name). Manual test is carried out to see if the validations as well as form functions work properly.
@@ -148,9 +150,13 @@ When mandatory fields are not filled in or form is invalid, [it displays an erro
 
 *Based on the manual test, all the forms on the webiste work properly*
 
+---
+
 — **Quality** —
 
 <div align="right"><a href="#testing-top">🔝</a></div>
+
+---
 
 ### Css
 
@@ -162,6 +168,10 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 
 - There are some [warnings](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-warnings.png) related to WebKit, which is one of [web browser rendering engines](https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css), for base.css, index.css and product.css. By looking at the [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about) post and a [Code Institue Slack](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-webkit.png) threads, no further actions are required so decide to leave as it is
 
+<div align="right"><a href="#testing-top">🔝</a></div>
+
+---
+
 ### JavaScript
 
 — **Code Validation** —
@@ -169,6 +179,10 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 As the JavaScript code is completed, a code validation test is carried out by using [JSHint](https://jshint.com/), which is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules
 
 **`quantity_input_script.html` (js code in cart app), `stripe_elements.js`, `quantity_input_script.html` (js code in product app), `countryfield.js` and js script on `cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`. `$` shows on all the files as undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as undefined variable but this comes from Stripe document so it can be ignored
+
+<div align="right"><a href="#testing-top">🔝</a></div>
+
+---
 
 ### Python
 
