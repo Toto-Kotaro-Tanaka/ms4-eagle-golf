@@ -154,6 +154,44 @@ When mandatory fields are not filled in or form is invalid, [it displays an erro
 
 — **Quality** —
 
+A quality check test is carried out by using [Lighthouse](https://developers.google.com/web/tools/lighthouse), which is an open-source and one of the automated DevTools for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO.
+
+**Home Page** (`index.html`)
+
+- Mobile Size: [Performance: 51 / Accessibility: 82 / Best Practices: 93 / SEO: 92](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/home-mobile.png)
+
+- Desktop Size: [Performance: 84 / Accessibility: 82 / Best Practices: 93 / SEO: 90](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/home-desktop.png)
+
+**Products Page** (`products.html`)
+
+- Mobile Size: [Performance: 44 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/products-mobile.png)
+
+- Desktop Size: [Performance: 72 / Accessibility: 83 / Best Practices: 93 / SEO: 90](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/products-desktop.png)
+
+**Product Details Page** (`products/<product id>.html`)
+
+- Mobile Size: [Performance: 53 / Accessibility: 82 / Best Practices: 93 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/product-details-mobile.png)
+
+- Desktop Size: [Performance: 85 / Accessibility: 82 / Best Practices: 93 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/product-details-desktop.png)
+
+**Cart Page** (`cart.html`)
+
+- Mobile Size: [Performance: 54 / Accessibility: 82 / Best Practices: 100 / SEO: 92](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/cart-mobile.png)
+
+- Desktop Size: [Performance: 87 / Accessibility: 82 / Best Practices: 100 / SEO: 90](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/cart-desktop.png)
+
+**Checkout Page** (`checkout.html`)
+
+- Mobile Size: [Performance: 51 / Accessibility: 81 / Best Practices: 100 / SEO: 92](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/checkout-mobile.png)
+
+- Desktop Size: [Performance: 76 / Accessibility: 81 / Best Practices: 100 / SEO: 90](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/checkout-desktop.png)
+
+**Profile Page** (`profile.html`)
+
+- Mobile Size: [Performance: 52 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/profile-mobile.png)
+
+- Desktop Size: [Performance: 89 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/profile-desktop.png)
+
 <div align="right"><a href="#testing-top">🔝</a></div>
 
 ---
