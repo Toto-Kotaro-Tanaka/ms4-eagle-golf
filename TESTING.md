@@ -199,8 +199,11 @@ Below is the list of `py` files that are customised therefore checked by the val
 
 **products App**
 
-- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*,, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
 
+**profiles App**
+
+- `apps.py`, `forms.py`, `models.py`, `urls.py`, and `views.py`: There are *no newline at end of file*, *line too long* and *trailing whitespace* warnings and errors and they are all fixed
 
 ### Web Browser
 
