@@ -187,7 +187,12 @@ Below is the list of `py` files that are customised therefore checked by the val
 
 **cart App**
 
-`apps.py`, `contexts.py`, `urls.py` and `views.py`: There are trailing whitespace, two blank lines, no newline at end of file, line too long warnings and errors, and they are all fixed.
+`apps.py`, `contexts.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *two blank lines*, *no newline at end of file*, *line too long* warnings and errors, and they are all fixed.
+
+**checkout App**
+
+`init.py`, `admin.py`, `apps.py`, `forms.py`, `models.py`, `signals.py`, `urls.py`, `views.py`, `webhook_handler.py` and `webhooks.py`: There are *no newline at end of file*, *trailing whitespace*, *line too long*, *too many blank lines*, *at least two spaces before inline comment*, *expected 2 blank lines*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+
 
 ### Web Browser
 
