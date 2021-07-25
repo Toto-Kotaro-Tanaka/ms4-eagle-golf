@@ -174,7 +174,8 @@ def checkout_success(request, order_number):
                 'default_country': order.country,
                 'default_phone_number': order.phone_number,
             }
-            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            user_profile_form = UserProfileForm(profile_data,
+                                                instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 

@@ -10,11 +10,14 @@ def subscription_form_contents(request):
         if subscription_form.is_valid():
             instance = subscription_form.save(commit=False)
             if Newsletter.objects.filter(subscribe_email=instance.subscribe_email).exists():
-                messages.error(request, 'Sorry, the email already exists in our list')
+                messages.error(request,
+                               'Sorry, the email already exists in our list')
             else:
                 subscription_form.save()
                 subscription_form = SubscriptionForm()
-                messages.success(request, 'Thank you very much for subscribing to our newsletter')
+                messages.success(request,
+                                 'Thank you very much for subscribing \
+                                 to our newsletter')
     else:
         subscription_form = SubscriptionForm()
 

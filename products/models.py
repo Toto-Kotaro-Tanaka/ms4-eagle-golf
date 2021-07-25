@@ -2,8 +2,10 @@ from django.db import models
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    brand = models.ForeignKey('Brand', null=True, blank=True,
+                              on_delete=models.SET_NULL)
     sku = models.CharField(max_length=30, null=True, blank=True)
     name = models.CharField(max_length=50)
     description = models.TextField()
@@ -11,7 +13,8 @@ class Product(models.Model):
     is_club = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     is_discount = models.BooleanField(default=False, null=True, blank=True)
-    discount_price = models.DecimalField(max_digits=6, decimal_places=2, default=0, null=True, blank=True)
+    discount_price = models.DecimalField(max_digits=6, decimal_places=2,
+                                         default=0, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -22,7 +25,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
- 
+
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50, null=True, blank=True)
 
