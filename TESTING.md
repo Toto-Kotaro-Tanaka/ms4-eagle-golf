@@ -117,11 +117,15 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **Checkout Success Page** (`checkout_success.html`): [0 Errors & 0 Warnings]
 
 **Allauth Account Pages** (`signup.html`, `login.html`, `logout.html`, `password_reset`): [0 Errors & 0 Warnings]
+
+> **Note**<br>
 > Check only core pages of Allauth templates but as they are Django package, presume no errors or warnings
 
 **Toast Messages** (`toast_error.html`, `toast_info.html`, `toast_success.html`, `toast_warning.html`): [0 Errors & 0 Warnings]
 
 **404 and 500 Pages** (`404.html`, `500.html`): [0 Errors & 0 Warnings]
+
+> **Note**<br>
 > Check only 404 page but they have the same structure so presume no errors or warnings on 500 page
 
 **Profile & Order History Page** (`profile.html`, `profile_order_history`): [0 Errors & 0 Warnings]
@@ -192,6 +196,7 @@ A quality check test is carried out by using [Lighthouse](https://developers.goo
 
 - Desktop Size: [Performance: 89 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/profile-desktop.png)
 
+> **Note**<br>
 > Improve **Accessibility** on those pages by adding `aria-label` on button elements that have no text and by not using headlines (h5 &  h6). Accessibility is now improved on all the pages and 90 plus scores show on the pages, except `checkout` page which still shows 88 because there are many fields that have no label for the fields and that brings down the score (There are no labels deliberately to keep the neat style)<br>
 There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anyhting below should be looked at and solved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Perfomance, I decide to leave it as it is.  
 
@@ -311,6 +316,7 @@ The website is available on the major web browsers, such as **Chrome**, **Safari
 ![Python Functions](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/python-functions.png)
 </details><br>
 
+> **Note**<br>
 > All the above visibilities and functions work without any problem on each browser, except a small issue on Firefox that browser [default input display causes an issues on Firefox](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/firefox-input.png) so it is fixed by making it inactive by putting `input[type=number] {-moz-appearance: textfield;}` on `base.css`
 
 <div align="right"><a href="#testing-top">🔝</a></div>
@@ -336,6 +342,26 @@ There are some key features to achieve the primary goals of the website from use
 ---
 
 ### Unsolved Issues
+
+**Low Performance on Mobile Size**
+
+- Cannot do it because of my current skillset (that may need to plan and build the website from the Performance point of view) time. Hope to have the skillset in the near future as I continue learning 
+
+**Increment and Decrement Buttons**
+
+- For the products that have size and all golf clubs that have right and left, increment & decrement buttons are not disabled. If `id` is used for this, one of them works but other one does not (and `id` cannot be used for duplicate id error on html validation). If `class` is used, when one of them is disabled, other one is also disabled. By setting a unique class, this would work but do not know how to implement this in JavaScript using Django template and it is not a major issue, leave it as unsolved issue. 
+
+**Sorting Products By Price Including Discounted Price**
+
+- Sort function on the product pages, it sorts by the original price but it does not consider the discount price. Therefore, some products [do not look like sorted by price correctly](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/sort.png). Original price field and discount price field are in the different table so they cannot be directly compared so this cannot be solved unless the current database structure is changed.
+
+**Save Delivery Info On Checkout**
+
+- On the checkout page, logged in users can save the delivery info if they wish to. There is a check box as an option, however even the box is unticked, the details are saved for some reason. Looked at the code but cannot figure out why this happens, and as it is not a major issue, leave it as unsolved issue.
+
+**Register Page**
+
+- On Register page, user name, which is the second field, is auto focused. When open the page, the first field, which is email address, should be auto focused. Try to fix this but no access to `forms.py` for Register page as it is Allauth package, and as it is not a major issue, leave it as unsolved issue.
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
