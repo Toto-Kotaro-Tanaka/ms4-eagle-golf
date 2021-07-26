@@ -137,17 +137,17 @@
                     </a>
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title mt-2">{{ product.name }}</h5>
+                    <div class="fs-5 card-title mt-2">{{ product.name }}</div>
                 </div>
                 <ul class="mt-2 list-group list-group-flush list-unstyled">
-                    <li class="h5 {% if not product.is_discount %}font-weight-bold{% endif %}">
+                    <li class="fs-5 {% if not product.is_discount %}font-weight-bold{% endif %}">
                         {% if product.is_discount %}
                             <s>Price: €{{ product.price }}</s>
                         {% else %}
                             Price: €{{ product.price }}{% endif %}
                     </li>
                     {% if product.is_discount %}
-                        <li class="font-weight-bold h5 text-uppercase">Sale: €{{ product.discount_price }}</li>
+                        <li class="fs-5 font-weight-bold text-uppercase">Sale: €{{ product.discount_price }}</li>
                     {% endif %}
                     <li class="text-muted">{{ product.category.friendly_name }}</li>
                 </ul>

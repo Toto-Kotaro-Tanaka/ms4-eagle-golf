@@ -29,10 +29,10 @@
             <!-- Product Details -->
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title fw-bold">{{ product.name }}</h5>
+                    <div class="card-title fw-bold">{{ product.name }}</div>
                     <p class="text-muted small">Product Category: {{ product.category.friendly_name }} | Product ID: {{ product.sku }}</p>
                     <p class="card-text">{{ product.description }}</p>
-                    <p class="card-text h5 {% if not product.is_discount %}fw-bold{% endif %}">
+                    <p class="fs-5 card-text {% if not product.is_discount %}fw-bold{% endif %}">
                     {% if product.is_discount %}
                         <s>Price: €{{ product.price }}</s>
                     {% else %}
@@ -40,7 +40,7 @@
                     {% endif %}
                     </p>
                     {% if product.is_discount %}
-                        <p class="card-text h5 text-uppercase fw-bold">Sale: €{{ product.discount_price }}</p>
+                        <p class="fs-5 card-text text-uppercase fw-bold">Sale: €{{ product.discount_price }}</p>
                     {% endif %}
                 </div>
                 <!-- Product Quantity Form -->
@@ -53,7 +53,7 @@
                                 <div class="input-group">
                                     <!-- Decrement Button -->
                                     <div class="input-group-prepend">
-                                        <button id="decrement-qty_{{ product.id }}" class="decrement-qty" data-item_id="{{ product.id }}">
+                                        <button id="decrement-qty_{{ product.id }}" class="decrement-qty" data-item_id="{{ product.id }}" aria-label="Decrement">
                                             <i class="fas fa-minus pt-2 fa-lg"></i>
                                         </button>
                                     </div>
@@ -62,7 +62,7 @@
                                             value="1" min="1" max="9" data-item_id="{{ product.id }}">
                                     <!-- Increment Button -->
                                     <div class="input-group-append">
-                                        <button id="increment-qty_{{ product.id }}" class="increment-qty" data-item_id="{{ product.id }}">
+                                        <button id="increment-qty_{{ product.id }}" class="increment-qty" data-item_id="{{ product.id }}" aria-label="Increment">
                                             <i class="fas fa-plus pt-2 fa-lg"></i>
                                         </button>
                                     </div>
