@@ -9,7 +9,7 @@
                     <!-- Decrement Button -->
                     <div class="input-group-prepend">
                         <button class="decrement-qty decrement-qty_{{ item.item_id }}{% if item.product.has_sizes %}_{{ item.size }}{% endif %}{% if item.product.is_club %}_{{ item.club }}{% endif %}"
-                            data-item_id="{{ item.item_id }}"><i class="fas fa-minus pt-2 fa-lg"></i>
+                            data-item_id="{{ item.item_id }}" aria-label="Decrement"><i class="fas fa-minus pt-2 fa-lg"></i>
                         </button>
                     </div>
                     <!-- Quantity Input Box -->
@@ -19,7 +19,7 @@
                     <!-- Increment Button -->
                     <div class="input-group-append">
                         <button class="increment-qty increment-qty_{{ item.item_id }}{% if item.product.has_sizes %}_{{ item.size }}{% endif %}{% if item.product.is_club %}_{{ item.club }}{% endif %}"
-                            data-item_id="{{ item.item_id }}"><i class="fas fa-plus pt-2 fa-lg"></i>
+                            data-item_id="{{ item.item_id }}" aria-label="Increment"><i class="fas fa-plus pt-2 fa-lg"></i>
                         </button>
                     </div>
                     <!-- Product Size -->
