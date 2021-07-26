@@ -108,7 +108,7 @@ The page where users can process the purchase. Strip, which is a secured platfor
 - **Checkout Success** (`checkout_success.html`)<br>
 The confirmation page where users are lead to when the payment process is completed. Users can see the order number, shipping address, product details. This page is accessible for registered users from Profile.
 
-- **Register** (`register.html`)<br>
+- **Register** (`signup.html`)<br>
 The page where users can create an account to save their details for next shopping and keep their purchase histories. A form with a built-in function is created with Django Allauth package.
 
 - **Login** (`login.html`)<br>
@@ -140,7 +140,8 @@ Below is the flowchart of the website to show the core relationships between the
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/front-end-chart.png)<br>
 
 > **Note:**<br>
-> **Page 500** is added after the initial planning and it belongs to the same place as Page 404
+> &#9702; **Page 500** is added after the initial planning and it belongs to the same place as Page 404<br>
+> &#9702; There is an arrow from Product details to Edit product, however, Edit product cannot be accessed from the Product details page
 
 — **Back-end** —<br>
 
@@ -192,10 +193,10 @@ The website is created as a desktop-first because it is easy to picture the whol
 </details>
 
 > **Note:**<br>
-> No product image and product details are shown in the same place as other details
+> No product image and product details on the website
 
 <details>
-<summary>Register (register.html)</summary><br>
+<summary>Register (signup.html)</summary><br>
 
 ![Wireframe: Register](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/register.png)
 </details>
@@ -231,7 +232,7 @@ The website is created as a desktop-first because it is easy to picture the whol
 
 — **Colours** —
 
-This is an e-commerce website that has a lot of products with images containing different colours, therefore **White** (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is **Hunter Green** (#09572A) ~~and this is used for some icons and fonts~~. **Jet** (#333333) is used as the main font colour, **Golden Yellow** (#FFDF00) is used for buttons and alerts to stand them out. **Flame** (#E84610) is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
+This is an e-commerce website that has a lot of products with images containing different colours, **White** (#FFFFFF) is used as the main background colour to keep the entire image of the website settled. The shop colour is **Hunter Green** (#09572A) ~~and this is used for some icons and fonts~~. **Jet** (#333333) is used as the main font colour, **Golden Yellow** (#FFDF00) is used for buttons and alerts to stand them out. **Flame** (#E84610) is used for other things that need user's attention. These are the base colours and similar colours are used on the different parts and sections on the website.
 
 > **Note:**<br>
 > **Hunter Green** (#09572A) is not used for any fonts or icons but used for the colour of toast success
@@ -240,14 +241,14 @@ This is an e-commerce website that has a lot of products with images containing 
 
 — **Typography** —
 
-**Roboto** which is one of the most popular google fonts is used for all texts in general because good readability is an important factor for e-commerce websites from the user's point of view. Robot is a default font for Android so many users are very familiar with it as well.
+**Roboto** which is one of the most popular google fonts is used for all the texts because good readability is an important factor for e-commerce websites from the user's point of view. Robot is a default font for Android so many users are very familiar with it as well.
 
 ![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/ux/roboto.png)
 
 <div align="right"><a href="#top">🔝</a></div>
 
 ## WEBSITE DEVELOPMENT PLAN
-This is a full-stack website that contains both front-end & back-end, so many Django apps, features and functions so a good website development plan is required to maximise the efficiency of the development. GitHub project planner, which has a Kanban planner, is used for this project. Below is the summary of core tasks* for the website and more detailed tasks are listed on [GitHub Projects](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/projects/1). This gives not only very clear planning but also making sure nothing is missed during the process.<br>
+This is a full-stack website that contains both front-end & back-end, so many Django apps, features and functions, therefore a good website development plan is required to maximise the efficiency of the development. GitHub project planner, which has a Kanban planner, is used for this project. Below is the summary of core tasks* for the website and more detailed tasks are listed on [GitHub Projects](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/projects/1). This gives not only very clear planning but also making sure nothing is missed during the process.<br>
 **Follow the same process as Code Institute Mini Project, Boutique Ado*
 
 1. Planning The Website with UX5 Planes
@@ -290,7 +291,7 @@ This is a full-stack website that contains both front-end & back-end, so many Dj
 
 - **More detailed categories and advertisement:** This is to have more detailed categories (e.g. There are only 11 categories but actual e-commerce website, there should be more categories available = more products) and more detailed advertisement such as having different colours, guidance for size etc. Currently have no time to work on this, decide to leave it out in this project
 
-- **Creating an account with social media:** <!-- This might be possible so take a look at it if have time -->
+- **Creating an account with social media:** Look at a tutorial and not sure if this can be implemented easily. All the testing is done and confirmed all the functions are working, and afraid of breaking something unintentionally by linking social account login, decide to leave this for this project but this is something would like to try with my own project as a challenge
 
 - **Product comparison:** This seems to be a very advanced feature and do not even know how to look up for this with my current skill and knowledge so decide to leave it out in this project
 
@@ -356,26 +357,29 @@ Testing report is available **[TESTING.md](https://github.com/Toto-Kotaro-Tanaka
 — **Stripe Webhook payment.intent_succeeded** —
 
 On the development mode, I get payment.intent_succeeded randomly failing although everything else for payment is working.
-According to debug,it shows `local variable ‘intent’ referenced before assignment` error so I try to fix the issue by looking at the internet first, but cannot solve it so look at Code Institute Slack. I find a similar post that suggests this can be caused by an error on the form (POST), so check my code on the form to make sure if everything is correct. There are no errors on the form but still get the error so post my query on Code Institute slack and get feedback that also suggests form is usually the issue for `local variable ‘intent’ referenced before assignment`. I check the form a few more times but cannot find the error so decide to leave it to revisit the issue. When I look at Code Institute slack for something else, I find a post that GitPod workspace URL sometimes changes (e.g. eu10 --> eu11) and discover that this is causing the issue for payment.intent_succeeded because the URL I put in Stripe Webhook and my GitPod URL do not match. Also, I find another post that localhost needs to be public (not private) when payments are taken on the website so the issue is solved by having the same URL for Stripe webhook endpoint and GitPod workspace, and having the localhost on the public. 
+According to debug, it shows `local variable ‘intent’ referenced before assignment` error so I try to fix the issue by looking at the internet first, but cannot solve it so look at Code Institute Slack. I find a similar post that suggests this can be caused by an error on the form (POST), so check my code on the form to make sure if everything is correct. There are no errors on the form but still get the error so post my query on Code Institute slack and get feedback that also suggests form is usually the issue for `local variable ‘intent’ referenced before assignment`. I check the form a few more times but cannot find the error so decide to leave it to revisit the issue. When I look at Code Institute slack for something else, I find a post that GitPod workspace URL sometimes changes (e.g. eu10 --> eu11) and discover that this is causing the issue for payment.intent_succeeded because the URL I put in Stripe Webhook and my GitPod URL do not match. Also, I find another post that localhost needs to be public (not private) when payments are taken on the website so the issue is solved by having the same URL for Stripe webhook endpoint and GitPod workspace, and having the localhost on the public. 
 
 — **Quantity Buttons for Products** —
 
 On the Django Mini Project, product `id` is used to make the quantity buttons disable on JavaScript when the quantity is 1 or max quantity. I follow the same code and implement this on my code for quantity buttons. This works fine when there is only one product on the page, however, when there is the same product with different sizes, it causes an error that [the button for the first product works fine but the button for the second product does not](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons.png). (It does not make disable even quantity is 1 or max quantity) Not sure how to solve the issue so post the query on Code Institute slack but get no response so contact a tutor support. The tutor says using the prodcut `id` is the issue for this and suggests to use `class` instead. I try it with `class` but using `class` raises another issue that when [the button of one of the product is disabled, the other product is also disabled](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/project-barriers/qty-buttons-class.png) so I decide to keep using product `id` for this and leave it as it is, because this is a minor issue for the website. *On mobile size, the button is not disabled, even with a single product, as id is being used and that is what I am told by the tutor.
+
+> **Note:**<br>
+> Using id actually causes html validation errors as duplicate ids. Therefore, class is used for increment and decrement buttons but without having a disable function
 
 — **First Name and Last Name for Allauth** —
 
 On the checkout form for registered users, there is a full name field that picks up the first name and last name of the user account. To show the full name from the database, first name and last name fields need to be filled so I try to have these fields available when users create an account. These fields belong to Allauth package, which is pre-built, well secured and has all necessary features, so I copy the file from the site-packages directory and try to modify it but cannot find models.py, forms.py and views.py for it. I search the internet but not sure how to do it so post the query on Code Institute Slack but get no feedback so contact a tutor support. Apparently, modifying Allauth (possibly all built in packages unless you are familiar with them?) is not easy as it looks according to the tutor. I do not want to break some other code by trying to implement this and this is a minor improvement for the webiste, I decide to leave it.
 
 > **Note:**<br>
-> Create a branch for testing and it gives errors for Stripe webhook so take no further action on this
+> Create a branch for testing and it gives errors for Stripe webhook as well so take no further action on this
 
 — **Newsletters App** —
 
-On the footer of the website, there is a field to subscribe to newsletters. I do not know how to implement this so try to create newsletters app to see if that works. It does not work quite well as the footer is available on all the pages as well as having an app just for subscribe to newsletters seems to be unnecessary so look at Code Institute post to see if anybody implements it. I find a post of someone who sets this up in home app with contexts processor so decide to do it the same. The subscribe function works fine but there are two issues, one same email can be submitted and one that sometimes leads to the server error for some invalid actions (e.g. On the register page, when I put the email address of the user already exists, it gives error 500 instead of showing "User already exists" message. For the first issue, I find a post of someone using `.objects.filter().exists()` method so I also use it for my function. For the second issue, it looks it is caused by not having () after `if subscription_form.is_valid`. Code is fixed and everything seems to work fine.
+On the footer of the website, there is a field to subscribe to newsletters. I do not know how to implement this so try to create newsletters app to see if that works. It does not work quite well because the footer is available on all the pages, and also having an app just for subscribe to newsletters seems to be unnecessary so look at Code Institute post to see if anybody implements it. I find a post of someone who sets this up in home app with contexts processor so decide to do it the same. The subscribe function works fine but there are two issues, one same email can be submitted and one that sometimes leads to the server error for some invalid actions (e.g. On the register page, when I put the email address of the user already exists, it gives error 500 instead of showing "User already exists" message) For the first issue, I find a post of someone using `.objects.filter().exists()` method so I also use it for my function. For the second issue, it looks it is caused by not having () after `if subscription_form.is_valid`. Code is fixed and everything seems to work fine.
 
 — **Free Golf Balls Field** —
 
-As a part of a special offer, users who spend €250 or more will get a box of free golf balls. Initially, I think about having it as a product and add it to the order if the total purchase value is €250 or more. However, this seems to be rather complicated so decided to have a boolean field on the order instead. The field is added after deployment in Heroku. I set up code for this and work fine on development mode but does not work on production mode. First, I check the internet for the solution. I find a post on Stackoverflow and try to solve it by following what it says but I end up messing up my migrations (that I fix it with my mentor because this happens on the same day I have a meeting with him) My migrations on development mode is fixed but still have the issue on the production mode so post it on Code Institue Slack community. Someone points out this is a migrations issue in Heroku, suggests to use heroku run python3 manage.py migrate command but it does not fix the issue. As I cannot solve the issue, I contact tutor support and the tutor says that my my postgres in Heroku is corrupted. Therefore, I have to delete it and restore it in Heroku. 
+As a part of a special offer, users who spend €250 or more will get a box of free golf balls. Initially, I think about having it as a product and add it to the order if the total purchase value is €250 or more. However, this seems to be rather complicated so decided to have a boolean field on the order instead. The field is added after deployment in Heroku. I set up code for this and work fine on development mode but does not work on production mode. First, I check the internet for the solution. I find a post on Stackoverflow and try to solve it by following what it says but I end up messing up my migrations (that I fix it with my mentor because this happens on the same day I have a meeting with him) My migrations on development mode is fixed but still have the issue on the production mode so post it on Code Institue Slack community. Someone points out this is a migrations issue in Heroku, suggests to use heroku run python3 manage.py migrate command but it does not fix the issue. As I cannot solve the issue, I contact tutor support and the tutor says that my postgres in Heroku is corrupted. Therefore, I have to delete it and restore it in Heroku. 
 
 
 <div align="right"><a href="#top">🔝</a></div>
@@ -595,6 +599,12 @@ Below are the processes of deploying the website to Heroku and setting up static
 <div align="right"><a href="#top">🔝</a></div>
 
 ## ACKNOWLEDGEMENTS
+
+I would like to thank;
+
+- My mentor, **Spencer Barriball**, for going through the project with me and especially solving the database issues with me
+- **Chris Zielinski** for giving me advice on several queries that I have during the project
+- Code Institute Tutors for giving me a guidance on how to solve some issues
 
 <div align="right"><a href="#top">🔝</a></div>
 
