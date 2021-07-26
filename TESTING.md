@@ -318,7 +318,7 @@ The website is available on the major web browsers, such as **Chrome**, **Safari
 
 — **Evidence Of Achieving The Website From UX Point Of View** —
 
-There are some key features to achieve the primary goals of the website from user's point of view (both shoppers and the owner) and this is to confirm that all the features planned on **Strategy and Scope Planes** are implemented.
+There are some key features to achieve the primary goals of the website from user's point of view (both shoppers and the owner) and this is to confirm that all the features planned on **Strategy and Scope Planes** are implemented based on the tests carried out in the testing section.
 
 <ins>Strategy Plane</ins>
 

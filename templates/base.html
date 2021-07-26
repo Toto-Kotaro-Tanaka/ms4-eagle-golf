@@ -114,7 +114,7 @@
                     action="{% url 'products' %}">
                     <input class="form-control" type="text" name="q" placeholder="Search Products"
                         aria-label="Search" />
-                    <button class="btn btn-outline-primary border-0" type="submit" data-mdb-ripple-color="dark">
+                    <button class="btn btn-outline-primary border-0" type="submit" data-mdb-ripple-color="dark" aria-label="Search button">
                         <i class="fas fa-search font-weight-bold color--333"></i>
                     </button>
                 </form>
@@ -216,19 +216,19 @@
             <!-- Section: Social media -->
             <div class="mb-4 social--media">
                 <a class="btn btn-outline-light border-0 facebook" href="https://www.facebook.com/" role="button" 
-                    target="_blank" rel="noopener">
+                    target="_blank" rel="noopener" aria-label="Facebook">
                     <i class="fab fa-facebook-square"></i>
                 </a>
                 <a class="btn btn-outline-light border-0 twitter" href="https://twitter.com/" role="button" 
-                    target="_blank" rel="noopener">
+                    target="_blank" rel="noopener" aria-label="Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
                 <a class="btn btn-outline-light border-0 instagram" href="https://www.instagram.com/" role="button" 
-                    target="_blank" rel="noopener">
+                    target="_blank" rel="noopener" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a class="btn btn-outline-light border-0 youtube" href="https://www.youtube.com/" role="button" 
-                    target="_blank" rel="noopener">
+                    target="_blank" rel="noopener" aria-label="Youtube">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
@@ -263,13 +263,13 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd <i class="fas fa-golf-ball"></i></h6>
+                        <div class="fs-6 text-uppercase fw-bold mb-4"><i class="fas fa-golf-ball"></i> Eagle Golf Ltd <i class="fas fa-golf-ball"></i></div>
                         <p>Since 2015, we have been selling golf products online to worldwide customers!</p>
                     </div>
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+                        <div class="fs-6 text-uppercase fw-bold mb-4">Products</div>
                         <p>
                             <a href="{% url 'products' %}?category=drivers,hybrids,irons,putters" class="text-reset">Golf Clubs</a>
                         </p>
@@ -282,7 +282,7 @@
                     </div>
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <div class="fs-6 text-uppercase fw-bold mb-4">Contact</div>
                         <p><i class="fas fa-home"></i> No.17 Fairgreen Business Park, Galway, H91 W30M, Ireland</p>
                         <p><i class="fas fa-envelope"></i> eagle.golf.ms4@gmail.com</p>
                         <p><i class="fas fa-phone"></i> +353 91 777777</p>
