@@ -68,7 +68,7 @@
             <!-- User Account -->
             <div class="col-6 order-lg-last col-lg-4">
                 <div class="text-reset me-3 inline float-end">
-                    <a href="{% url 'view_cart' %}">
+                    <a href="{% url 'view_cart' %}" aria-label="Shopping Cart">
                         <i class="fas fa-shopping-cart fa-lg icon {% if grand_total %}color--333{% endif %}"></i>
                     </a>
                     <p class="text-center m-0 color--737373 {% if grand_total %}font-weight-bold color--333{% endif %}">
