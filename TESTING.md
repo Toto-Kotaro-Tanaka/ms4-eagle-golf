@@ -192,6 +192,9 @@ A quality check test is carried out by using [Lighthouse](https://developers.goo
 
 - Desktop Size: [Performance: 89 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/profile-desktop.png)
 
+> Improve **Accessibility** on those pages by adding `aria-label` on button elements that have no text and by not using headlines (h5 &  h6). Accessibility is now improved on all the pages and 90 plus scores show on the pages, except `checkout` page which still shows 88 because there are many fields that have no label for the fields and that brings down the score (There are no labels deliberately to keep the neat style)<br>
+There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anyhting below should be looked at and solved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Perfomance, I decide to leave it as it is.  
+
 <div align="right"><a href="#testing-top">🔝</a></div>
 
 ---
