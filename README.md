@@ -4,7 +4,7 @@
 
 This is an e-commerce website for golf products that I create for **Milestone Project 4 (Full Stack Frameworks with Django)** in [Code Institute](https://codeinstitute.net/), Ireland. The use of the website is for educational purposes only, however, all the functionalities work as if it is an actual e-commerce website. It is a mobile responsive website and the link to the website is available [HERE](https://ms4-eagle-golf.herokuapp.com/).
 
-<!-- Mock up goes here -->
+![image](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/general/mockup.png)
 
 ## USER STORIES
 
