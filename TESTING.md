@@ -241,7 +241,7 @@ Below is the list of `py` files that are customised therefore checked by the val
 
 **eagle-golf Product**
 
-- `asgi.py`, `settings.py`, `urls.py` and `wsgi.py`: Line too long <!-- Check the long lines on settings.py -->
+- `asgi.py`, `settings.py`, `urls.py` and `wsgi.py`: There is *line too long* error and it is all fixed
 
 **cart App**
 
@@ -249,19 +249,22 @@ Below is the list of `py` files that are customised therefore checked by the val
 
 **checkout App**
 
-- `init.py`, `admin.py`, `apps.py`, `forms.py`, `models.py`, `signals.py`, `urls.py`, `views.py`, `webhook_handler.py` and `webhooks.py`: There are *no newline at end of file*, *trailing whitespace*, *line too long*, *too many blank lines*, *at least two spaces before inline comment*, *expected 2 blank lines*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+- `init.py`, `admin.py`, `apps.py`, `forms.py`, `models.py`, `signals.py`, `urls.py`, `views.py`, `webhook_handler.py` and `webhooks.py`: There are *no newline at end of file*, *trailing whitespace*, *line too long*, *too many blank lines*, *at least two spaces before inline comment*, *expected 2 blank lines*, *blank line contains whitespace* warnings and errors and they are all fixed
 
 **home App**
 
-- `admin.py`, `apps.py`, `contexts.py`, `forms.py`, `models.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *no newline at end of file* and *line too long* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+- `admin.py`, `apps.py`, `contexts.py`, `forms.py`, `models.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *no newline at end of file* and *line too long* warnings and errors and they are all fixed
 
 **products App**
 
-- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*, *blank line contains whitespace* warnings and errors and they are all fixed
 
 **profiles App**
 
 - `apps.py`, `forms.py`, `models.py`, `urls.py`, and `views.py`: There are *no newline at end of file*, *line too long* and *trailing whitespace* warnings and errors and they are all fixed
+
+> **Note**<br>
+> All Python code complies with PEP8 guidance except [4 Allauth Password Validators](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/auth-pwd-validators.png) that cannot be broken into separate lines
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
