@@ -119,7 +119,7 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 **Allauth Account Pages** (`signup.html`, `login.html`, `logout.html`, `password_reset`): [0 Errors & 0 Warnings]
 
 > **Note**<br>
-> Check only core pages of Allauth templates but as they are Django package, presume no errors or warnings
+> Check only core pages of Allauth templates but as they are Django package, presume no errors or warnings on other Allauth pages
 
 **Toast Messages** (`toast_error.html`, `toast_info.html`, `toast_success.html`, `toast_warning.html`): [0 Errors & 0 Warnings]
 
@@ -224,7 +224,8 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 
 As the JavaScript code is completed, a code validation test is carried out by using [JSHint](https://jshint.com/), which is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
 
-**`quantity_input_script.html`** (js code in cart app), **`stripe_elements.js`**, **`quantity_input_script.html`** (js code in product app), **`countryfield.js`** and js script on **`cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`. `$` shows on all the files as undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as an undefined variable but this comes from Stripe document so it can be ignored
+**`quantity_input_script.html`** (js code in cart app), **`stripe_elements.js`**, **`quantity_input_script.html`** (js code in product app), **`countryfield.js`** and js script on **`cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`.<br> 
+`$` shows on all the files as an undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as an undefined variable but this comes from Stripe document so it can be ignored
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -257,13 +258,14 @@ There are some functionalities, which are run by `views.py` file in each app (in
 
 **products App:**
 
-- Product Display: Products are displayed by... group of categories, category, brand, sale products and all products. They can be sorted by price, category and product name both ascending and descending. Products can be searched by a keyword &#10004;
-- Product Details Display: Product details can be viewed by clicking an image of the product. It displays product category, ID, description, price, size (if applicable), discount price (applicable) &#10004;
+- Product Display: Products are displayed by group of categories, category, brand, sale products and all products. They can be sorted by price, category and product name both ascending and descending order. Products can be searched by a keyword &#10004;
+- Product Details Display: Product details can be viewed by clicking an image of the product. It displays product category, ID, description, price, size (if applicable), discount price (if applicable) &#10004;
 - Product Add, Edit and Delete: Only authorised user (admin) is allowed to do these &#10004;
 
 **profile App:**
 
 - Profile: Access to the profile page where users can update the personal details and access to the order history &#10004;
+- Profile (Admin): For admin user, Edit and Delete buttons appear on each product and there is a page for Adding product &#10004;
 
 ---
 
@@ -345,7 +347,7 @@ There are some key features to achieve the primary goals of the website from use
 
 **Low Performance on Mobile Size**
 
-- Cannot do it because of my current skillset (that may need to plan and build the website from the Performance point of view) time. Hope to have the skillset in the near future as I continue learning 
+- Cannot improve it because of my current skillset (that may need to plan and build the website from the Performance point of view) and time. Hope to have the skillset in the near future as I continue learning 
 
 **Increment and Decrement Buttons**
 
@@ -361,11 +363,11 @@ There are some key features to achieve the primary goals of the website from use
 
 **Register Page**
 
-- On the Register page, the user name, which is the second field, is auto-focused. When open the page, the first field, which is an email address, should be auto focused. Try to fix this but no access to `forms.py` for the Register page as it is Allauth package, and as it is not a major issue, leave it as an unsolved issue.
+- On the Register page, the user name, which is the second field, is auto-focused. When open the page, the first field, which is an email address, should be auto-focused. Try to fix this but no access to `forms.py` for the Register page as it is Allauth package, and as it is not a major issue, leave it as an unsolved issue.
 
-**Register Page**
+**Full Name**
 
-- For registered users, when they go to the checkout page, they see some fields are pre-filled from the last order. There is a full name field that picks up the first name and last name of users personal info. To retrieve the data from the fields, users must input the details. Try to get first name and last name at the time of registration but cannot add these fields as they are controlled by Allauth. As it is not a major issue, decide to leave it as an unsolved issue. 
+- For registered users, when they go to the checkout page, they see some fields are pre-filled if they update Default Delivery Information on the profile page. There is a full name field that picks up the first name and last name of users personal info. To retrieve the data from the fields, users must input the details. Try to get first name and last name at the time of registration but cannot add these fields as they are controlled by Allauth. Try to add first name and last name fields on the profile page but that causes some issues on Stripe. It is not a major issue, decide to leave it as an unsolved issue. 
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
