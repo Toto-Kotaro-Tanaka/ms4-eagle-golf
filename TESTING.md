@@ -233,6 +233,40 @@ As the JavaScript code is completed, a code validation test is carried out by us
 
 ### Python
 
+— **Code Validation** —
+
+As Python code is completed, a code validation test is carried out by using [PEP8 &#40;Python Enhancement Proposal&#41; online](http://pep8online.com) to see if the code meets guidelines and best practices for the readability and consistency of Python code.
+
+Below is the list of `py` files that are customised therefore checked by the validator.
+
+**eagle-golf Product**
+
+- `asgi.py`, `settings.py`, `urls.py` and `wsgi.py`: Line too long <!-- Check the long lines on settings.py -->
+
+**cart App**
+
+- `apps.py`, `contexts.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *two blank lines*, *no newline at end of file*, *line too long* warnings and errors, and they are all fixed.
+
+**checkout App**
+
+- `init.py`, `admin.py`, `apps.py`, `forms.py`, `models.py`, `signals.py`, `urls.py`, `views.py`, `webhook_handler.py` and `webhooks.py`: There are *no newline at end of file*, *trailing whitespace*, *line too long*, *too many blank lines*, *at least two spaces before inline comment*, *expected 2 blank lines*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+
+**home App**
+
+- `admin.py`, `apps.py`, `contexts.py`, `forms.py`, `models.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *no newline at end of file* and *line too long* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+
+**products App**
+
+- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
+
+**profiles App**
+
+- `apps.py`, `forms.py`, `models.py`, `urls.py`, and `views.py`: There are *no newline at end of file*, *line too long* and *trailing whitespace* warnings and errors and they are all fixed
+
+<div align="right"><a href="#testing-top">🔝</a></div>
+
+---
+
 — **Functions** —
 
 There are some functionalities, which are run by `views.py` file in each app (in some cases by `contexts.py`), on the website. A manual test is carried out to see if these functions work as expected.
@@ -269,35 +303,17 @@ There are some functionalities, which are run by `views.py` file in each app (in
 
 ---
 
-— **Code Validation** —
+### Defensive Programme
 
-As Python code is completed, a code validation test is carried out by using [PEP8 &#40;Python Enhancement Proposal&#41; online](http://pep8online.com) to see if the code meets guidelines and best practices for the readability and consistency of Python code.
+There are some pages that only authorised users have access to. This is to test and confirm that non-authorised users have no access to these pages.
 
-Below is the list of `py` files that are customised therefore checked by the validator.
+- Profile page: Only logged in users have access to the profile page. When `/profile/` is typed on URL, unless users are logged in, users are directed to the login page.
 
-**eagle-golf Product**
+- Add Product page: Only admin has access to the page. When `/products/add/` is typed on URL, if users are not logged in, users are directed to the login page. If users are logged in, then users are directed to the home page with [an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/add-product.png). 
 
-- `asgi.py`, `settings.py`, `urls.py` and `wsgi.py`: Line too long <!-- Check the long lines on settings.py -->
+- Edit Product page and Delete product function: Same as "Add Product".
 
-**cart App**
-
-- `apps.py`, `contexts.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *two blank lines*, *no newline at end of file*, *line too long* warnings and errors, and they are all fixed.
-
-**checkout App**
-
-- `init.py`, `admin.py`, `apps.py`, `forms.py`, `models.py`, `signals.py`, `urls.py`, `views.py`, `webhook_handler.py` and `webhooks.py`: There are *no newline at end of file*, *trailing whitespace*, *line too long*, *too many blank lines*, *at least two spaces before inline comment*, *expected 2 blank lines*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
-
-**home App**
-
-- `admin.py`, `apps.py`, `contexts.py`, `forms.py`, `models.py`, `urls.py` and `views.py`: There are *trailing whitespace*, *no newline at end of file* and *line too long* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
-
-**products App**
-
-- `admin.py`, `apps.py`, `forms.py`, `models.py`, `urls.py`, `views.py` and `widgits.py`: There are *no newline at end of file*, *line too long*, *blank line contains whitespace* warnings and errors and they are all fixed <!-- Except some too long lines as TBC -->
-
-**profiles App**
-
-- `apps.py`, `forms.py`, `models.py`, `urls.py`, and `views.py`: There are *no newline at end of file*, *line too long* and *trailing whitespace* warnings and errors and they are all fixed
+- Order History: Only the user who purchased the product has access to the order history. When the order history URL is typed and if users are not the user who purchased the product, the users are redirected to the profile page with [an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/product-history.png). 
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
