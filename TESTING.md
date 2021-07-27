@@ -134,25 +134,25 @@ As the HTML code is completed on all HTML files, a code validation test is carri
 
 — **Form Validation** —
 
-There are some forms on the website. Some of them are validated by front-end (e.g. @ mark for email input) and some by back-end (e.g. existing user name). Manual test is carried out to see if the validations as well as form functions work properly.
+There are some forms on the website. Some of them are validated by front-end (e.g. @ mark for email input) and some by back-end (e.g. existing user name). A manual test is carried out to see if the validations and form functions work properly.
 
 **Search Form**
 
-The form takes any texts including special characters (e.g. £, @, [ etc) so there is no form validation for this and the search is processed when search button is clicked as long as there is a text in the input box. It works fine [when a key word exists in product names or descriptions](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/search-form.png), and when it does not it shows 0 result. [When there is no text in the input field, then it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/search-form-empty.png). The search function is available on all the pages and it works from anywhere on the page.
+The form takes any texts including special characters (e.g. £, @, [ etc) so there is no form validation for this and the search is processed when the search button is clicked as long as there is a text in the input box. It works fine [when a key word exists in product names or descriptions](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/search-form.png), and when it does not it shows 0 result. [When there is no text in the input field, then it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/search-form-empty.png). The search function is available on all the pages and it works from anywhere on the page.
 
 **Subscribe To Newsletter Form**
 
-The form is available on all the pages on the website so try to submit an email from a few different pages to make sure it works. All the emails are submitted from any pages and saved in the database so [it works fine](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/subscribe-newsletters-success.png). If the email has no @ mark, it gives a warning message that @ mark must be included. There should not be duplicated emails in the system so if the email address already exists, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/subscribe-newsletters-error.png). 
+The form is available on all the pages on the website so try to submit an email from a few different pages to make sure it works. All the emails are submitted from any page and saved in the database so [it works fine](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/subscribe-newsletters-success.png). If the email has no @ mark, it gives a warning message that @ mark must be included. There should not be duplicated emails in the system so if the email address already exists, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/subscribe-newsletters-error.png). 
 
 **Register and Login Forms**
 
-Users must be unique so if email address or username already exits in the database, [it displays an error message for register page](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/register-form-email.png). Also, when the passwords do not match, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/register-form-password.png). This is similar for login page that if email or user name does not exists in the database, [it displays an error message and if password is incorrect, it also displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/login-form.png).
+Users must be unique so if the email address or username already exists in the database, [it displays an error message for register page](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/register-form-email.png). Also, when the passwords do not match, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/register-form-password.png). This is similar for the login page that if the email or user name does not exist in the database, [it displays an error message and if password is incorrect, it also displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/login-form.png).
 
 **Add Product, Checkout and Stripe Form**
 
-When mandatory fields are not filled in or form is invalid, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/add-product-form.png). For credit card details, it is validated by Stripe and if it is invalid details, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/stripe-form.png).
+When mandatory fields are not filled in or the form is invalid, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/add-product-form.png). For credit card details, it is validated by Stripe and if it is invalid details, [it displays an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/stripe-form.png).
 
-*Based on the manual test, all the forms on the webiste work properly*
+*Based on the manual test, all the forms on the website work properly*
 
 ---
 
@@ -197,8 +197,8 @@ A quality check test is carried out by using [Lighthouse](https://developers.goo
 - Desktop Size: [Performance: 89 / Accessibility: 83 / Best Practices: 100 / SEO: 100](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/profile-desktop.png)
 
 > **Note**<br>
-> Improve **Accessibility** on those pages by adding `aria-label` on button elements that have no text and by not using headlines (h5 &  h6). Accessibility is now improved on all the pages and 90 plus scores show on the pages, except `checkout` page which still shows 88 because there are many fields that have no label for the fields and that brings down the score (There are no labels deliberately to keep the neat style)<br>
-There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anyhting below should be looked at and solved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Perfomance, I decide to leave it as it is.  
+> Improve **Accessibility** on those pages by adding `aria-label` on button elements that have no text and by not using headlines (h5 & h6) for `Heading elements are not in a sequentially-descending order` error. Accessibility is now improved on all the pages and 90 plus scores show on the pages, except the `checkout` page which still shows 88 because there are many fields that have no label for the fields and that brings down the score (There are no labels deliberately to keep the neat style)<br>
+There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anything below should be looked at and solved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Performance, I decide to leave it as it is.  
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -224,7 +224,7 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 
 As the JavaScript code is completed, a code validation test is carried out by using [JSHint](https://jshint.com/), which is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
 
-**`quantity_input_script.html`** (js code in cart app), **`stripe_elements.js`**, **`quantity_input_script.html`** (js code in product app), **`countryfield.js`** and js script on **`cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`. `$` shows on all the files as undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as undefined variable but this comes from Stripe document so it can be ignored
+**`quantity_input_script.html`** (js code in cart app), **`stripe_elements.js`**, **`quantity_input_script.html`** (js code in product app), **`countryfield.js`** and js script on **`cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`. `$` shows on all the files as undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as an undefined variable but this comes from Stripe document so it can be ignored
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -234,21 +234,21 @@ As the JavaScript code is completed, a code validation test is carried out by us
 
 — **Functions** —
 
-There are some functionalities, which are run by `views.py` file in each app (in some case by `contexts.py`), on the website. Manual test is carried out to see if these functions work as expected.
+There are some functionalities, which are run by `views.py` file in each app (in some cases by `contexts.py`), on the website. A manual test is carried out to see if these functions work as expected.
 
 **cart App:**
 
 - View Cart: Products in the cart can be viewed by clicking the cart icon or a process your order button &#10004;
 - Add Cart: Products can be added from the product page by clicking an add to shopping cart button. If the same product has different sizes (and right or left for golf clubs), they are added separately &#10004;
 - Adjust Cart: Products can be adjusted in the cart. Change the quantity of the product and remove it &#10004;
-- Special Offer: Free Golf Balls appear for any order €250 or more. This is not run by `views.py` but should work when total purchase is €250 or more &#10004;
-- Display: Price per product, discount price and total value inluding shipping cost show based on the products in the cart &#10004;
+- Special Offer: Free Golf Balls appear for any order €250 or more. This is not run by `views.py` but should work when the total purchase is €250 or more &#10004;
+- Display: Price per product, discount price and total value including shipping cost show based on the products in the cart &#10004;
 
 **checkout App:**
 
 - Checkout: Checkout is done by completing the form & credit card details and clicking a complete order button. Products in the cart can be views by clicking the cart icon or a process your order button &#10004;
-- Checkout Success: When the order is completed, it creates an order in the database and save the info. It also shows checkout success page for users &#10004;
-- Confirmation email: When the order is successed (means payment in Stripe goes through), confirmation email is sent &#10004;
+- Checkout Success: When the order is completed, it creates an order in the database and saves the info. It also shows checkout success page for users &#10004;
+- Confirmation email: When the order is succeeded (means payment in Stripe goes through), a confirmation email is sent &#10004;
 - Stripe: When the order is completed, it creates a record of [payment_intent, charge.succeeded and payment_intent.succeeded](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/stripe-function.png) &#10004;
 
 **home App:**
@@ -257,13 +257,13 @@ There are some functionalities, which are run by `views.py` file in each app (in
 
 **products App:**
 
-- Product Display: Products are displayed by... group of categories, category, brand, sale products and all products. They can be sorted by price, category and product name both ascending and descending. Products can be searched by a key word &#10004;
+- Product Display: Products are displayed by... group of categories, category, brand, sale products and all products. They can be sorted by price, category and product name both ascending and descending. Products can be searched by a keyword &#10004;
 - Product Details Display: Product details can be viewed by clicking an image of the product. It displays product category, ID, description, price, size (if applicable), discount price (applicable) &#10004;
 - Product Add, Edit and Delete: Only authorised user (admin) is allowed to do these &#10004;
 
 **profile App:**
 
-- Profile: Access to profile page where users can update the personal details and access to the order history &#10004;
+- Profile: Access to the profile page where users can update the personal details and access to the order history &#10004;
 
 ---
 
@@ -317,7 +317,7 @@ The website is available on the major web browsers, such as **Chrome**, **Safari
 </details><br>
 
 > **Note**<br>
-> All the above visibilities and functions work without any problem on each browser, except a small issue on Firefox that browser [default input display causes an issues on Firefox](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/firefox-input.png) so it is fixed by making it inactive by putting `input[type=number] {-moz-appearance: textfield;}` on `base.css`
+> All the above visibilities and functions work without any problem on each browser, except a small issue on Firefox that browser [default input display causes an issue on Firefox](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/firefox-input.png) so it is fixed by making it inactive by putting `input[type=number] {-moz-appearance: textfield;}` on `base.css`
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -349,19 +349,23 @@ There are some key features to achieve the primary goals of the website from use
 
 **Increment and Decrement Buttons**
 
-- For the products that have size and all golf clubs that have right and left, increment & decrement buttons are not disabled. If `id` is used for this, one of them works but other one does not (and `id` cannot be used for duplicate id error on html validation). If `class` is used, when one of them is disabled, other one is also disabled. By setting a unique class, this would work but do not know how to implement this in JavaScript using Django template and it is not a major issue, leave it as unsolved issue. 
+- For the products that have a size and all golf clubs that have right and left, increment & decrement buttons are not disabled. If `id` is used for this, one of them works but the other one does not (and `id` cannot be used for duplicate id error on html validation). If `class` is used, when one of them is disabled, another one is also disabled. By setting a unique class, this would work but do not know how to implement this in JavaScript using Django template and it is not a major issue, leave it as an unsolved issue. 
 
 **Sorting Products By Price Including Discounted Price**
 
-- Sort function on the product pages, it sorts by the original price but it does not consider the discount price. Therefore, some products [do not look like sorted by price correctly](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/sort.png). Original price field and discount price field are in the different table so they cannot be directly compared so this cannot be solved unless the current database structure is changed.
+- Sort function on the product pages, it sorts by the original price but it does not consider the discount price. Therefore, some products [do not look like sorted by price correctly](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/sort.png). The original price field and discount price field are in the different tables so they cannot be directly compared so this cannot be solved unless the current database structure is changed.
 
 **Save Delivery Info On Checkout**
 
-- On the checkout page, logged in users can save the delivery info if they wish to. There is a check box as an option, however even the box is unticked, the details are saved for some reason. Looked at the code but cannot figure out why this happens, and as it is not a major issue, leave it as unsolved issue.
+- On the checkout page, logged in users can save the delivery info if they wish to. There is a check box as an option, however even the box is unticked, the details are saved for some reason. Looked at the code but cannot figure out why this happens, and as it is not a major issue, leave it as an unsolved issue.
 
 **Register Page**
 
-- On Register page, user name, which is the second field, is auto focused. When open the page, the first field, which is email address, should be auto focused. Try to fix this but no access to `forms.py` for Register page as it is Allauth package, and as it is not a major issue, leave it as unsolved issue.
+- On the Register page, the user name, which is the second field, is auto-focused. When open the page, the first field, which is an email address, should be auto focused. Try to fix this but no access to `forms.py` for the Register page as it is Allauth package, and as it is not a major issue, leave it as an unsolved issue.
+
+**Register Page**
+
+- For registered users, when they go to the checkout page, they see some fields are pre-filled from the last order. There is a full name field that picks up the first name and last name of users personal info. To retrieve the data from the fields, users must input the details. Try to get first name and last name at the time of registration but cannot add these fields as they are controlled by Allauth. As it is not a major issue, decide to leave it as an unsolved issue. 
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
