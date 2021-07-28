@@ -10,9 +10,8 @@
         <div class="row">
             <div class="col">
                 {{ message }}
-                {% if grand_total %}
+                {% if not grand_total and not on_profile_page %}
                     <hr class="mt-3 mb-3">
-                {% else %}
                     <p class="mt-3 text-center fw-bold">* Your Shopping Cart is empty now *</p>
                     <p class="mt-2 text-center">Checkout our 
                         <a class="fw-bold text-uppercase" href="{% url 'products' %}?sale">SALE</a> products
@@ -20,58 +19,61 @@
                 {% endif %}
             </div>
         </div>
-        {% if grand_total and not on_profile_page %}
-            <p class="fw-bold">Your Cart ({{ product_count }})</p>
-            <div class="bag--notification--wrapper">
-                {% for item in cart_items %}
-                    <div class="row mb-2">
-                        <div class="col-3 my-1">
-                            {% if item.product.image %}
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                            {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                            {% endif %}
+        {% if grand_total %}
+            {% if on_product_page or on_cart_page %}
+                <hr class="mt-3 mb-3">
+                <p class="fw-bold">Your Cart ({{ product_count }})</p>
+                <div class="bag--notification--wrapper">
+                    {% for item in cart_items %}
+                        <div class="row mb-2">
+                            <div class="col-3 my-1">
+                                {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                {% endif %}
+                            </div>
+                            <div class="col-9">
+                                <p class="my-0 fw-bold">{{ item.product.name }}</p>
+                                {% if item.product.has_sizes %}
+                                    <p class="my-0 small">Size: {{ item.size|upper }}</p>
+                                {% elif item.product.is_club %}
+                                    <p class="my-0 small">Club: {{ item.club|title }}</p>
+                                {% endif %}
+                                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            </div>
                         </div>
-                        <div class="col-9">
-                            <p class="my-0 fw-bold">{{ item.product.name }}</p>
-                            {% if item.product.has_sizes %}
-                                <p class="my-0 small">Size: {{ item.size|upper }}</p>
-                            {% elif item.product.is_club %}
-                                <p class="my-0 small">Club: {{ item.club|title }}</p>
-                            {% endif %}
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p class="mt-3 mb-1 text-black fw-bold">
-                        Total (Exc. delivery): €{{ total|floatformat:2 }}
-                    </p>
-                    <!-- Free Golf Balls -->
-                    {% if free_golf_balls_delta > 0 %}
-                        <p class="mb-0 p-2 text-black text-center bg--color--ffdf00-07">
-                            Spend <span class="fw-bold">€{{ free_golf_balls_delta }}</span> or more to get free golf balls!
-                        </p>
-                    {% endif %}
-                    {% if free_golf_balls_delta == 0 %}
-                        <p class="mb-0 p-2 text-black text-center bg--color--ffdf00-07">
-                            You get Free Golf Balls with your purchase!
-                        </p>
-                    {% endif %}
-                    {% if on_cart_page %}
-                    <a href="{% url 'checkout' %}" class="btn btn-success mt-3 m-2">
-                        <i class="fas fa-lock"></i> Secure Checkout
-                    </a>
-                    {% endif %}
-                    {% if not on_cart_page %}                
-                    <a href="{% url 'view_cart' %}" class="btn btn-success mt-3 m-2 bg--color--09572a">
-                        <i class="fas fa-lock"></i> Process Your Order
-                    </a>
-                    {% endif %}
+                    {% endfor %}
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mt-3 mb-1 text-black fw-bold">
+                            Total (Exc. delivery): €{{ total|floatformat:2 }}
+                        </p>
+                        <!-- Free Golf Balls -->
+                        {% if free_golf_balls_delta > 0 %}
+                            <p class="mb-0 p-2 text-black text-center bg--color--ffdf00-07">
+                                Spend <span class="fw-bold">€{{ free_golf_balls_delta }}</span> or more to get free golf balls!
+                            </p>
+                        {% endif %}
+                        {% if free_golf_balls_delta == 0 %}
+                            <p class="mb-0 p-2 text-black text-center bg--color--ffdf00-07">
+                                You get Free Golf Balls with your purchase!
+                            </p>
+                        {% endif %}
+                        {% if on_cart_page %}
+                        <a href="{% url 'checkout' %}" class="btn btn-success mt-3 m-2">
+                            <i class="fas fa-lock"></i> Secure Checkout
+                        </a>
+                        {% endif %}
+                        {% if not on_cart_page %}                
+                        <a href="{% url 'view_cart' %}" class="btn btn-success mt-3 m-2 bg--color--09572a">
+                            <i class="fas fa-lock"></i> Process Your Order
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
         {% endif %}
     </div>
 </div>
