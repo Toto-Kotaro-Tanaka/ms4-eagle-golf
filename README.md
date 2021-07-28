@@ -268,6 +268,9 @@ This is a full-stack website that contains both front-end & back-end, so many Dj
 1. Testing (Testing for HTML, CSS, JavaScript, Python, User Stories, Functions and Features)
 1. Final Check Before Submission
 
+> **Note:**<br>
+> **CSS**: In previous projects, get confused by Bootstrap CSS classes and my own CSS classes so for this project, two dashes (a kind of BEM methodology) is used on all CSS classes 
+
 <div align="right"><a href="#top">🔝</a></div>
 
 ## FEATURES
