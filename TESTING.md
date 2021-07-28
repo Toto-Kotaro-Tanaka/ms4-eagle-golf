@@ -198,7 +198,7 @@ A quality check test is carried out by using [Lighthouse](https://developers.goo
 
 > **Note**<br>
 > Improve **Accessibility** on those pages by adding `aria-label` on button elements that have no text and by not using headlines (h5 & h6) for `Heading elements are not in a sequentially-descending order` error. Accessibility is now improved on all the pages and 90 plus scores show on the pages, except the `checkout` page which still shows 88 because there are many fields that have no label for the fields and that brings down the score (There are no labels deliberately to keep the neat style)<br>
-There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anything below should be looked at and solved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Performance, I decide to leave it as it is.  
+There are some issues on Performance especially low scores on mobile size. The main issues are caused by the type and size of images, unused CSS and JavaScript CDNs. I recall having the same issues on my previous project that I could not improve the Performance. (e.g. When changing the size or type of the image, it causes another type of error and when trying to limit the use of CDNs, Bootstrap and JavaScript do not work on certain pages) Ideally, the score should be more than 90 for all the categories on both mobile and desktop sizes and anything below should be looked at and improved as much as possible, however, as almost coming to the end of the project and I am afraid of breaking something by trying to improve the Performance, I decide to leave it as it is.  
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -212,7 +212,8 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 
 **`base.css`, `cart.css`, `checkout.css`, `index.css`, `products.css` and `profile.css`** are tested and there are [no errors on any of CSS files](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-validation.png).
 
-- There are some [warnings](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-warnings.png) related to WebKit, which is one of [web browser rendering engines](https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css), for base.css, index.css and product.css. By looking at the [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about) post and a [Code Institue Slack](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-webkit.png) threads, no further actions are required so decide to leave as it is
+> **Note**<br>
+> There are some [warnings](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-warnings.png) related to WebKit, which is one of [web browser rendering engines](https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css), for base.css, index.css and product.css. By looking at the [Stack Overflow](https://stackoverflow.com/questions/52490004/what-are-all-of-these-w3c-css-validation-warnings-about) post and a [Code Institue Slack](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/css-webkit.png) threads, no further actions are required so decide to leave as it is
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -225,7 +226,7 @@ As the CSS code is completed, a code validation test is carried out by using [W3
 As the JavaScript code is completed, a code validation test is carried out by using [JSHint](https://jshint.com/), which is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
 
 **`quantity_input_script.html`** (js code in cart app), **`stripe_elements.js`**, **`quantity_input_script.html`** (js code in product app), **`countryfield.js`** and js script on **`cart.html`** are tested. There is a warning of `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).` so solve the warning by putting `/*jshint esversion: 6 */`.<br> 
-`$` shows on all the files as an undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as an undefined variable but this comes from Stripe document so it can be ignored
+`$` shows on all the files as an undefined variable but this is jQuery symbol so can be ignored. `Stripe` on `stripe_elements.js` shows as an undefined variable but this comes from Stripe document so it can be ignored.
 
 <div align="right"><a href="#testing-top">🔝</a></div>
 
@@ -237,7 +238,7 @@ As the JavaScript code is completed, a code validation test is carried out by us
 
 As Python code is completed, a code validation test is carried out by using [PEP8 &#40;Python Enhancement Proposal&#41; online](http://pep8online.com) to see if the code meets guidelines and best practices for the readability and consistency of Python code.
 
-Below is the list of `py` files that are customised therefore checked by the validator.
+Below is the list of `py` files that are customised and checked by the validator.
 
 **eagle-golf Product**
 
@@ -312,7 +313,7 @@ There are some pages that only authorised users have access to. This is to test 
 
 - Profile page: Only logged in users have access to the profile page. When `/profile/` is typed on URL, unless users are logged in, users are directed to the login page.
 
-- Add Product page: Only admin has access to the page. When `/products/add/` is typed on URL, if users are not logged in, users are directed to the login page. If users are logged in, then users are directed to the home page with [an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/add-product.png). 
+- Add Product page: Only admin has access to the page. When `/products/add/` is typed on URL, if users are not logged in, users are directed to the login page. If users are logged in, then users are directed to the home page with [an error message](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/add-product.png) unless Admin user. 
 
 - Edit Product page and Delete product function: Same as "Add Product".
 
@@ -348,7 +349,7 @@ The website is available on the major web browsers, such as **Chrome**, **Safari
 
 — **Evidence Of Achieving The Website From UX Point Of View** —
 
-There are some key features to achieve the primary goals of the website from user's point of view (both shoppers and the owner) and this is to confirm that all the features planned on **Strategy and Scope Planes** are implemented based on the tests carried out in the testing section.
+There are some key features to achieve the primary goals of the website from user's point of view (both shoppers and the owner) and this is to confirm that all the features planned on **Strategy** and **Scope Planes** are implemented on the website based on the tests carried out in the testing section.
 
 <ins>Strategy Plane</ins>
 
@@ -363,6 +364,8 @@ There are some key features to achieve the primary goals of the website from use
 ---
 
 ### Unsolved Issues
+
+There are a few issues in the project that are addressed to get them solved however they remain unsolved issues due to a lack of my current skill and/or time
 
 **Low Performance on Mobile Size**
 
