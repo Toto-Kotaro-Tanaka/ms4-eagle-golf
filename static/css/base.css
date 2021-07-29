@@ -212,8 +212,8 @@ body {
     right: 2rem;
 }
 
-.bag--notification--wrapper {
-    max-height: 12rem;
+.cart--notification--wrapper {
+    max-height: 9rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
