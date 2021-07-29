@@ -10,7 +10,7 @@ Order Date: {{ order.date|date:"d M y @ H:i" }}
 Product {% if order.lineitems.all.count > 1 %}{{ forloop.counter }}{% endif %}:
 {{ item.product.name }}{% if item.product_size %} - Size: {{ item.product_size|upper }}{% elif item.product_club %} - Club: {{ item.product_club|title }}{% endif %}
 QTY: {{ item.quantity }} @ {% if not item.product.is_discount %}€{{ item.product.price }}{% else %}€{{ item.product.discount_price }}{% endif %} each
-{% if order.lineitems.all.count > 1 %}----------{% endif %}{% endfor%}
+{% if order.lineitems.all.count > 1 %}-----------------{% endif %}{% endfor%}
 {% if order.free_golf_balls %}
 Special Offer: FREE Golf Balls x 1
 {% endif %}
