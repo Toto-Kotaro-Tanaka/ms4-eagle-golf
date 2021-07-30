@@ -130,10 +130,10 @@ The error pages that appear when the page is not found or invalid and where user
 The template documents that have core components of html and css and are used among other html files.
 
 - **Admin** (`/admin`)<br>
-The admin panel, which can be created with Django project, where Admin can take control of products and other data
+The admin panel, which can be created with Django project, where Admin can take control of products and other data.
 
 - **CSS** & **JavaScript** (`.css` & `.js`)<br>
-CSS and JavaScript files of those HTML files are created within the same app folder
+CSS and JavaScript files of those HTML files are created within the same app folder.
 
 Below is the flowchart of the website to show the core relationships between the pages. (Most of the pages are linked to each other subject to permission)<br>
 
@@ -404,7 +404,7 @@ As a part of a special offer, users who spend €250 or more will get a box of f
 
 — **Commitments** —
 
-- When a section or even a group of work is completed, it is committed in git and pushed into GitHub to make sure to keep the history of the work logged properly and not to lose the work in unexpected situations. Below commands are used for this.
+- When a section or even a group of work is completed, it is committed in git and pushed into GitHub to make sure to keep the history of the work logged properly and not to lose the work in unexpected situations. Below commands are used for this
 
 ```
 * git status | To check the status of new/modified folders, files, and documents
@@ -417,7 +417,7 @@ As a part of a special offer, users who spend €250 or more will get a box of f
 
 — **Branches** —
 
-- When some testing is needed, create a branch and test it on the branch instead of using the main / master branch. When the testing is successful, then merge the branch into the main / master and when it is not, leave the branch unmerged and keep working on the main / master branch. Below commands are used for this.
+- When some testing is needed, create a branch and test it on the branch instead of using the main / master branch. When the testing is successful, then merge the branch into the main / master and when it is not, leave the branch unmerged and keep working on the main / master branch. Below commands are used for this
 
 ```
 * git branch <branch name> | To create a new branch
