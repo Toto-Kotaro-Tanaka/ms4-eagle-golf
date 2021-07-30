@@ -393,5 +393,12 @@ There are a few issues in the project that are addressed to get them solved howe
 
 - For registered users, when they go to the checkout page, they see some fields are pre-filled if they update Default Delivery Information on the profile page. There is a full name field that picks up the first name and last name of users personal info. To retrieve the data from the fields, users must input the details. Try to get first name and last name at the time of registration but cannot add these fields as they are controlled by Allauth. Try to add first name and last name fields on the profile page but that causes some issues on Stripe. It is not a major issue, decide to leave it as an unsolved issue 
 
+**Error Message of Subscribe to Newsletter Form**
+
+- During the final checking of the website before submission, notice that when the "Update Information" button is clicked, the [error message for Subscribe to Newsletters comes up](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/error-message.png). Check `contexts.py` in the  Home App that has Subscribe to Newsletters function and `views.py` in the Profile App that has Update Information function to see if there are any errors on them, like the same variable being used and that might cause the issue. Cannot find any obvious errors on them and not sure how to solve the problem so post it to Code Institute slack. Get feedback to suggest something wrong with it but not the solution so contact tutor support. It is [confirmed that when the "Update Information" button is clicked, Subscribe to Newsletters function is NOT working](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf/blob/master/readme/testing/error-message.png) (meaning both Update Information and Subscribe to Newsletters functions are working independently and correctly) and the tutor thinks a browser is causing the issue but cannot identify it. Try to use a different browser but get the same result. Look for the solution or similar issues on the internet but cannot find it. Approx. 4 hours of time is spent but cannot identify and solve the issue, decided to leave it as an unsolved issue 
+
+> **Note**<br>
+> Strangely enough, this only happens with the "Update Information" button on the Profile page. There is a form that does a POST action on the Product Details page, and when the button is clicked, no error message comes up 
+
 <div align="right"><a href="#testing-top">🔝</a></div>
 
